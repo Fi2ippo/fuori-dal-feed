@@ -97,43 +97,21 @@ function renderDates() {
     }).join('') + '</div></nav>';
 }
 
-function renderTimeline() {
+function renderSideTimeline() {
   const total = slides.length;
-  const active = slides[current];
-  const caption = active.kind === 'end' ? 'FINE' : active.section.name;
-  const segments = slides.map((slide, index) => {
-    const state = index < current ? ' completed' : (index === current ? ' active' : ' future');
-    const label = (index + 1) + ' di ' + total + ' — ' +
-      (slide.section ? slide.section.name + ': ' : '') + sceneLabel(slide);
-    return '<button type="button" class="timeline-segment' + state +
-      '" data-screen="' + index + '" aria-label="' + escapeHtml(label) +
-      '" ' + (index === current ? 'aria-current="step" ' : '') +
-      'title="' + escapeHtml(label) + '"><span class="timeline-line"></span></button>';
-  }).join('');
-
-  const percentage = Math.min(88, Math.max(0, (current + .5) / total * 100));
-  return '<section class="desktop-timeline" aria-label="Avanzamento della lettura">' +
-    '<div class="timeline-heading"><span>EDIZIONE DEL ' + escapeHtml(longDate(edition.date).toUpperCase()) +
-    '</span><span class="timeline-count"><strong>' + pad(current + 1) +
-    '</strong> di ' + pad(total) + '</span></div>' +
-    '<nav class="timeline-segments" id="desktop-segments" aria-label="Vai a una schermata">' + segments +
-    '</nav><div class="timeline-label" style="--label-position:' + percentage + '%">' +
-    escapeHtml(caption) + '</div></section>';
-}
-
-function renderMobileTimeline() {
-  const total = slides.length;
-  return '<aside class="mobile-rail" aria-label="Avanzamento della lettura">' +
-    '<div class="mobile-rail-top">' + pad(current + 1) + '<span>/' + pad(total) + '</span></div>' +
-    '<nav class="mobile-segments" id="mobile-segments" aria-label="Schermate dell’edizione">' +
+  return '<aside class="reading-rail" aria-label="Progresso della lettura">' +
+    '<nav class="rail-segments" id="rail-segments" aria-label="Vai a una schermata dell’edizione">' +
     slides.map((slide, index) => {
       const state = index < current ? ' completed' : index === current ? ' active' : ' future';
-      const label = (index + 1) + ' di ' + total + ' — ' + sceneLabel(slide);
-      return '<button type="button" class="mobile-segment' + state +
-        '" data-screen="' + index + '" aria-label="' + escapeHtml(label) + '" ' +
-        (index === current ? 'aria-current="step" ' : '') +
-        'title="' + escapeHtml(label) + '"><span></span></button>';
-    }).join('') + '</nav></aside>';
+      const label = (index + 1) + ' di ' + total + ' — ' +
+        (slide.section ? slide.section.name + ' — ' : '') + sceneLabel(slide);
+      return '<button type="button" class="rail-segment' + state +
+        '" data-screen="' + index + '" aria-label="' + escapeHtml(label) + '"' +
+        (index === current ? ' aria-current="step"' : '') +
+        ' title="' + escapeHtml(label) + '"><span class="rail-line" aria-hidden="true"></span></button>';
+    }).join('') +
+    '</nav><div class="rail-count" aria-label="Schermata ' + (current + 1) + ' di ' + total + '">' +
+    pad(current + 1) + '<span>/' + pad(total) + '</span></div></aside>';
 }
 
 function richText(value, terms) {
@@ -225,8 +203,7 @@ function render() {
   app.innerHTML =
     '<header class="site-header"><a class="brand" href="./" aria-label="FUORI DAL FEED, torna all’edizione recente">' +
     'FUORI DAL <span>FEED.</span></a>' + renderDates() + '</header>' +
-    renderTimeline() +
-    '<div class="reading-layout">' + renderMobileTimeline() +
+    '<div class="reading-layout">' + renderSideTimeline() +
     '<main class="reading-main" id="reading-main">' +
     slides.map(renderSlide).join('') +
     '<div class="reading-controls" aria-label="Navigazione schermate">' +
@@ -240,16 +217,11 @@ function render() {
     dateList.scrollLeft = Math.max(0, selectedDate.offsetLeft - dateList.offsetLeft -
       (dateList.clientWidth - selectedDate.offsetWidth) / 2);
   }
-  for (const selector of ['#desktop-segments', '#mobile-segments']) {
-    const nav = app.querySelector(selector);
-    const active = nav?.querySelector('[aria-current]');
-    if (active && nav) {
-      if (selector === '#desktop-segments') {
-        nav.scrollLeft = Math.max(0, active.offsetLeft - nav.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2);
-      } else {
-        nav.scrollTop = Math.max(0, active.offsetTop - nav.offsetTop - (nav.clientHeight - active.offsetHeight) / 2);
-      }
-    }
+  const rail = app.querySelector('#rail-segments');
+  const selected = rail?.querySelector('[aria-current="step"]');
+  if (selected && rail) {
+    rail.scrollTop = Math.max(0,
+      selected.offsetTop - rail.offsetTop - (rail.clientHeight - selected.offsetHeight) / 2);
   }
 }
 
