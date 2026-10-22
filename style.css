@@ -608,3 +608,6 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 @media (pointer:coarse) and (prefers-reduced-motion:reduce) {
   .reading-scroll { scroll-snap-type: none; }
 }
+
+/* Timeline jumps and direct article links must not land on a nearby gate. */
+.reading-scroll.bypass-snap { scroll-snap-type: none !important; }
