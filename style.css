@@ -209,9 +209,9 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 
 /* Article typography and progressive-disclosure content */
 .article {
-  width: min(100%, 800px);
+  width: min(100%, 1250px);
   margin: 0 auto;
-  padding: 42px 46px 138px;
+  padding: 42px clamp(32px, 4vw, 64px) 138px;
 }
 .article-meta {
   display: flex;
@@ -229,19 +229,26 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 .article-meta > span:first-child { color: #504d48; }
 .demo-flag { color: #ad5c4c; }
 .article h1 {
-  max-width: 690px;
+  max-width: 1100px;
   margin: 31px 0 20px;
-  font: normal clamp(41px, 4.5vw, 67px)/1.12 Georgia, 'Times New Roman', serif;
+  font: normal clamp(42px, 5vw, 76px)/1.12 Georgia, 'Times New Roman', serif;
   letter-spacing: -.045em;
   text-wrap: balance;
 }
 .article-dek {
-  max-width: 650px;
+  max-width: 950px;
   margin: 0 0 48px;
   font: normal clamp(21px, 2vw, 25px)/1.47 Georgia, 'Times New Roman', serif;
   color: #68645e;
 }
-.article-body { max-width: 650px; }
+.article-reading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 245px);
+  gap: clamp(30px, 4.6vw, 74px);
+  align-items: start;
+  width: 100%;
+}
+.article-body { min-width: 0; max-width: none; }
 .article-body > p {
   margin: 0 0 26px;
   font: normal 19px/1.82 Georgia, 'Times New Roman', serif;
@@ -261,7 +268,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   cursor: help;
 }
 .term:hover { color: #a84435; border-bottom-style: solid; }
-.article-extras { max-width: 650px; margin-top: 53px; }
+.article-extras { max-width: 920px; margin-top: 53px; }
 .article-details { margin: 0; border-top: 1px solid var(--line); }
 .article-details:last-child { border-bottom: 1px solid var(--line); }
 .article-details summary {
@@ -398,4 +405,81 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
     transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* v5 — Reading surface, annotations, and actual per-article progress */
+.rail-line { position: relative; overflow: hidden; }
+.rail-line::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: var(--fill, 0%);
+  background: var(--active);
+  transition: height .18s ease;
+}
+.rail-segment.completed .rail-line::after { height: 100%; background: var(--past); }
+.rail-segment.active:not(.completed) .rail-line::after { background: var(--active); }
+.article-kind { color: var(--past); font-weight: 700; }
+.meta-separator { color: #aaa29a; margin: 0 6px; }
+.margin-note {
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  min-width: 0;
+  border-left: 2px solid var(--past);
+  padding: 5px 6px 7px 20px;
+  background: var(--paper);
+}
+.inline-note {
+  max-width: 780px;
+  margin: 2px 0 31px;
+  padding: 18px 20px 20px;
+  border-left: 2px solid var(--past);
+  background: #efebe4;
+  position: relative;
+}
+.annotation-heading {
+  margin: 0 32px 12px 0;
+  font: normal 23px/1.2 Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.margin-note p, .inline-note p {
+  margin: 0;
+  font: 14px/1.75 Arial, Helvetica, sans-serif;
+  color: #56534d;
+}
+.inline-note .annotation-heading { font-size: 21px; }
+.annotation-example { margin-top: 12px !important; color: var(--muted) !important; }
+.annotation-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: 4px 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1;
+}
+.inline-note .annotation-close { top: 9px; right: 9px; }
+.ending .category-rule { margin-top: 15px; }
+.ending-subtitle { margin-top: 30px; }
+.ending-date { margin-top: 4px; font: 12px/1.7 Arial, sans-serif !important; color: #9d968c !important; text-transform: capitalize; }
+@media (max-width: 1189px) {
+  .article-reading { display: block; }
+  .article-body { max-width: 930px; }
+  .article-extras { max-width: 930px; }
+  .margin-note { display: none !important; }
+}
+@media (max-width: 779px) {
+  .article { padding: 33px 22px 125px; }
+  .article h1 { font-size: clamp(33px, 7.6vw, 51px); }
+  .article-dek { font-size: 19px; }
+}
+@media (max-width: 380px) {
+  .article { padding-left: 17px; padding-right: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rail-line::after { transition: none; }
 }
