@@ -483,3 +483,19 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .rail-line::after { transition: none; }
 }
+
+/* Cross-edition contextual return — visible only after following a related story. */
+.return-to-reading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  margin-bottom: 21px;
+  text-decoration: none;
+  color: #9d493b;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .025em;
+}
+.return-to-reading:hover { text-decoration: underline; text-underline-offset: 4px; }
+.return-to-reading span { font-size: 19px; line-height: .8; }
