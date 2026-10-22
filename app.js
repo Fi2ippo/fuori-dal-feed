@@ -181,7 +181,9 @@ function richText(value, terms) {
   return html + escapeHtml(value.slice(start));
 }
 
-function returnToReadingLink() {
+function returnToReadingLink(storyId) {
+  const params = new URLSearchParams(location.search);
+  if (params.get('date') !== edition.date || params.get('story') !== storyId) return '';
   try {
     const link = JSON.parse(sessionStorage.getItem('fdf-reading-return'));
     if (!link || link.destination !== location.search || link.origin === link.destination) return '';
@@ -237,7 +239,7 @@ function renderArticle(slide) {
     '</div></details>' : '';
 
   return '<article class="article" id="' + escapeHtml(story.id) +
-    '">' + returnToReadingLink() + head + '<h1>' + escapeHtml(story.title) +
+    '">' + returnToReadingLink(story.id) + head + '<h1>' + escapeHtml(story.title) +
     '</h1><p class="article-dek">' + escapeHtml(story.dek || '') +
     '</p><div class="article-reading"><div class="article-body">' + paragraphs +
     '</div><aside class="margin-note" id="margin-note" aria-live="polite" hidden></aside></div>' +
