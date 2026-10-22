@@ -503,3 +503,96 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 /* Keep the unfilled part of the active reading segment visible. */
 .rail-segment.active:not(.completed) .rail-line { background: #eed8d1; }
 .rail-segment.active.completed .rail-line { background: var(--past); }
+
+
+/* v6 — One continuous editorial scroll, with natural breathing at boundaries. */
+.reading-layout { height: 100%; min-height: 0; }
+.reading-main { height: 100%; min-height: 0; overflow: hidden; }
+.reading-scroll {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: #d5cfc6 transparent;
+  scroll-behavior: auto;
+  scroll-padding-top: 0;
+}
+.reading-scroll:focus { outline: none; }
+.reading-scroll:focus-visible { outline: 2px solid #d5afa6; outline-offset: -2px; }
+.reading-section { position: relative; min-height: 100%; width: 100%; }
+.chapter-section, .ending-section {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chapter-section .category, .ending-section .ending {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.article-section { min-height: 100%; }
+.article-section .article {
+  padding-top: clamp(38px, 4.5vh, 58px);
+  padding-bottom: clamp(48px, 7vh, 82px);
+}
+.article-section .article h1 { max-width: 1100px; }
+.article-section .article-ending { margin-top: 58px; }
+.category-hint { opacity: .72; font-size: 11px; letter-spacing: .025em; }
+/* A small amount of extra travel creates a perceptible end to each story.
+   Native scrolling remains available, especially for touch and assistive tech. */
+.editorial-gate {
+  display: grid;
+  position: relative;
+  place-items: center;
+  height: clamp(96px, 16vh, 152px);
+  width: 100%;
+  pointer-events: none;
+  background: var(--paper);
+}
+.editorial-gate.chapter-gate { height: clamp(136px, 23vh, 218px); }
+.gate-rule {
+  display: block;
+  width: 40px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--past);
+  opacity: .38;
+  transform: scaleX(.85);
+  transition: opacity .23s ease, transform .25s ease;
+}
+.editorial-gate.gate-engaged .gate-rule { opacity: .95; transform: scaleX(1.3); }
+/* The current article gradually fills its own progress segment;
+   completed and already visited articles retain their separate state. */
+.rail-line { background: var(--future); }
+.rail-segment.visited:not(.completed):not(.active) .rail-line { background: #eaded8; }
+.rail-segment.visited:not(.completed):not(.active) .rail-line::after { background: var(--past); }
+.rail-segment.active:not(.completed) .rail-line { background: #eed8d1; }
+.rail-segment.active .rail-line::after { background: var(--active); }
+.rail-segment.active.completed .rail-line::after,
+.rail-segment.completed .rail-line::after { background: var(--past); }
+.rail-segment.active .rail-line { transform: scaleX(1.4); }
+.reading-controls { display: none !important; }
+@media (max-width: 779px) {
+  .chapter-section .category, .ending-section .ending { padding: 27px 16px; }
+  .article-section .article { padding: 33px 22px 52px; }
+  .article-section .article-ending { margin-top: 46px; }
+  .editorial-gate { height: clamp(82px, 13vh, 118px); }
+  .editorial-gate.chapter-gate { height: clamp(113px, 19vh, 160px); }
+}
+@media (max-width: 380px) {
+  .article-section .article { padding-left: 17px; padding-right: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gate-rule { transition: none; }
+  .reading-scroll { scroll-behavior: auto; }
+}
