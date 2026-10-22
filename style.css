@@ -499,3 +499,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 }
 .return-to-reading:hover { text-decoration: underline; text-underline-offset: 4px; }
 .return-to-reading span { font-size: 19px; line-height: .8; }
+
+/* Keep the unfilled part of the active reading segment visible. */
+.rail-segment.active:not(.completed) .rail-line { background: #eed8d1; }
+.rail-segment.active.completed .rail-line { background: var(--past); }
