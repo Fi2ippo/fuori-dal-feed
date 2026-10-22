@@ -357,8 +357,10 @@ function updateScroll(){
   if(index!==current){
     current=index;
     setRailIndex(index);
-    history.replaceState({},'',currentUrl());
-    rememberPosition();
+    if(!jumpInProgress){
+      history.replaceState({},'',currentUrl());
+      rememberPosition();
+    }
     if(window.innerWidth<1190)closeTerm();
   }
   const fraction=measure(blocks[index],top,viewport),key=screenKey(index);
@@ -380,9 +382,11 @@ function updateScroll(){
     node.classList.toggle('completed',maxRead>=.985);
     node.style.setProperty('--fill',Math.round((i===index?fraction:maxRead)*100)+'%');
   });
-  readerState.positions[flowKey()]=top;
-  readerState.positions[key]=Math.max(0,top-blocks[index].offsetTop);
-  queueReaderSave();
+  if(!jumpInProgress){
+    readerState.positions[flowKey()]=top;
+    readerState.positions[key]=Math.max(0,top-blocks[index].offsetTop);
+    queueReaderSave();
+  }
 }
 function scheduleScroll(){
   if(scrollTick||initializing)return;
@@ -447,6 +451,7 @@ function render(landing={index:current,mode:'start'}){
 function navigateTo(index,smooth=true){
   const target=scrollEl?.querySelector('#screen-'+index);
   if(!target)return;
+  saveCurrent();
   closeTerm();boundaryBrake=null;passedGate=-1;jumpInProgress=true;skipPreviousCompletion=true;
   scrollEl.classList.add('bypass-snap');
   const isSmooth=smooth&&!reducedMotion.matches;
@@ -456,11 +461,17 @@ function navigateTo(index,smooth=true){
     const done=()=>{
       if(settled)return;settled=true;
       scrollEl.removeEventListener('scrollend',done);
-      jumpInProgress=false;scrollEl.classList.remove('bypass-snap');scheduleScroll();
+      jumpInProgress=false;
+      history.replaceState({},'',currentUrl());rememberPosition();
+      scrollEl.classList.remove('bypass-snap');scheduleScroll();
     };
     scrollEl.addEventListener('scrollend',done,{once:true});
     setTimeout(done,1050);
-  }else{jumpInProgress=false;scrollEl.classList.remove('bypass-snap');scheduleScroll();}
+  }else{
+    current=index;
+    history.replaceState({},'',currentUrl());rememberPosition();
+    jumpInProgress=false;scrollEl.classList.remove('bypass-snap');scheduleScroll();
+  }
 }
 function changeEdition(date){
   const next=editions.find(item=>item.date===date);
