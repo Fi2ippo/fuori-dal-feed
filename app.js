@@ -467,6 +467,7 @@ function changeEdition(date){
   if(!next||next.date===edition.date)return;
   saveCurrent();edition=next;slides=buildSlides(next);current=0;
   history.pushState({},'',currentUrl());
+  rememberPosition();
   render({index:0,mode:'start'});
 }
 /* Only near boundaries, only for mouse / trackpad wheel: gentle 340ms maximum
