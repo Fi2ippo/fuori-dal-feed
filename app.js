@@ -95,7 +95,7 @@ function storyUrl(date, id) {
 
 function rememberPosition() {
   try {
-    localStorage.setItem('fdf-position', JSON.stringify({ date: edition.date, index: current }));
+    localStorage.setItem('fdf-position', JSON.stringify({ date: edition.date, index: current, editionTag: edition.status || 'published' }));
   } catch (_) {
     // Browsing without local storage must still work.
   }
@@ -116,7 +116,8 @@ function restoreFromUrl(initial = false) {
   else if (initial && !date) {
     try {
       const saved = JSON.parse(localStorage.getItem('fdf-position'));
-      if (saved?.date === edition.date && Number.isInteger(saved.index)) index = saved.index;
+      if (saved?.date === edition.date && saved.editionTag === (edition.status || 'published') &&
+          Number.isInteger(saved.index)) index = saved.index;
     } catch (_) { /* Optional convenience. */ }
   }
 
@@ -477,7 +478,7 @@ window.addEventListener('popstate', () => {
   render();
 });
 
-fetch('./data/editions.json')
+fetch('./data/editions.json', { cache: 'no-store' })
   .then(response => {
     if (!response.ok) throw new Error('Edizioni non disponibili');
     return response.json();
