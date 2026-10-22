@@ -181,6 +181,15 @@ function richText(value, terms) {
   return html + escapeHtml(value.slice(start));
 }
 
+function returnToReadingLink() {
+  try {
+    const link = JSON.parse(sessionStorage.getItem('fdf-reading-return'));
+    if (!link || link.destination !== location.search || link.origin === link.destination) return '';
+    return '<a class="return-to-reading" href="' + escapeHtml(link.origin) +
+      '"><span aria-hidden="true">←</span> Torna alla lettura</a>';
+  } catch (_) { return ''; }
+}
+
 function renderArticle(slide) {
   const story = slide.story;
   const validKinds = ['NOTIZIA', 'ANALISI', 'CONTESTO', 'RICERCA', 'CULTURA'];
@@ -190,7 +199,8 @@ function renderArticle(slide) {
     escapeHtml(slide.section.name) +
     ' <span aria-hidden="true">·</span> ' + escapeHtml(longDate(edition.date)) +
     '</span><span>' + (Number(story.minutes) || 0) + ' MIN DI LETTURA' +
-    (edition.demo ? ' <span class="demo-flag">· EDIZIONE DIMOSTRATIVA</span>' : '') +
+    (edition.demo ? ' <span class="demo-flag">· EDIZIONE DIMOSTRATIVA</span>' :
+      edition.status === 'edizione-pilota' ? ' <span class="demo-flag">· EDIZIONE PILOTA</span>' : '') +
     '</span></div>';
 
   const paragraphs = (story.paragraphs || [])
@@ -227,7 +237,7 @@ function renderArticle(slide) {
     '</div></details>' : '';
 
   return '<article class="article" id="' + escapeHtml(story.id) +
-    '">' + head + '<h1>' + escapeHtml(story.title) +
+    '">' + returnToReadingLink() + head + '<h1>' + escapeHtml(story.title) +
     '</h1><p class="article-dek">' + escapeHtml(story.dek || '') +
     '</p><div class="article-reading"><div class="article-body">' + paragraphs +
     '</div><aside class="margin-note" id="margin-note" aria-live="polite" hidden></aside></div>' +
@@ -371,6 +381,18 @@ function changeEdition(date) {
 }
 
 app.addEventListener('click', event => {
+  const related = event.target.closest('.related-list a');
+  if (related) {
+    rememberScroll();
+    saveReaderState();
+    try {
+      sessionStorage.setItem('fdf-reading-return', JSON.stringify({
+        origin: currentUrl(),
+        destination: related.getAttribute('href')
+      }));
+    } catch (_) { /* Browser history remains available. */ }
+    return;
+  }
   const dateButton = event.target.closest('button[data-date]');
   if (dateButton) return changeEdition(dateButton.dataset.date);
 
