@@ -516,7 +516,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior-y: contain;
-  touch-action: pan-y;
+  touch-action: auto;
   scrollbar-width: thin;
   scrollbar-color: #d5cfc6 transparent;
   scroll-behavior: auto;
