@@ -243,255 +243,307 @@ function renderArticle(slide) {
     '">' + returnToReadingLink(story.id) + head + '<h1>' + escapeHtml(story.title) +
     '</h1><p class="article-dek">' + escapeHtml(story.dek || '') +
     '</p><div class="article-reading"><div class="article-body">' + paragraphs +
-    '</div><aside class="margin-note" id="margin-note" aria-live="polite" hidden></aside></div>' +
+    '</div><aside class="margin-note" aria-live="polite" hidden></aside></div>' +
     '<div class="article-extras">' + deepDive + relatedHtml + sourceHtml +
     '</div><div class="article-ending" aria-hidden="true"></div></article>';
 }
 
-function renderSlide(slide, index) {
+
+/* The edition is a single vertical stream. Sections are semantic landmarks;
+   gates add gentle editorial breathing space without hiding any article. */
+let scrollEl=null,scrollTick=0,initializing=false,jumpInProgress=false;
+let boundaryBrake=null,passedGate=-1;
+const clamp=(v,min=0,max=1)=>Math.max(min,Math.min(max,v));
+function flowKey(){return edition.date+'|flow';}
+function renderSlide(slide,index){
   let content;
-  if (slide.kind === 'category') {
-    const ordinal = edition.sections.indexOf(slide.section) + 1;
-    content = '<div class="category"><div class="eyebrow">' +
-      pad(ordinal) + ' / ' + pad(edition.sections.length) +
-      '</div><h1>' + escapeHtml(slide.section.name) +
-      '</h1><div class="category-rule" aria-hidden="true"></div>' +
-      '<p class="category-hint">Continua <span aria-hidden="true">→</span></p></div>';
-  } else if (slide.kind === 'end') {
-    content = '<div class="ending"><div class="eyebrow">FINE DELL’EDIZIONE</div>' +
-      '<h1>Per oggi, sei aggiornato.</h1><div class="category-rule" aria-hidden="true"></div>' +
-      '<p class="ending-subtitle">La lettura di oggi finisce qui.</p>' +
-      '<p class="ending-date">' + escapeHtml(longDate(edition.date)) + '</p></div>';
-  } else {
-    content = renderArticle(slide);
-  }
-  return '<section class="slide' + (index === current ? ' active' : '') +
-    '" data-index="' + index + '"' + (index === current ? '' : ' inert') +
-    ' aria-label="' + escapeHtml(sceneLabel(slide)) + '">' + content + '</section>';
+  if(slide.kind==='category'){
+    const no=edition.sections.indexOf(slide.section)+1;
+    content='<div class="category"><div class="eyebrow">'+pad(no)+' / '+pad(edition.sections.length)+
+      '</div><h1>'+escapeHtml(slide.section.name)+'</h1><div class="category-rule"></div>'+
+      '<p class="category-hint">Scorri per continuare ↓</p></div>';
+  }else if(slide.kind==='end'){
+    content='<div class="ending"><div class="eyebrow">FINE DELL’EDIZIONE</div>'+
+      '<h1>Per oggi, sei aggiornato.</h1><div class="category-rule"></div>'+
+      '<p class="ending-subtitle">La lettura di oggi finisce qui.</p>'+
+      '<p class="ending-date">'+escapeHtml(longDate(edition.date))+'</p></div>';
+  }else content=renderArticle(slide);
+  const kind=slide.kind==='category'?'chapter-section':slide.kind==='end'?'ending-section':'article-section';
+  const section='<section class="reading-section '+kind+'" id="screen-'+index+
+    '" data-index="'+index+'" aria-label="'+escapeHtml(sceneLabel(slide))+'">'+content+'</section>';
+  if(index===slides.length-1)return section;
+  const chapter=slide.kind==='category'||slides[index+1].kind==='category';
+  return section+'<div class="editorial-gate '+(chapter?'chapter-gate':'story-gate')+
+    '" data-after="'+index+'" aria-hidden="true"><span class="gate-rule"></span></div>';
 }
-
-function render() {
-  if (!edition) return;
-  app.innerHTML =
-    '<header class="site-header"><a class="brand" href="./" aria-label="FUORI DAL FEED, torna all’edizione recente">' +
-    'FUORI DAL <span>FEED.</span></a>' + renderDates() + '</header>' +
-    '<div class="reading-layout">' + renderSideTimeline() +
-    '<main class="reading-main" id="reading-main">' +
-    slides.map(renderSlide).join('') +
-    '<div class="reading-controls" aria-label="Navigazione schermate">' +
-    '<button type="button" data-prev aria-label="Schermata precedente" ' + (current === 0 ? 'disabled ' : '') + '>←</button>' +
-    '<button type="button" data-next aria-label="Schermata successiva" ' +
-    (current === slides.length - 1 ? 'disabled ' : '') + '>→</button></div></main></div>';
-
-  const key = screenKey();
-  app.querySelectorAll('.slide.active details[data-detail]').forEach(detail => {
-    detail.open = Boolean(readerState.details[key + ':' + detail.dataset.detail]);
-  });
-  const activeElement = app.querySelector('.slide.active');
-  if (activeElement) {
-    const desiredY = Math.max(0, Number(readerState.positions[key]) || 0);
-    activeElement.scrollTop = desiredY;
-    window.requestAnimationFrame(() => {
-      if (screenKey() === key && activeElement.isConnected) activeElement.scrollTop = desiredY;
-    });
-  }
-
-  const selectedDate = app.querySelector('.date-item.active');
-  const dateList = app.querySelector('.date-list');
-  if (selectedDate && dateList) {
-    dateList.scrollLeft = Math.max(0, selectedDate.offsetLeft - dateList.offsetLeft -
-      (dateList.clientWidth - selectedDate.offsetWidth) / 2);
-  }
-  const rail = app.querySelector('#rail-segments');
-  const selected = rail?.querySelector('[aria-current="step"]');
-  if (selected && rail) {
-    rail.scrollTop = Math.max(0,
-      selected.offsetTop - rail.offsetTop - (rail.clientHeight - selected.offsetHeight) / 2);
-  }
+function closeTerm(){
+  document.querySelectorAll('.inline-note').forEach(n=>n.remove());
+  app.querySelectorAll('.margin-note').forEach(n=>{n.innerHTML='';n.hidden=true;});
+  termAnchor=null;
 }
-
-function closeTerm() {
-  document.querySelector('.inline-note')?.remove();
-  const margin = app.querySelector('#margin-note');
-  if (margin) {
-    margin.hidden = true;
-    margin.innerHTML = '';
-  }
-  termAnchor = null;
-}
-
-function showTerm(button) {
-  const slide = slides[current];
-  if (!slide?.story) return;
-  const term = (slide.story.terms || [])[Number(button.dataset.term)];
-  if (!term) return;
-  if (termAnchor === button) { closeTerm(); return; }
-  closeTerm();
-  termAnchor = button;
-
-  const message = '<button type="button" class="annotation-close" aria-label="Chiudi spiegazione">×</button>' +
-    '<div class="annotation-heading">' + escapeHtml(term.term) + '</div>' +
-    '<p>' + escapeHtml(term.definition) + '</p>' +
-    (term.example ? '<p class="annotation-example">' + escapeHtml(term.example) + '</p>' : '');
+function showTerm(button){
+  const section=button.closest('.reading-section');
+  const story=slides[Number(section?.dataset.index)]?.story;
+  const item=(story?.terms||[])[Number(button.dataset.term)];
+  if(!item)return;
+  if(termAnchor===button){closeTerm();return;}
+  closeTerm();termAnchor=button;
+  const html='<button type="button" class="annotation-close" aria-label="Chiudi spiegazione">×</button>'+
+    '<div class="annotation-heading">'+escapeHtml(item.term)+'</div>'+
+    '<p>'+escapeHtml(item.definition)+'</p>'+
+    (item.example?'<p class="annotation-example">'+escapeHtml(item.example)+'</p>':'');
   let note;
-  if (window.innerWidth >= 1190) {
-    note = app.querySelector('#margin-note');
-    if (!note) return;
-    note.hidden = false;
-    note.innerHTML = message;
-  } else {
-    note = document.createElement('aside');
-    note.className = 'inline-note';
-    note.innerHTML = message;
-    button.closest('p')?.insertAdjacentElement('afterend', note);
+  if(window.innerWidth>=1190){
+    note=section.querySelector('.margin-note');
+    if(!note)return;
+    note.hidden=false;note.innerHTML=html;
+  }else{
+    note=document.createElement('aside');
+    note.className='inline-note';
+    note.innerHTML=html;
+    button.closest('p')?.insertAdjacentElement('afterend',note);
   }
-  note.setAttribute('role', 'note');
-  note.setAttribute('aria-label', 'Spiegazione: ' + term.term);
-  note.querySelector('.annotation-close')?.addEventListener('click', () => {
-    closeTerm();
-    button.focus({ preventScroll: true });
+  note.setAttribute('role','note');
+  note.setAttribute('aria-label','Spiegazione: '+item.term);
+  note.querySelector('.annotation-close')?.addEventListener('click',()=>{
+    closeTerm();button.focus({preventScroll:true});
+  });
+  scheduleScroll();
+}
+function elements(){return scrollEl?[...scrollEl.querySelectorAll('.reading-section')]:[];}
+function viewIndex(blocks,top,viewport){
+  const probe=top+Math.min(110,viewport*.18);
+  let result=0;
+  for(let i=0;i<blocks.length;i++){
+    if(blocks[i].offsetTop<=probe+1)result=i;
+    else break;
+  }
+  return result;
+}
+function measure(block,top,viewport){
+  const height=Math.max(1,block.offsetHeight);
+  const untilDone=Math.max(1,height-Math.min(viewport*.55,height*.55));
+  return clamp((top-block.offsetTop)/untilDone);
+}
+function setRailIndex(index){
+  const rail=app.querySelector('#rail-segments');
+  rail?.querySelectorAll('.rail-segment').forEach((node,i)=>{
+    node.classList.toggle('active',i===index);
+    if(i===index)node.setAttribute('aria-current','step');
+    else node.removeAttribute('aria-current');
+  });
+  const count=app.querySelector('.rail-count');
+  if(count)count.innerHTML=pad(index+1)+'<span>/'+pad(slides.length)+'</span>';
+  const active=rail?.querySelector('.rail-segment.active');
+  if(active&&rail){
+    const centered=active.offsetTop-rail.offsetTop-(rail.clientHeight-active.offsetHeight)/2;
+    if(Math.abs(rail.scrollTop-centered)>active.offsetHeight*2)
+      rail.scrollTo({top:centered,behavior:reducedMotion.matches?'instant':'smooth'});
+  }
+}
+function updateScroll(){
+  if(initializing||!scrollEl||!edition)return;
+  const blocks=elements();if(!blocks.length)return;
+  const top=scrollEl.scrollTop,viewport=scrollEl.clientHeight;
+  const index=viewIndex(blocks,top,viewport);
+  if(index!==current){
+    current=index;
+    setRailIndex(index);
+    history.replaceState({},'',currentUrl());
+    rememberPosition();
+    if(window.innerWidth<1190)closeTerm();
+  }
+  const fraction=measure(blocks[index],top,viewport),key=screenKey(index);
+  if(!jumpInProgress){
+    readerState.progress[key]=Math.max(Number(readerState.progress[key])||0,fraction);
+    // A skipped article is never automatically marked read by a direct jump.
+    if(index>0){
+      const previous=blocks[index-1];
+      if(top-previous.offsetTop<viewport*2.2&&
+         top+1>=previous.offsetTop+previous.offsetHeight){
+        readerState.progress[screenKey(index-1)]=1;
+      }
+    }
+  }
+  app.querySelectorAll('.rail-segment').forEach((node,i)=>{
+    const maxRead=clamp(Number(readerState.progress[screenKey(i)])||0);
+    node.classList.toggle('visited',maxRead>.01);
+    node.classList.toggle('completed',maxRead>=.985);
+    node.style.setProperty('--fill',Math.round((i===index?fraction:maxRead)*100)+'%');
+  });
+  readerState.positions[flowKey()]=top;
+  readerState.positions[key]=Math.max(0,top-blocks[index].offsetTop);
+  queueReaderSave();
+}
+function scheduleScroll(){
+  if(scrollTick||initializing)return;
+  scrollTick=requestAnimationFrame(()=>{scrollTick=0;updateScroll();});
+}
+function saveCurrent(){
+  if(!scrollEl||!edition)return;
+  const block=elements()[current];
+  readerState.positions[flowKey()]=scrollEl.scrollTop;
+  if(block)readerState.positions[screenKey()]=Math.max(0,scrollEl.scrollTop-block.offsetTop);
+  saveReaderState();rememberPosition();
+}
+function restoreDetails(){
+  app.querySelectorAll('.reading-section').forEach(section=>{
+    const index=Number(section.dataset.index);
+    section.querySelectorAll('details[data-detail]').forEach(detail=>{
+      detail.open=Boolean(readerState.details[screenKey(index)+':'+detail.dataset.detail]);
+    });
   });
 }
-
-function updateScreen(index, addHistory = false) {
-  const next = Math.max(0, Math.min(index, slides.length - 1));
-  if (next === current) return;
-  const previous = slides[current];
-  rememberScroll(previous?.kind === 'category' || previous?.kind === 'end');
-  saveReaderState();
+function render(landing={index:current,mode:'start'}){
+  if(!edition)return;
+  cancelAnimationFrame(scrollTick);scrollTick=0;initializing=true;
   closeTerm();
-  current = next;
-  const method = addHistory ? 'pushState' : 'replaceState';
-  history[method]({}, '', currentUrl());
-  rememberPosition();
-  render();
-}
-
-function move(delta) { updateScreen(current + delta); }
-
-function changeEdition(date) {
-  const next = editions.find(item => item.date === date);
-  if (!next || next.date === edition.date) return;
-  rememberScroll(slides[current]?.kind === 'category');
-  saveReaderState();
-  closeTerm();
-  edition = next;
-  slides = buildSlides(edition);
-  current = 0;
-  history.pushState({}, '', currentUrl());
-  rememberPosition();
-  render();
-}
-
-app.addEventListener('click', event => {
-  const related = event.target.closest('.related-list a');
-  if (related) {
-    rememberScroll();
-    saveReaderState();
-    try {
-      sessionStorage.setItem('fdf-reading-return', JSON.stringify({
-        origin: currentUrl(),
-        destination: related.getAttribute('href')
-      }));
-    } catch (_) { /* Browser history remains available. */ }
-    return;
+  app.innerHTML='<header class="site-header"><a class="brand" href="./" aria-label="FUORI DAL FEED, ultima edizione">'+
+    'FUORI DAL <span>FEED.</span></a>'+renderDates()+'</header>'+
+    '<div class="reading-layout">'+renderSideTimeline()+
+    '<main class="reading-main"><div class="reading-scroll" id="reading-scroll" tabindex="0" aria-label="Edizione del '+
+    escapeHtml(longDate(edition.date))+'">'+slides.map(renderSlide).join('')+
+    '</div></main></div>';
+  scrollEl=app.querySelector('#reading-scroll');
+  restoreDetails();
+  scrollEl.addEventListener('scroll',scheduleScroll,{passive:true});
+  scrollEl.addEventListener('wheel',handleWheel,{passive:false});
+  const dateList=app.querySelector('.date-list');
+  const dateActive=dateList?.querySelector('.date-item.active');
+  if(dateList&&dateActive){
+    dateList.scrollLeft=Math.max(0,dateActive.offsetLeft-dateList.offsetLeft-
+      (dateList.clientWidth-dateActive.offsetWidth)/2);
   }
-  const dateButton = event.target.closest('button[data-date]');
-  if (dateButton) return changeEdition(dateButton.dataset.date);
-
-  const screenButton = event.target.closest('button[data-screen]');
-  if (screenButton) return updateScreen(Number(screenButton.dataset.screen));
-
-  if (event.target.closest('[data-prev]')) return move(-1);
-  if (event.target.closest('[data-next]')) return move(1);
-
-  const term = event.target.closest('button[data-term]');
-  if (term) return showTerm(term);
-
-  if (event.target.closest('.category-hint')) move(1);
-});
-
-document.addEventListener('pointerdown', event => {
-  if (!event.target.closest('.inline-note, .margin-note, .term')) closeTerm();
-});
-
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') return closeTerm();
-  if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-  if (event.target.closest('button, a, input, textarea, select, summary, [contenteditable="true"]')) return;
-  if (event.key === 'ArrowRight') move(1);
-  if (event.key === 'ArrowLeft') move(-1);
-});
-
-document.addEventListener('wheel', event => {
-  if (!event.target.closest('.reading-main') ||
-      event.target.closest('.term-popover') ||
-      Math.abs(event.deltaX) < 28 ||
-      Math.abs(event.deltaX) <= Math.abs(event.deltaY) * 1.5) return;
-  const now = performance.now();
-  if (now - wheelLastAt < 650) return;
-  wheelLastAt = now;
-  move(event.deltaX > 0 ? 1 : -1);
-}, { passive: true });
-
-app.addEventListener('touchstart', event => {
-  if (!event.target.closest('.reading-main') ||
-      event.target.closest('a, button, summary, details')) return;
-  const touch = event.changedTouches[0];
-  if (touch.clientX < 26 || touch.clientX > window.innerWidth - 26) return;
-  gesture = { x: touch.clientX, y: touch.clientY };
-}, { passive: true });
-
-app.addEventListener('touchend', event => {
-  if (!gesture) return;
-  const touch = event.changedTouches[0];
-  const dx = touch.clientX - gesture.x;
-  const dy = touch.clientY - gesture.y;
-  gesture = null;
-  if (Math.abs(dx) > 90 && Math.abs(dx) > Math.abs(dy) * 1.6 &&
-      !window.getSelection()?.toString()) move(dx < 0 ? 1 : -1);
-}, { passive: true });
-
-app.addEventListener('touchcancel', () => { gesture = null; }, { passive: true });
-
-app.addEventListener('scroll', event => {
-  if (event.target.classList?.contains('slide') && event.target.classList.contains('active')) {
-    rememberScroll();
-    if (window.innerWidth < 1190) closeTerm();
+  boundaryBrake=null;passedGate=-1;jumpInProgress=false;
+  requestAnimationFrame(()=>{
+    const wanted=scrollEl.querySelector('#screen-'+landing.index);
+    if(!wanted)return;
+    const stored=Number(readerState.positions[screenKey(landing.index)])||0;
+    const resume=landing.mode==='resume'||landing.mode==='return';
+    const flow=Number(readerState.positions[flowKey()]);
+    const useFlow=landing.mode==='resume'&&Number.isFinite(flow);
+    scrollEl.scrollTop=useFlow?flow:wanted.offsetTop+(resume?Math.max(0,stored):0);
+    current=landing.index;setRailIndex(current);
+    requestAnimationFrame(()=>{initializing=false;updateScroll();});
+  });
+}
+function navigateTo(index,smooth=true){
+  const target=scrollEl?.querySelector('#screen-'+index);
+  if(!target)return;
+  closeTerm();boundaryBrake=null;passedGate=-1;jumpInProgress=true;
+  const isSmooth=smooth&&!reducedMotion.matches;
+  scrollEl.scrollTo({top:target.offsetTop,behavior:isSmooth?'smooth':'instant'});
+  if(isSmooth){
+    let settled=false;
+    const done=()=>{
+      if(settled)return;settled=true;
+      scrollEl.removeEventListener('scrollend',done);
+      jumpInProgress=false;scheduleScroll();
+    };
+    scrollEl.addEventListener('scrollend',done,{once:true});
+    setTimeout(done,1050);
+  }else{jumpInProgress=false;scheduleScroll();}
+}
+function changeEdition(date){
+  const next=editions.find(item=>item.date===date);
+  if(!next||next.date===edition.date)return;
+  saveCurrent();edition=next;slides=buildSlides(next);current=0;
+  history.pushState({},'',currentUrl());
+  render({index:0,mode:'start'});
+}
+/* Only near boundaries, only for mouse / trackpad wheel: gentle 340ms maximum
+   catch. Touch and keyboard retain browser-native scrolling. */
+function handleWheel(e){
+  if(reducedMotion.matches||!scrollEl||e.defaultPrevented||e.ctrlKey||e.metaKey)return;
+  if(e.target.closest('a,button,summary,.inline-note,.margin-note'))return;
+  if(Math.abs(e.deltaY)<3||Math.abs(e.deltaY)<Math.abs(e.deltaX)*1.4)return;
+  const delta=e.deltaY*(e.deltaMode===1?18:e.deltaMode===2?scrollEl.clientHeight:1);
+  const direction=Math.sign(delta),now=performance.now(),top=scrollEl.scrollTop;
+  if(boundaryBrake){
+    if(direction===boundaryBrake.direction&&
+      (now-boundaryBrake.last>170||now-boundaryBrake.start>340)){
+      passedGate=boundaryBrake.index;boundaryBrake=null;
+    }else if(direction===boundaryBrake.direction){
+      e.preventDefault();boundaryBrake.last=now;return;
+    }else boundaryBrake=null;
   }
-}, true);
-app.addEventListener('toggle', event => {
-  const detail = event.target;
-  if (!detail.matches?.('.slide.active details[data-detail]')) return;
-  readerState.details[screenKey() + ':' + detail.dataset.detail] = detail.open;
-  queueReaderSave();
-}, true);
-window.addEventListener('pagehide', () => {
-  rememberScroll();
-  saveReaderState();
+  if(Math.abs(delta)<12)return;
+  const gates=scrollEl.querySelectorAll('.editorial-gate');
+  for(let i=0;i<gates.length;i++){
+    const gate=gates[i];
+    const stop=clamp(gate.offsetTop+gate.offsetHeight*.5-scrollEl.clientHeight*.53,
+      0,Math.max(0,scrollEl.scrollHeight-scrollEl.clientHeight));
+    if(passedGate===i){
+      if(Math.abs(top-stop)>85)passedGate=-1;
+      else continue;
+    }
+    const crosses=direction>0?
+      top<stop+8&&top+delta>=stop-14:
+      top>stop-8&&top+delta<=stop+14;
+    if(!crosses)continue;
+    e.preventDefault();
+    scrollEl.scrollTop=stop;
+    boundaryBrake={index:i,direction,start:now,last:now};
+    gate.classList.add('gate-engaged');
+    setTimeout(()=>gate.classList.remove('gate-engaged'),420);
+    scheduleScroll();return;
+  }
+}
+app.addEventListener('click',event=>{
+  const date=event.target.closest('button[data-date]');
+  if(date)return changeEdition(date.dataset.date);
+  const jump=event.target.closest('button[data-screen]');
+  if(jump)return navigateTo(Number(jump.dataset.screen));
+  const term=event.target.closest('button[data-term]');
+  if(term)return showTerm(term);
+  const related=event.target.closest('.related-list a');
+  if(related){
+    saveCurrent();
+    try{sessionStorage.setItem('fdf-reading-return',JSON.stringify({
+      origin:currentUrl(),destination:related.getAttribute('href')
+    }));}catch(_){}
+  }
 });
-
-window.addEventListener('resize', closeTerm);
-window.addEventListener('popstate', () => {
-  closeTerm();
+document.addEventListener('pointerdown',event=>{
+  if(!event.target.closest('.inline-note,.margin-note,.term'))closeTerm();
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){closeTerm();return;}
+  if(event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
+  if(event.ctrlKey&&event.key==='Home'){event.preventDefault();navigateTo(0,false);}
+  if(event.ctrlKey&&event.key==='End'){event.preventDefault();navigateTo(slides.length-1,false);}
+});
+app.addEventListener('toggle',event=>{
+  const detail=event.target;
+  if(!detail.matches?.('.reading-section details[data-detail]'))return;
+  const index=Number(detail.closest('.reading-section').dataset.index);
+  readerState.details[screenKey(index)+':'+detail.dataset.detail]=detail.open;
+  queueReaderSave();requestAnimationFrame(scheduleScroll);
+},true);
+window.addEventListener('resize',()=>{closeTerm();boundaryBrake=null;passedGate=-1;scheduleScroll();});
+window.addEventListener('pagehide',saveCurrent);
+window.addEventListener('popstate',()=>{
+  if(!editions.length)return;
+  saveCurrent();
   restoreFromUrl();
-  render();
+  const from=(()=>{try{return JSON.parse(sessionStorage.getItem('fdf-reading-return'))}catch(_){return null}})();
+  render({index:current,mode:from?.origin===location.search?'return':'start'});
 });
-
-fetch('./data/editions.json', { cache: 'no-store' })
-  .then(response => {
-    if (!response.ok) throw new Error('Edizioni non disponibili');
-    return response.json();
-  })
-  .then(data => {
-    if (!Array.isArray(data) || !data.length) throw new Error('Archivio vuoto');
-    editions = data.filter(item => item.date && Array.isArray(item.sections))
-      .sort((a, b) => b.date.localeCompare(a.date));
-    if (!editions.length) throw new Error('Nessuna edizione valida');
+fetch('./data/editions.json',{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw Error('Edizioni non disponibili');return r.json();})
+  .then(data=>{
+    if(!Array.isArray(data)||!data.length)throw Error('Archivio vuoto');
+    editions=data.filter(x=>x.date&&Array.isArray(x.sections))
+      .sort((a,b)=>b.date.localeCompare(a.date));
+    if(!editions.length)throw Error('Nessuna edizione valida');
+    const params=new URLSearchParams(location.search);
+    const landingMode=!params.get('date')&&!params.get('story')&&!params.get('section')&&!params.get('end')
+      ?'resume':'start';
     restoreFromUrl(true);
-    render();
+    const savedReturn=(()=>{try{return JSON.parse(sessionStorage.getItem('fdf-reading-return'))}catch(_){return null}})();
+    render({index:current,mode:savedReturn?.origin===location.search?'return':landingMode});
   })
-  .catch(error => {
-    app.innerHTML = '<div class="load-error"><h1>Non riusciamo a caricare l’edizione.</h1>' +
-      '<p>' + escapeHtml(error.message) + '</p><button type="button" onclick="location.reload()">Riprova</button></div>';
+  .catch(e=>{
+    app.innerHTML='<div class="load-error"><h1>Non riusciamo a caricare l’edizione.</h1><p>'+
+      escapeHtml(e.message)+'</p><button type="button" onclick="location.reload()">Riprova</button></div>';
   });
