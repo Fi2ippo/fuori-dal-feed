@@ -12,6 +12,53 @@ let current = 0;
 let wheelLastAt = 0;
 let gesture = null;
 let termAnchor = null;
+let readerState = { positions: {}, progress: {}, details: {} };
+let saveTimer = null;
+
+try {
+  const stored = JSON.parse(localStorage.getItem('fdf-reader-v1'));
+  if (stored && typeof stored === 'object') {
+    readerState = {
+      positions: stored.positions && typeof stored.positions === 'object' ? stored.positions : {},
+      progress: stored.progress && typeof stored.progress === 'object' ? stored.progress : {},
+      details: stored.details && typeof stored.details === 'object' ? stored.details : {}
+    };
+  }
+} catch (_) { /* Storage is optional. */ }
+
+function screenKey(index = current) {
+  if (!edition || !slides[index]) return '';
+  const slide = slides[index];
+  const id = slide.kind === 'story' ? slide.story.id :
+    slide.kind === 'category' ? slide.section.id : 'finish';
+  return edition.date + '|' + slide.kind + '|' + id;
+}
+function saveReaderState() {
+  if (saveTimer) clearTimeout(saveTimer);
+  try { localStorage.setItem('fdf-reader-v1', JSON.stringify(readerState)); }
+  catch (_) { /* Reading must work without local storage. */ }
+}
+function queueReaderSave() {
+  if (saveTimer) clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => { saveTimer = null; saveReaderState(); }, 200);
+}
+function rememberScroll(completed = false) {
+  const element = app.querySelector('.slide.active');
+  if (!element) return;
+  const key = screenKey();
+  const maximum = Math.max(0, element.scrollHeight - element.clientHeight);
+  const progress = completed ? 1 : (maximum < 4 ? (slides[current]?.kind === 'story' ? 1 : 0) :
+    Math.min(1, Math.max(0, element.scrollTop / maximum)));
+  readerState.positions[key] = element.scrollTop;
+  readerState.progress[key] = Math.max(readerState.progress[key] || 0, progress);
+  const segment = app.querySelector('.rail-segment.active');
+  if (segment) {
+    segment.style.setProperty('--fill', Math.round(progress * 100) + '%');
+    if (readerState.progress[key] >= .985) segment.classList.add('completed');
+  }
+  queueReaderSave();
+}
+
 
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -102,11 +149,14 @@ function renderSideTimeline() {
   return '<aside class="reading-rail" aria-label="Progresso della lettura">' +
     '<nav class="rail-segments" id="rail-segments" aria-label="Vai a una schermata dell’edizione">' +
     slides.map((slide, index) => {
-      const state = index < current ? ' completed' : index === current ? ' active' : ' future';
+      const fraction = Math.max(0, Math.min(1, readerState.progress[screenKey(index)] || 0));
+      const status = (fraction >= .985 ? ' completed' : ' future') +
+        (index === current ? ' active' : '');
       const label = (index + 1) + ' di ' + total + ' — ' +
         (slide.section ? slide.section.name + ' — ' : '') + sceneLabel(slide);
-      return '<button type="button" class="rail-segment' + state +
-        '" data-screen="' + index + '" aria-label="' + escapeHtml(label) + '"' +
+      return '<button type="button" class="rail-segment' + status +
+        '" data-screen="' + index + '" style="--fill:' + Math.round(fraction * 100) +
+        '%" aria-label="' + escapeHtml(label) + '"' +
         (index === current ? ' aria-current="step"' : '') +
         ' title="' + escapeHtml(label) + '"><span class="rail-line" aria-hidden="true"></span></button>';
     }).join('') +
@@ -133,7 +183,11 @@ function richText(value, terms) {
 
 function renderArticle(slide) {
   const story = slide.story;
-  const head = '<div class="article-meta"><span>' + escapeHtml(slide.section.name) +
+  const validKinds = ['NOTIZIA', 'ANALISI', 'CONTESTO', 'RICERCA', 'CULTURA'];
+  const kind = validKinds.includes(story.type) ? story.type : 'NOTIZIA';
+  const head = '<div class="article-meta"><span><strong class="article-kind">' +
+    escapeHtml(kind) + '</strong><span class="meta-separator"> / </span>' +
+    escapeHtml(slide.section.name) +
     ' <span aria-hidden="true">·</span> ' + escapeHtml(longDate(edition.date)) +
     '</span><span>' + (Number(story.minutes) || 0) + ' MIN DI LETTURA' +
     (edition.demo ? ' <span class="demo-flag">· EDIZIONE DIMOSTRATIVA</span>' : '') +
@@ -143,7 +197,7 @@ function renderArticle(slide) {
     .map(paragraph => '<p>' + richText(paragraph, story.terms) + '</p>').join('');
 
   const deepDive = story.deepDive ?
-    '<details class="article-details"><summary><span>PER CAPIRE DAVVERO</span><span class="details-icon" aria-hidden="true"></span></summary>' +
+    '<details class="article-details" data-detail="deepDive"><summary><span>PER CAPIRE DAVVERO</span><span class="details-icon" aria-hidden="true"></span></summary>' +
     '<div class="details-body"><p>' + escapeHtml(story.deepDive) + '</p></div></details>' : '';
 
   const related = (story.related || []).filter(item =>
@@ -151,8 +205,10 @@ function renderArticle(slide) {
       (s.stories || []).some(a => a.id === item.storyId)
     ))
   );
+  const relatedHeading = related.some(item => item.date < edition.date) ?
+    'LA STORIA FIN QUI' : 'PER COLLEGARE I FATTI';
   const relatedHtml = related.length ?
-    '<details class="article-details"><summary><span>LA STORIA FIN QUI</span><span class="details-icon" aria-hidden="true"></span></summary>' +
+    '<details class="article-details" data-detail="related"><summary><span>' + relatedHeading + '</span><span class="details-icon" aria-hidden="true"></span></summary>' +
     '<div class="details-body related-list">' +
     related.map(item => '<a href="' + escapeHtml(storyUrl(item.date, item.storyId)) +
       '">' + escapeHtml(longDate(item.date)) + ' <span aria-hidden="true">→</span><strong>' +
@@ -164,7 +220,7 @@ function renderArticle(slide) {
     catch (_) { return false; }
   });
   const sourceHtml = sources.length ?
-    '<details class="article-details"><summary><span>FONTI E DOCUMENTI</span><span class="details-icon" aria-hidden="true"></span></summary>' +
+    '<details class="article-details" data-detail="sources"><summary><span>FONTI E DOCUMENTI</span><span class="details-icon" aria-hidden="true"></span></summary>' +
     '<div class="details-body sources-list">' +
     sources.map(source => '<a target="_blank" rel="noopener noreferrer" href="' + escapeHtml(source.url) +
       '">' + escapeHtml(source.title || source.url) + ' <span aria-hidden="true">↗</span></a>').join('') +
@@ -173,7 +229,8 @@ function renderArticle(slide) {
   return '<article class="article" id="' + escapeHtml(story.id) +
     '">' + head + '<h1>' + escapeHtml(story.title) +
     '</h1><p class="article-dek">' + escapeHtml(story.dek || '') +
-    '</p><div class="article-body">' + paragraphs + '</div>' +
+    '</p><div class="article-reading"><div class="article-body">' + paragraphs +
+    '</div><aside class="margin-note" id="margin-note" aria-live="polite" hidden></aside></div>' +
     '<div class="article-extras">' + deepDive + relatedHtml + sourceHtml +
     '</div><div class="article-ending" aria-hidden="true"></div></article>';
 }
@@ -189,7 +246,9 @@ function renderSlide(slide, index) {
       '<p class="category-hint">Continua <span aria-hidden="true">→</span></p></div>';
   } else if (slide.kind === 'end') {
     content = '<div class="ending"><div class="eyebrow">FINE DELL’EDIZIONE</div>' +
-      '<h1>Per oggi, ci siamo.</h1><p>A domani.</p></div>';
+      '<h1>Per oggi, sei aggiornato.</h1><div class="category-rule" aria-hidden="true"></div>' +
+      '<p class="ending-subtitle">La lettura di oggi finisce qui.</p>' +
+      '<p class="ending-date">' + escapeHtml(longDate(edition.date)) + '</p></div>';
   } else {
     content = renderArticle(slide);
   }
@@ -211,6 +270,19 @@ function render() {
     '<button type="button" data-next aria-label="Schermata successiva" ' +
     (current === slides.length - 1 ? 'disabled ' : '') + '>→</button></div></main></div>';
 
+  const key = screenKey();
+  app.querySelectorAll('.slide.active details[data-detail]').forEach(detail => {
+    detail.open = Boolean(readerState.details[key + ':' + detail.dataset.detail]);
+  });
+  const activeElement = app.querySelector('.slide.active');
+  if (activeElement) {
+    const desiredY = Math.max(0, Number(readerState.positions[key]) || 0);
+    activeElement.scrollTop = desiredY;
+    window.requestAnimationFrame(() => {
+      if (screenKey() === key && activeElement.isConnected) activeElement.scrollTop = desiredY;
+    });
+  }
+
   const selectedDate = app.querySelector('.date-item.active');
   const dateList = app.querySelector('.date-list');
   if (selectedDate && dateList) {
@@ -226,42 +298,54 @@ function render() {
 }
 
 function closeTerm() {
-  document.querySelector('.term-popover')?.remove();
+  document.querySelector('.inline-note')?.remove();
+  const margin = app.querySelector('#margin-note');
+  if (margin) {
+    margin.hidden = true;
+    margin.innerHTML = '';
+  }
   termAnchor = null;
 }
 
 function showTerm(button) {
-  const selected = slides[current];
-  if (!selected?.story) return;
-  const item = (selected.story.terms || [])[Number(button.dataset.term)];
-  if (!item) return;
+  const slide = slides[current];
+  if (!slide?.story) return;
+  const term = (slide.story.terms || [])[Number(button.dataset.term)];
+  if (!term) return;
   if (termAnchor === button) { closeTerm(); return; }
   closeTerm();
   termAnchor = button;
 
-  const popover = document.createElement('div');
-  popover.className = 'term-popover';
-  popover.setAttribute('role', 'dialog');
-  popover.setAttribute('aria-label', 'Spiegazione: ' + item.term);
-  popover.innerHTML = '<button type="button" class="term-close" aria-label="Chiudi spiegazione">×</button>' +
-    '<div class="term-heading">' + escapeHtml(item.term) + '</div>' +
-    '<p>' + escapeHtml(item.definition) + '</p>';
-  document.body.append(popover);
-  const target = button.getBoundingClientRect();
-  const width = Math.min(340, window.innerWidth - 32);
-  popover.style.width = width + 'px';
-  popover.style.left = Math.max(16, Math.min(target.left, window.innerWidth - width - 16)) + 'px';
-  const availableBelow = window.innerHeight - target.bottom - 16;
-  let top = availableBelow >= popover.offsetHeight ?
-    target.bottom + 10 : target.top - popover.offsetHeight - 10;
-  popover.style.top = Math.max(10, Math.min(top, window.innerHeight - popover.offsetHeight - 10)) + 'px';
-  popover.querySelector('.term-close').addEventListener('click', closeTerm);
-  popover.querySelector('.term-close').focus({ preventScroll: true });
+  const message = '<button type="button" class="annotation-close" aria-label="Chiudi spiegazione">×</button>' +
+    '<div class="annotation-heading">' + escapeHtml(term.term) + '</div>' +
+    '<p>' + escapeHtml(term.definition) + '</p>' +
+    (term.example ? '<p class="annotation-example">' + escapeHtml(term.example) + '</p>' : '');
+  let note;
+  if (window.innerWidth >= 1190) {
+    note = app.querySelector('#margin-note');
+    if (!note) return;
+    note.hidden = false;
+    note.innerHTML = message;
+  } else {
+    note = document.createElement('aside');
+    note.className = 'inline-note';
+    note.innerHTML = message;
+    button.closest('p')?.insertAdjacentElement('afterend', note);
+  }
+  note.setAttribute('role', 'note');
+  note.setAttribute('aria-label', 'Spiegazione: ' + term.term);
+  note.querySelector('.annotation-close')?.addEventListener('click', () => {
+    closeTerm();
+    button.focus({ preventScroll: true });
+  });
 }
 
 function updateScreen(index, addHistory = false) {
   const next = Math.max(0, Math.min(index, slides.length - 1));
   if (next === current) return;
+  const previous = slides[current];
+  rememberScroll(previous?.kind === 'category' || previous?.kind === 'end');
+  saveReaderState();
   closeTerm();
   current = next;
   const method = addHistory ? 'pushState' : 'replaceState';
@@ -275,6 +359,8 @@ function move(delta) { updateScreen(current + delta); }
 function changeEdition(date) {
   const next = editions.find(item => item.date === date);
   if (!next || next.date === edition.date) return;
+  rememberScroll(slides[current]?.kind === 'category');
+  saveReaderState();
   closeTerm();
   edition = next;
   slides = buildSlides(edition);
@@ -301,7 +387,7 @@ app.addEventListener('click', event => {
 });
 
 document.addEventListener('pointerdown', event => {
-  if (!event.target.closest('.term-popover, .term')) closeTerm();
+  if (!event.target.closest('.inline-note, .margin-note, .term')) closeTerm();
 });
 
 document.addEventListener('keydown', event => {
@@ -344,8 +430,21 @@ app.addEventListener('touchend', event => {
 app.addEventListener('touchcancel', () => { gesture = null; }, { passive: true });
 
 app.addEventListener('scroll', event => {
-  if (event.target.classList?.contains('slide')) closeTerm();
+  if (event.target.classList?.contains('slide') && event.target.classList.contains('active')) {
+    rememberScroll();
+    if (window.innerWidth < 1190) closeTerm();
+  }
 }, true);
+app.addEventListener('toggle', event => {
+  const detail = event.target;
+  if (!detail.matches?.('.slide.active details[data-detail]')) return;
+  readerState.details[screenKey() + ':' + detail.dataset.detail] = detail.open;
+  queueReaderSave();
+}, true);
+window.addEventListener('pagehide', () => {
+  rememberScroll();
+  saveReaderState();
+});
 
 window.addEventListener('resize', closeTerm);
 window.addEventListener('popstate', () => {
