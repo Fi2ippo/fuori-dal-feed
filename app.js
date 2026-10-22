@@ -1,1 +1,401 @@
-const app=document.querySelector('#app');let editions=[],edition=null,slides=[],current=0,openTerm=null;const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric'});const slug=(date,id)=>'./?date='+encodeURIComponent(date)+'&story='+encodeURIComponent(id);function buildSlides(){slides=[];for(const section of edition.sections){slides.push({kind:'category',section});for(const story of section.stories)slides.push({kind:'story',section,story})}slides.push({kind:'end'})}function highlight(text,terms){let html=esc(text);for(const item of terms||[]){const escaped=esc(item.term);html=html.replace(new RegExp('\\b('+escaped+')\\b','gi'),m=>'<button class="term" data-term="'+esc(item.term)+'">'+m+'</button>')}return html}function render(){const params=new URLSearchParams(location.search);const requested=params.get('date');edition=editions.find(e=>e.date===requested)||editions[0];buildSlides();const story=params.get('story');if(story){const i=slides.findIndex(s=>s.story?.id===story);if(i>=0)current=i}current=Math.min(current,slides.length-1);app.innerHTML='<header><div class="brand">FUORI DAL <span>FEED.</span></div><div class="datebar"><button id="date-trigger" class="date-trigger" aria-haspopup="dialog" aria-expanded="false"><span class="date-day">'+new Date(edition.date+'T12:00:00').toLocaleDateString('it-IT',{day:'2-digit'})+'</span><span class="date-label"><span class="date-weekday">'+new Date(edition.date+'T12:00:00').toLocaleDateString('it-IT',{weekday:'long'})+'</span><span class="date-month">'+new Date(edition.date+'T12:00:00').toLocaleDateString('it-IT',{month:'long',year:'numeric'})+'</span></span><span class="date-chevron">⌄</span></button><div id="calendar-popover" class="calendar-popover" hidden></div></div></header><div class="layout"><aside><div class="track"><div class="progress" style="height:'+((current)/(slides.length-1)*100)+'%"></div><div class="milestones">'+edition.sections.map((s,i)=>'<button class="step '+(slides[current]?.section?.id===s.id?'active':'')+'" data-section="'+esc(s.id)+'" title="'+esc(s.name)+'" aria-label="Vai a '+esc(s.name)+'"><span class="dot"></span><span class="tooltip">'+esc(s.name)+'</span></button>').join('')+'</div></div><div class="count">'+String(current+1).padStart(2,'0')+' <span>/ '+String(slides.length).padStart(2,'0')+'</span></div></aside><main>'+slides.map((slide,i)=>'<section class="slide '+(i===current?'active':'')+'" data-index="'+i+'">'+(slide.kind==='category'?'<div class="category"><div class="eyebrow">'+String(edition.sections.indexOf(slide.section)+1).padStart(2,'0')+' / '+String(edition.sections.length).padStart(2,'0')+'</div><h1>'+esc(slide.section.name)+'</h1><div class="rule"></div><div class="hint">Continua →</div></div>':slide.kind==='end'?'<div class="end"><div class="eyebrow">FINE DELL’EDIZIONE</div><h1>Per oggi, ci siamo.</h1><p>A domani.</p></div>':'<article class="article" id="'+esc(slide.story.id)+'"><div class="meta"><span>'+esc(slide.section.name)+' · '+esc(fmt(edition.date))+'</span><span>'+esc(slide.story.minutes)+' MIN · '+(edition.demo?'<span class="demo">DEMO — NON NOTIZIE REALI</span>':'FUORI DAL FEED')+'</span></div><h1>'+esc(slide.story.title)+'</h1><div class="dek">'+esc(slide.story.dek)+'</div>'+slide.story.paragraphs.map(p=>'<p>'+highlight(p,slide.story.terms)+'</p>').join('')+'<div id="term-panel"></div><details class="details"><summary>PER CAPIRE DAVVERO ↗</summary><p>'+esc(slide.story.deepDive)+'</p></details>'+(slide.story.related?.length?'<details class="details related"><summary>LA STORIA FIN QUI ↗</summary>'+slide.story.related.map(r=>'<a href="'+slug(r.date,r.storyId)+'">'+esc(fmt(r.date))+' — '+esc(r.label)+' ↗</a>').join('')+'</details>':'')+(slide.story.sources?.length?'<details class="details"><summary>FONTI E DOCUMENTI ↗</summary>'+slide.story.sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title)+'</a>').join('<br>')+'</details>':'')+'</article>')+'</section>').join('')+'<div class="nav"><button id="prev" aria-label="Schermata precedente" '+(current===0?'disabled':'')+'>←</button><button id="next" aria-label="Schermata successiva" '+(current===slides.length-1?'disabled':'')+'>→</button></div></main></div>';document.querySelector('#date-trigger').onclick=toggleCalendar;document.querySelector('#prev').onclick=()=>move(-1);document.querySelector('#next').onclick=()=>move(1);document.querySelectorAll('[data-section]').forEach(b=>b.onclick=()=>{current=slides.findIndex(s=>s.section?.id===b.dataset.section&&s.kind==='category');sync()});document.querySelectorAll('[data-term]').forEach(b=>b.onclick=()=>{const t=slides[current].story.terms.find(x=>x.term===b.dataset.term);showTerm(b,t)});}function changeEdition(date){if(!editions.some(e=>e.date===date))return;current=0;history.pushState({},'',slug(date,''));render()}function toggleCalendar(){const pop=document.querySelector('#calendar-popover'),trigger=document.querySelector('#date-trigger');if(!pop)return;if(!pop.hidden){pop.hidden=true;trigger.setAttribute('aria-expanded','false');return}const [year,month]=edition.date.split('-').map(Number),first=new Date(year,month-1,1),offset=(first.getDay()+6)%7,days=new Date(year,month,0).getDate(),available=new Set(editions.map(e=>e.date));let cells='';for(let i=0;i<offset;i++)cells+='<span class="calendar-blank"></span>';for(let day=1;day<=days;day++){const date=year+'-'+String(month).padStart(2,'0')+'-'+String(day).padStart(2,'0');cells+='<button class="calendar-day '+(date===edition.date?'selected':'')+'" data-date="'+date+'" '+(!available.has(date)?'disabled title="Nessuna edizione disponibile"':'')+'>'+day+'</button>'}pop.innerHTML='<div class="calendar-top"><span>ARCHIVIO DELLE EDIZIONI</span><button id="calendar-close" aria-label="Chiudi calendario">×</button></div><div class="calendar-month">'+first.toLocaleDateString('it-IT',{month:'long',year:'numeric'})+'</div><div class="calendar-grid">'+['L','M','M','G','V','S','D'].map(d=>'<span class="calendar-weekday">'+d+'</span>').join('')+cells+'</div><div class="calendar-foot">Sono selezionabili solo i giorni pubblicati.</div>';pop.hidden=false;trigger.setAttribute('aria-expanded','true');pop.querySelector('#calendar-close').onclick=()=>toggleCalendar();pop.querySelectorAll('[data-date]:not(:disabled)').forEach(b=>b.onclick=()=>changeEdition(b.dataset.date))}function showTerm(button,term){document.querySelector('.term-popover')?.remove();if(!term)return;const pop=document.createElement('div');pop.className='term-popover';pop.setAttribute('role','dialog');pop.setAttribute('aria-label','Spiegazione: '+term.term);pop.innerHTML='<button class="term-close" aria-label="Chiudi spiegazione">×</button><div class="term-title">'+esc(term.term)+'</div><p>'+esc(term.definition)+'</p>';document.body.appendChild(pop);const rect=button.getBoundingClientRect(),w=Math.min(340,innerWidth-32),left=Math.max(16,Math.min(rect.left,innerWidth-w-16));pop.style.width=w+'px';pop.style.left=left+'px';pop.style.top=Math.min(rect.bottom+12,innerHeight-pop.offsetHeight-16)+'px';pop.querySelector('.term-close').onclick=()=>pop.remove()}document.addEventListener('pointerdown',e=>{if(!e.target.closest('.datebar')){const p=document.querySelector('#calendar-popover');if(p&&!p.hidden){p.hidden=true;document.querySelector('#date-trigger')?.setAttribute('aria-expanded','false')}}if(!e.target.closest('.term-popover,.term'))document.querySelector('.term-popover')?.remove()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('.term-popover')?.remove();const p=document.querySelector('#calendar-popover');if(p)p.hidden=true}});function sync(){document.querySelector('.term-popover')?.remove();openTerm=null;const s=slides[current];const id=s.story?.id||'';history.replaceState({},'',slug(edition.date,id));render();document.querySelector('.slide.active')?.scrollTo(0,0);localStorage.setItem('fdf-position',JSON.stringify({date:edition.date,index:current}))}function move(d){const next=Math.max(0,Math.min(slides.length-1,current+d));if(next!==current){current=next;sync()}}document.addEventListener('keydown',e=>{if(e.target.closest('select,button'))return;if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});let lastWheel=0;document.addEventListener('wheel',e=>{if(!e.target.closest('main'))return;const horizontal=Math.abs(e.deltaX)>Math.abs(e.deltaY)*1.3;if(!horizontal||Math.abs(e.deltaX)<18)return;const now=Date.now();if(now-lastWheel<650)return;lastWheel=now;move(e.deltaX>0?1:-1)},{passive:true});let startX=0;document.addEventListener('touchstart',e=>{startX=e.touches[0].clientX},{passive:true});document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>85)move(dx<0?1:-1)},{passive:true});window.addEventListener('popstate',()=>{current=0;render()});fetch('./data/editions.json').then(r=>{if(!r.ok)throw Error('Dati non disponibili');return r.json()}).then(data=>{editions=data.sort((a,b)=>b.date.localeCompare(a.date));const p=new URLSearchParams(location.search);if(!p.has('date')&&!p.has('story')){try{const saved=JSON.parse(localStorage.getItem('fdf-position'));if(saved?.date===editions[0]?.date)current=saved.index||0}catch{}}render()}).catch(e=>app.innerHTML='<div class="empty">Impossibile caricare l’edizione. '+esc(e.message)+'</div>');
+'use strict';
+
+const app = document.querySelector('#app');
+const dateFormat = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+const shortDateFormat = new Intl.DateTimeFormat('it-IT', { day: '2-digit', month: 'short' });
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+let editions = [];
+let edition = null;
+let slides = [];
+let current = 0;
+let wheelLastAt = 0;
+let gesture = null;
+let termAnchor = null;
+
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[char]));
+const dateObject = value => new Date(value + 'T12:00:00');
+const longDate = value => dateFormat.format(dateObject(value));
+const shortDate = value => shortDateFormat.format(dateObject(value)).toUpperCase().replace('.', '');
+const pad = n => String(n).padStart(2, '0');
+
+function buildSlides(selectedEdition) {
+  const result = [];
+  for (const section of selectedEdition.sections || []) {
+    result.push({ kind: 'category', section });
+    for (const story of section.stories || []) result.push({ kind: 'story', section, story });
+  }
+  result.push({ kind: 'end' });
+  return result;
+}
+
+function currentUrl() {
+  const params = new URLSearchParams();
+  params.set('date', edition.date);
+  const active = slides[current];
+  if (active?.kind === 'story') params.set('story', active.story.id);
+  if (active?.kind === 'category') params.set('section', active.section.id);
+  if (active?.kind === 'end') params.set('end', '1');
+  return '?' + params.toString();
+}
+
+function storyUrl(date, id) {
+  const params = new URLSearchParams({ date, story: id });
+  return '?' + params.toString();
+}
+
+function rememberPosition() {
+  try {
+    localStorage.setItem('fdf-position', JSON.stringify({ date: edition.date, index: current }));
+  } catch (_) {
+    // Browsing without local storage must still work.
+  }
+}
+
+function restoreFromUrl(initial = false) {
+  const params = new URLSearchParams(location.search);
+  const date = params.get('date');
+  edition = editions.find(item => item.date === date) || editions[0];
+  slides = buildSlides(edition);
+  const story = params.get('story');
+  const section = params.get('section');
+  let index = 0;
+
+  if (story) index = slides.findIndex(item => item.kind === 'story' && item.story.id === story);
+  else if (section) index = slides.findIndex(item => item.kind === 'category' && item.section.id === section);
+  else if (params.get('end') === '1') index = slides.length - 1;
+  else if (initial && !date) {
+    try {
+      const saved = JSON.parse(localStorage.getItem('fdf-position'));
+      if (saved?.date === edition.date && Number.isInteger(saved.index)) index = saved.index;
+    } catch (_) { /* Optional convenience. */ }
+  }
+
+  current = Math.max(0, Math.min(index, slides.length - 1));
+}
+
+function sceneLabel(slide) {
+  if (slide.kind === 'end') return 'Fine dell’edizione';
+  if (slide.kind === 'category') return slide.section.name;
+  return slide.story.title;
+}
+
+function renderDates() {
+  // Only real published editions appear here; oldest to newest.
+  const ordered = [...editions].sort((a, b) => a.date.localeCompare(b.date));
+  return '<nav class="date-nav" aria-label="Archivio delle edizioni">' +
+    '<div class="date-list" id="date-list">' +
+    ordered.map(item => {
+      const active = item.date === edition.date;
+      return '<button type="button" class="date-item' + (active ? ' active' : '') +
+        '" data-date="' + escapeHtml(item.date) + '" ' +
+        (active ? 'aria-current="date" ' : '') +
+        'aria-label="Edizione del ' + escapeHtml(longDate(item.date)) + '">' +
+        escapeHtml(shortDate(item.date)) + '</button>';
+    }).join('') + '</div></nav>';
+}
+
+function renderTimeline() {
+  const total = slides.length;
+  const active = slides[current];
+  const caption = active.kind === 'end' ? 'FINE' : active.section.name;
+  const segments = slides.map((slide, index) => {
+    const state = index < current ? ' completed' : (index === current ? ' active' : ' future');
+    const label = (index + 1) + ' di ' + total + ' — ' +
+      (slide.section ? slide.section.name + ': ' : '') + sceneLabel(slide);
+    return '<button type="button" class="timeline-segment' + state +
+      '" data-screen="' + index + '" aria-label="' + escapeHtml(label) +
+      '" ' + (index === current ? 'aria-current="step" ' : '') +
+      'title="' + escapeHtml(label) + '"><span class="timeline-line"></span></button>';
+  }).join('');
+
+  const percentage = Math.min(88, Math.max(0, (current + .5) / total * 100));
+  return '<section class="desktop-timeline" aria-label="Avanzamento della lettura">' +
+    '<div class="timeline-heading"><span>EDIZIONE DEL ' + escapeHtml(longDate(edition.date).toUpperCase()) +
+    '</span><span class="timeline-count"><strong>' + pad(current + 1) +
+    '</strong> di ' + pad(total) + '</span></div>' +
+    '<nav class="timeline-segments" id="desktop-segments" aria-label="Vai a una schermata">' + segments +
+    '</nav><div class="timeline-label" style="--label-position:' + percentage + '%">' +
+    escapeHtml(caption) + '</div></section>';
+}
+
+function renderMobileTimeline() {
+  const total = slides.length;
+  return '<aside class="mobile-rail" aria-label="Avanzamento della lettura">' +
+    '<div class="mobile-rail-top">' + pad(current + 1) + '<span>/' + pad(total) + '</span></div>' +
+    '<nav class="mobile-segments" id="mobile-segments" aria-label="Schermate dell’edizione">' +
+    slides.map((slide, index) => {
+      const state = index < current ? ' completed' : index === current ? ' active' : ' future';
+      const label = (index + 1) + ' di ' + total + ' — ' + sceneLabel(slide);
+      return '<button type="button" class="mobile-segment' + state +
+        '" data-screen="' + index + '" aria-label="' + escapeHtml(label) + '" ' +
+        (index === current ? 'aria-current="step" ' : '') +
+        'title="' + escapeHtml(label) + '"><span></span></button>';
+    }).join('') + '</nav></aside>';
+}
+
+function richText(value, terms) {
+  const available = (terms || []).filter(term => term.term && term.definition);
+  if (!available.length) return escapeHtml(value);
+  const escapedTerms = available.map(term => term.term.replace(/[.*+?^$()|[\]{}\\]/g, '\\$&'));
+  const regex = new RegExp('(?<![\\p{L}\\p{N}])(' + escapedTerms.join('|') + ')(?![\\p{L}\\p{N}])', 'giu');
+  let start = 0;
+  let html = '';
+  for (const match of String(value).matchAll(regex)) {
+    html += escapeHtml(value.slice(start, match.index));
+    const termIndex = available.findIndex(term => term.term.toLocaleLowerCase('it') === match[0].toLocaleLowerCase('it'));
+    html += '<button type="button" class="term" data-term="' + termIndex +
+      '" aria-label="Spiega: ' + escapeHtml(match[0]) + '">' + escapeHtml(match[0]) + '</button>';
+    start = match.index + match[0].length;
+  }
+  return html + escapeHtml(value.slice(start));
+}
+
+function renderArticle(slide) {
+  const story = slide.story;
+  const head = '<div class="article-meta"><span>' + escapeHtml(slide.section.name) +
+    ' <span aria-hidden="true">·</span> ' + escapeHtml(longDate(edition.date)) +
+    '</span><span>' + (Number(story.minutes) || 0) + ' MIN DI LETTURA' +
+    (edition.demo ? ' <span class="demo-flag">· EDIZIONE DIMOSTRATIVA</span>' : '') +
+    '</span></div>';
+
+  const paragraphs = (story.paragraphs || [])
+    .map(paragraph => '<p>' + richText(paragraph, story.terms) + '</p>').join('');
+
+  const deepDive = story.deepDive ?
+    '<details class="article-details"><summary><span>PER CAPIRE DAVVERO</span><span class="details-icon" aria-hidden="true"></span></summary>' +
+    '<div class="details-body"><p>' + escapeHtml(story.deepDive) + '</p></div></details>' : '';
+
+  const related = (story.related || []).filter(item =>
+    editions.some(e => e.date === item.date && (e.sections || []).some(s =>
+      (s.stories || []).some(a => a.id === item.storyId)
+    ))
+  );
+  const relatedHtml = related.length ?
+    '<details class="article-details"><summary><span>LA STORIA FIN QUI</span><span class="details-icon" aria-hidden="true"></span></summary>' +
+    '<div class="details-body related-list">' +
+    related.map(item => '<a href="' + escapeHtml(storyUrl(item.date, item.storyId)) +
+      '">' + escapeHtml(longDate(item.date)) + ' <span aria-hidden="true">→</span><strong>' +
+      escapeHtml(item.label || item.storyId) + '</strong></a>').join('') +
+    '</div></details>' : '';
+
+  const sources = (story.sources || []).filter(source => {
+    try { return ['http:', 'https:'].includes(new URL(source.url).protocol); }
+    catch (_) { return false; }
+  });
+  const sourceHtml = sources.length ?
+    '<details class="article-details"><summary><span>FONTI E DOCUMENTI</span><span class="details-icon" aria-hidden="true"></span></summary>' +
+    '<div class="details-body sources-list">' +
+    sources.map(source => '<a target="_blank" rel="noopener noreferrer" href="' + escapeHtml(source.url) +
+      '">' + escapeHtml(source.title || source.url) + ' <span aria-hidden="true">↗</span></a>').join('') +
+    '</div></details>' : '';
+
+  return '<article class="article" id="' + escapeHtml(story.id) +
+    '">' + head + '<h1>' + escapeHtml(story.title) +
+    '</h1><p class="article-dek">' + escapeHtml(story.dek || '') +
+    '</p><div class="article-body">' + paragraphs + '</div>' +
+    '<div class="article-extras">' + deepDive + relatedHtml + sourceHtml +
+    '</div><div class="article-ending" aria-hidden="true"></div></article>';
+}
+
+function renderSlide(slide, index) {
+  let content;
+  if (slide.kind === 'category') {
+    const ordinal = edition.sections.indexOf(slide.section) + 1;
+    content = '<div class="category"><div class="eyebrow">' +
+      pad(ordinal) + ' / ' + pad(edition.sections.length) +
+      '</div><h1>' + escapeHtml(slide.section.name) +
+      '</h1><div class="category-rule" aria-hidden="true"></div>' +
+      '<p class="category-hint">Continua <span aria-hidden="true">→</span></p></div>';
+  } else if (slide.kind === 'end') {
+    content = '<div class="ending"><div class="eyebrow">FINE DELL’EDIZIONE</div>' +
+      '<h1>Per oggi, ci siamo.</h1><p>A domani.</p></div>';
+  } else {
+    content = renderArticle(slide);
+  }
+  return '<section class="slide' + (index === current ? ' active' : '') +
+    '" data-index="' + index + '"' + (index === current ? '' : ' inert') +
+    ' aria-label="' + escapeHtml(sceneLabel(slide)) + '">' + content + '</section>';
+}
+
+function render() {
+  if (!edition) return;
+  app.innerHTML =
+    '<header class="site-header"><a class="brand" href="./" aria-label="FUORI DAL FEED, torna all’edizione recente">' +
+    'FUORI DAL <span>FEED.</span></a>' + renderDates() + '</header>' +
+    renderTimeline() +
+    '<div class="reading-layout">' + renderMobileTimeline() +
+    '<main class="reading-main" id="reading-main">' +
+    slides.map(renderSlide).join('') +
+    '<div class="reading-controls" aria-label="Navigazione schermate">' +
+    '<button type="button" data-prev aria-label="Schermata precedente" ' + (current === 0 ? 'disabled ' : '') + '>←</button>' +
+    '<button type="button" data-next aria-label="Schermata successiva" ' +
+    (current === slides.length - 1 ? 'disabled ' : '') + '>→</button></div></main></div>';
+
+  const selectedDate = app.querySelector('.date-item.active');
+  const dateList = app.querySelector('.date-list');
+  if (selectedDate && dateList) {
+    dateList.scrollLeft = Math.max(0, selectedDate.offsetLeft - dateList.offsetLeft -
+      (dateList.clientWidth - selectedDate.offsetWidth) / 2);
+  }
+  for (const selector of ['#desktop-segments', '#mobile-segments']) {
+    const nav = app.querySelector(selector);
+    const active = nav?.querySelector('[aria-current]');
+    if (active && nav) {
+      if (selector === '#desktop-segments') {
+        nav.scrollLeft = Math.max(0, active.offsetLeft - nav.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2);
+      } else {
+        nav.scrollTop = Math.max(0, active.offsetTop - nav.offsetTop - (nav.clientHeight - active.offsetHeight) / 2);
+      }
+    }
+  }
+}
+
+function closeTerm() {
+  document.querySelector('.term-popover')?.remove();
+  termAnchor = null;
+}
+
+function showTerm(button) {
+  const selected = slides[current];
+  if (!selected?.story) return;
+  const item = (selected.story.terms || [])[Number(button.dataset.term)];
+  if (!item) return;
+  if (termAnchor === button) { closeTerm(); return; }
+  closeTerm();
+  termAnchor = button;
+
+  const popover = document.createElement('div');
+  popover.className = 'term-popover';
+  popover.setAttribute('role', 'dialog');
+  popover.setAttribute('aria-label', 'Spiegazione: ' + item.term);
+  popover.innerHTML = '<button type="button" class="term-close" aria-label="Chiudi spiegazione">×</button>' +
+    '<div class="term-heading">' + escapeHtml(item.term) + '</div>' +
+    '<p>' + escapeHtml(item.definition) + '</p>';
+  document.body.append(popover);
+  const target = button.getBoundingClientRect();
+  const width = Math.min(340, window.innerWidth - 32);
+  popover.style.width = width + 'px';
+  popover.style.left = Math.max(16, Math.min(target.left, window.innerWidth - width - 16)) + 'px';
+  const availableBelow = window.innerHeight - target.bottom - 16;
+  let top = availableBelow >= popover.offsetHeight ?
+    target.bottom + 10 : target.top - popover.offsetHeight - 10;
+  popover.style.top = Math.max(10, Math.min(top, window.innerHeight - popover.offsetHeight - 10)) + 'px';
+  popover.querySelector('.term-close').addEventListener('click', closeTerm);
+  popover.querySelector('.term-close').focus({ preventScroll: true });
+}
+
+function updateScreen(index, addHistory = false) {
+  const next = Math.max(0, Math.min(index, slides.length - 1));
+  if (next === current) return;
+  closeTerm();
+  current = next;
+  const method = addHistory ? 'pushState' : 'replaceState';
+  history[method]({}, '', currentUrl());
+  rememberPosition();
+  render();
+}
+
+function move(delta) { updateScreen(current + delta); }
+
+function changeEdition(date) {
+  const next = editions.find(item => item.date === date);
+  if (!next || next.date === edition.date) return;
+  closeTerm();
+  edition = next;
+  slides = buildSlides(edition);
+  current = 0;
+  history.pushState({}, '', currentUrl());
+  rememberPosition();
+  render();
+}
+
+app.addEventListener('click', event => {
+  const dateButton = event.target.closest('button[data-date]');
+  if (dateButton) return changeEdition(dateButton.dataset.date);
+
+  const screenButton = event.target.closest('button[data-screen]');
+  if (screenButton) return updateScreen(Number(screenButton.dataset.screen));
+
+  if (event.target.closest('[data-prev]')) return move(-1);
+  if (event.target.closest('[data-next]')) return move(1);
+
+  const term = event.target.closest('button[data-term]');
+  if (term) return showTerm(term);
+
+  if (event.target.closest('.category-hint')) move(1);
+});
+
+document.addEventListener('pointerdown', event => {
+  if (!event.target.closest('.term-popover, .term')) closeTerm();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') return closeTerm();
+  if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  if (event.target.closest('button, a, input, textarea, select, summary, [contenteditable="true"]')) return;
+  if (event.key === 'ArrowRight') move(1);
+  if (event.key === 'ArrowLeft') move(-1);
+});
+
+document.addEventListener('wheel', event => {
+  if (!event.target.closest('.reading-main') ||
+      event.target.closest('.term-popover') ||
+      Math.abs(event.deltaX) < 28 ||
+      Math.abs(event.deltaX) <= Math.abs(event.deltaY) * 1.5) return;
+  const now = performance.now();
+  if (now - wheelLastAt < 650) return;
+  wheelLastAt = now;
+  move(event.deltaX > 0 ? 1 : -1);
+}, { passive: true });
+
+app.addEventListener('touchstart', event => {
+  if (!event.target.closest('.reading-main') ||
+      event.target.closest('a, button, summary, details')) return;
+  const touch = event.changedTouches[0];
+  if (touch.clientX < 26 || touch.clientX > window.innerWidth - 26) return;
+  gesture = { x: touch.clientX, y: touch.clientY };
+}, { passive: true });
+
+app.addEventListener('touchend', event => {
+  if (!gesture) return;
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - gesture.x;
+  const dy = touch.clientY - gesture.y;
+  gesture = null;
+  if (Math.abs(dx) > 90 && Math.abs(dx) > Math.abs(dy) * 1.6 &&
+      !window.getSelection()?.toString()) move(dx < 0 ? 1 : -1);
+}, { passive: true });
+
+app.addEventListener('touchcancel', () => { gesture = null; }, { passive: true });
+
+app.addEventListener('scroll', event => {
+  if (event.target.classList?.contains('slide')) closeTerm();
+}, true);
+
+window.addEventListener('resize', closeTerm);
+window.addEventListener('popstate', () => {
+  closeTerm();
+  restoreFromUrl();
+  render();
+});
+
+fetch('./data/editions.json')
+  .then(response => {
+    if (!response.ok) throw new Error('Edizioni non disponibili');
+    return response.json();
+  })
+  .then(data => {
+    if (!Array.isArray(data) || !data.length) throw new Error('Archivio vuoto');
+    editions = data.filter(item => item.date && Array.isArray(item.sections))
+      .sort((a, b) => b.date.localeCompare(a.date));
+    if (!editions.length) throw new Error('Nessuna edizione valida');
+    restoreFromUrl(true);
+    render();
+  })
+  .catch(error => {
+    app.innerHTML = '<div class="load-error"><h1>Non riusciamo a caricare l’edizione.</h1>' +
+      '<p>' + escapeHtml(error.message) + '</p><button type="button" onclick="location.reload()">Riprova</button></div>';
+  });
