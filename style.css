@@ -596,3 +596,15 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .gate-rule { transition: none; }
   .reading-scroll { scroll-behavior: auto; }
 }
+
+
+/* Native touch threshold: proximity snapping acts only on the editorial
+   separators. Unlike mandatory page snapping it never traps a long article. */
+@media (pointer:coarse) and (prefers-reduced-motion:no-preference) {
+  .reading-scroll { scroll-snap-type: y proximity; }
+  .editorial-gate { scroll-snap-align: center; scroll-snap-stop: normal; }
+}
+/* On touch and reduced-motion devices every article remains freely accessible. */
+@media (pointer:coarse) and (prefers-reduced-motion:reduce) {
+  .reading-scroll { scroll-snap-type: none; }
+}
