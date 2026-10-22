@@ -424,22 +424,31 @@ function render(landing={index:current,mode:'start'}){
       (dateList.clientWidth-dateActive.offsetWidth)/2);
   }
   boundaryBrake=null;passedGate=-1;jumpInProgress=false;skipPreviousCompletion=true;
+  const createdScroll=scrollEl;
+  createdScroll.classList.add('bypass-snap');
   requestAnimationFrame(()=>{
-    const wanted=scrollEl.querySelector('#screen-'+landing.index);
+    if(scrollEl!==createdScroll)return;
+    const wanted=createdScroll.querySelector('#screen-'+landing.index);
     if(!wanted)return;
     const stored=Number(readerState.positions[screenKey(landing.index)])||0;
     const resume=landing.mode==='resume'||landing.mode==='return';
     const flow=Number(readerState.positions[flowKey()]);
     const useFlow=landing.mode==='resume'&&Number.isFinite(flow);
-    scrollEl.scrollTop=useFlow?flow:wanted.offsetTop+(resume?Math.max(0,stored):0);
+    createdScroll.scrollTop=useFlow?flow:wanted.offsetTop+(resume?Math.max(0,stored):0);
     current=landing.index;setRailIndex(current);
-    requestAnimationFrame(()=>{initializing=false;updateScroll();});
+    requestAnimationFrame(()=>{
+      if(scrollEl!==createdScroll)return;
+      initializing=false;
+      updateScroll();
+      requestAnimationFrame(()=>createdScroll.classList.remove('bypass-snap'));
+    });
   });
 }
 function navigateTo(index,smooth=true){
   const target=scrollEl?.querySelector('#screen-'+index);
   if(!target)return;
   closeTerm();boundaryBrake=null;passedGate=-1;jumpInProgress=true;skipPreviousCompletion=true;
+  scrollEl.classList.add('bypass-snap');
   const isSmooth=smooth&&!reducedMotion.matches;
   scrollEl.scrollTo({top:target.offsetTop,behavior:isSmooth?'smooth':'instant'});
   if(isSmooth){
@@ -447,11 +456,11 @@ function navigateTo(index,smooth=true){
     const done=()=>{
       if(settled)return;settled=true;
       scrollEl.removeEventListener('scrollend',done);
-      jumpInProgress=false;scheduleScroll();
+      jumpInProgress=false;scrollEl.classList.remove('bypass-snap');scheduleScroll();
     };
     scrollEl.addEventListener('scrollend',done,{once:true});
     setTimeout(done,1050);
-  }else{jumpInProgress=false;scheduleScroll();}
+  }else{jumpInProgress=false;scrollEl.classList.remove('bypass-snap');scheduleScroll();}
 }
 function changeEdition(date){
   const next=editions.find(item=>item.date===date);
