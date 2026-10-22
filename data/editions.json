@@ -1,77 +1,471 @@
 [
   {
     "date": "2026-10-22",
-    "demo": true,
+    "status": "edizione-pilota",
+    "editorialNote": "Prima edizione giornalistica pilota. Fonti consultate il 22 ottobre 2026; i collegamenti rimandano agli originali.",
     "sections": [
       {
-        "id": "attualita",
-        "name": "ATTUALITÀ",
+        "id": "italia",
+        "name": "ITALIA",
         "stories": [
           {
-            "id": "comprendere-notizie",
-            "title": "Che cosa rende una notizia davvero importante?",
-            "dek": "Una guida dimostrativa al modo in cui leggeremo il mondo.",
-            "minutes": 4,
+            "id": "tir-decreto-carburanti",
+            "type": "NOTIZIA",
+            "title": "Il caro carburanti ferma i Tir. Il governo approva gli aiuti",
+            "dek": "Tra blocchi stradali e approvvigionamenti in difficoltà, il decreto cerca di riportare alla normalità il trasporto delle merci.",
+            "minutes": 2,
             "paragraphs": [
-              "Una notizia non è importante soltanto perché compare in molti titoli. Per capire un evento dobbiamo distinguere i fatti verificati dalle interpretazioni e dalle ipotesi.",
-              "Una buona ricostruzione risponde a cinque domande: che cosa è successo, perché è successo, quale contesto lo precede, quali conseguenze potrebbe avere e che cosa non sappiamo ancora.",
-              "Nel nostro giornale ogni termine complesso può aprire una spiegazione senza interrompere la lettura. Prova a selezionare il concetto evidenziato nel prossimo paragrafo.",
-              "Il contesto è l'insieme degli avvenimenti e delle condizioni che aiutano a comprendere un fatto. Senza contesto, anche un'informazione corretta può risultare fuorviante."
+              "Il Consiglio dei ministri ha approvato il 22 ottobre un decreto con misure di sostegno per autotrasportatori, agricoltori e pescatori, dopo giorni di proteste contro il prezzo dei carburanti. Il provvedimento interviene mentre in diverse regioni del Sud i presìdi dei camion hanno rallentato la circolazione delle merci, creando difficoltà per supermercati, aziende e collegamenti con i porti. Secondo Reuters, alcuni blocchi in Sicilia e Calabria hanno iniziato ad allentarsi, mentre la situazione in Campania resta più complessa.",
+              "Alla base delle proteste c'è un problema economico concreto: il gasolio è una voce decisiva nei bilanci delle imprese di trasporto. Quando aumenta il costo di ogni viaggio, cresce la pressione sui margini di chi distribuisce prodotti alimentari, medicinali e materie prime. Una parte di quei costi può trasferirsi ai clienti e infine ai consumatori. Per questo una protesta di categoria può diventare rapidamente un problema per un intero territorio.",
+              "Il governo ha annunciato un rafforzamento dei crediti d'imposta sul carburante e ulteriori fondi per i settori coinvolti. Ma l'approvazione del decreto non significa che tutti i blocchi siano stati rimossi o che la crisi sia conclusa: gli effetti dipenderanno dall'applicazione delle misure, dalle decisioni delle associazioni e dall'andamento dei prezzi energetici. È questa la differenza fra un intervento approvato e un problema risolto."
             ],
+            "deepDive": "Un credito d'imposta non è un rimborso automatico alla pompa: riduce, a certe condizioni, le imposte dovute dall'impresa. La sua efficacia dipende da chi è ammesso, da quali spese copre e da quanto velocemente il beneficio diventa utilizzabile. Per comprendere le proteste conviene separare tre piani: il prezzo internazionale dell'energia, la struttura fiscale del carburante e la possibilità delle imprese di assorbire i rincari.",
             "terms": [
               {
-                "term": "contesto",
-                "definition": "Le circostanze storiche, politiche, economiche e sociali che aiutano a interpretare un avvenimento."
+                "term": "crediti d'imposta",
+                "definition": "Agevolazioni che permettono di ridurre le imposte da pagare, rispettando condizioni previste dalla legge."
+              },
+              {
+                "term": "margini",
+                "definition": "La differenza tra i ricavi di un'attività e i costi sostenuti: se i costi aumentano e i prezzi non cambiano, i margini diminuiscono."
+              },
+              {
+                "term": "approvvigionamenti",
+                "definition": "Il processo con cui negozi, aziende e servizi ricevono materiali e prodotti necessari a funzionare."
               }
             ],
-            "deepDive": "Prima di trarre conclusioni, chiediti quali elementi sono confermati, quali provengono da una sola fonte e quali sono ancora oggetto di discussione.",
-            "sources": [],
-            "related": []
-          }
-        ]
-      },
-      {
-        "id": "geopolitica",
-        "name": "GEOPOLITICA",
-        "stories": [
-          {
-            "id": "capire-geopolitica",
-            "title": "Perché gli eventi internazionali sono collegati?",
-            "dek": "Una lettura introduttiva, non una notizia di attualità.",
-            "minutes": 3,
-            "paragraphs": [
-              "Le decisioni di uno Stato possono influenzare gli altri attraverso commercio, sicurezza, energia e diplomazia.",
-              "Per comprendere un conflitto o un negoziato bisogna osservare gli interessi degli attori, le loro possibilità di azione e i vincoli internazionali."
+            "sources": [
+              {
+                "title": "Reuters — Proteste e pacchetto di aiuti, 22 ottobre",
+                "url": "https://www.reuters.com/world/southern-italy-truckers-ease-protests-government-lines-up-aid-2026-10-22/"
+              },
+              {
+                "title": "RaiNews — Il Consiglio dei ministri approva il decreto",
+                "url": "https://www.rainews.it/video/2026/10/caro-carburante-blocco-tir-decreto-via-libera-del-cdm-al-decreto-per-autotrasporto-e-agricoltura-ad9d995e-8ade-4f8a-9461-de9e2ead7843.html"
+              }
             ],
-            "terms": [],
-            "deepDive": "Una stessa decisione può avere conseguenze differenti per i Paesi coinvolti. Per questo separeremo sempre fatti, posizioni ufficiali e analisi.",
-            "sources": [],
+            "related": []
+          },
+          {
+            "id": "inflazione-settembre-istat",
+            "type": "CONTESTO",
+            "title": "Prezzi al +4,2%: perché la spesa continua a pesare",
+            "dek": "L'Istat fotografa un'accelerazione dell'inflazione italiana a settembre, trainata soprattutto dall'energia.",
+            "minutes": 1,
+            "paragraphs": [
+              "L'Istat ha confermato che i prezzi al consumo in Italia erano cresciuti del 4,2% a settembre 2026 rispetto allo stesso mese dell'anno precedente, contro il 3,3% registrato ad agosto. Il dato è stato pubblicato il 16 ottobre, ma resta essenziale per capire la crisi dei trasporti e il dibattito economico di questa settimana. L'incremento mensile è dello 0,7%. Non significa che ogni singolo prodotto costi esattamente il 4,2% in più: l'indice sintetizza variazioni molto diverse.",
+              "La spinta principale viene dall'energia: secondo l'Istat, la crescita annua dei prezzi energetici arriva al 22,6%. Gli alimentari non lavorati registrano +5,5%. Il cosiddetto carrello della spesa, che comprende beni alimentari e prodotti per la cura della casa e della persona, accelera fino al +1,5% su base annua. La composizione conta: le famiglie spendono quote differenti del proprio reddito per cibo, carburante e abitazione, quindi possono sperimentare il rincaro in modo diseguale.",
+              "Un'inflazione del 4,2% non equivale a una riduzione dei prezzi: significa che, in media, stanno ancora aumentando rispetto all'anno precedente. E se i salari non crescono allo stesso ritmo, diminuisce il potere d'acquisto. Per capire se la situazione migliorerà dovremo osservare i nuovi dati, la dinamica dell'energia e l'effettiva trasmissione dei costi lungo la filiera."
+            ],
+            "deepDive": "L'inflazione tendenziale confronta un mese con lo stesso mese dell'anno precedente; quella congiunturale confronta due mesi consecutivi. Quando l'inflazione scende da 4% a 2%, i prezzi medi non tornano al livello iniziale: crescono semplicemente più lentamente. La distinzione evita una delle confusioni più comuni nel dibattito sul costo della vita.",
+            "terms": [
+              {
+                "term": "inflazione",
+                "definition": "Aumento nel tempo del livello medio dei prezzi di un insieme rappresentativo di beni e servizi."
+              },
+              {
+                "term": "potere d'acquisto",
+                "definition": "Quantità di beni e servizi che un reddito permette di comprare."
+              },
+              {
+                "term": "filiera",
+                "definition": "Successione di attività che porta un prodotto dalla produzione fino alla vendita al consumatore."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Istat — Prezzi al consumo, settembre 2026 (dati definitivi)",
+                "url": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-settembre-2026/"
+              }
+            ],
             "related": [
               {
                 "date": "2026-10-22",
-                "storyId": "comprendere-notizie",
-                "label": "Come valutare una notizia"
+                "storyId": "tir-decreto-carburanti",
+                "label": "Il decreto e la protesta dei trasportatori",
+                "relation": "correlata"
               }
             ]
           }
         ]
       },
       {
-        "id": "ricerca",
-        "name": "RICERCA E CULTURA",
+        "id": "mondo",
+        "name": "MONDO",
         "stories": [
           {
-            "id": "metodo-scientifico",
-            "title": "Come leggere una ricerca senza fermarsi al titolo",
-            "dek": "Dalle domande iniziali ai limiti dei risultati.",
-            "minutes": 3,
+            "id": "ucraina-negoziati-e-attacchi",
+            "type": "NOTIZIA",
+            "title": "Ucraina: si parla di negoziati, ma continuano gli attacchi",
+            "dek": "Le nuove aperture diplomatiche non fermano i bombardamenti né cancellano le distanze sulle condizioni di pace.",
+            "minutes": 1,
             "paragraphs": [
-              "Un articolo scientifico non è una prova assoluta: descrive una domanda, un metodo, dei risultati e i loro limiti.",
-              "Quando parleremo di studi scientifici, indicheremo le fonti originali, i metodi impiegati e ciò che i risultati non consentono di concludere."
+              "Il 22 ottobre la guerra tra Russia e Ucraina continua a mostrare due sviluppi paralleli: tentativi di riaprire i contatti diplomatici e intensificazione degli attacchi a distanza. Reuters riferisce di missili russi su Kyiv e di numerosi droni ucraini diretti verso l'area di Mosca. Le autorità ucraine hanno segnalato feriti e danni alle infrastrutture della capitale. Anche siti energetici e logistici sono coinvolti nelle operazioni delle due parti.",
+              "La diplomazia statunitense cerca di rimettere in moto i colloqui, e Mosca ha segnalato disponibilità a nuove discussioni. Ma essere disponibili a parlare non significa avere accettato lo stesso compromesso. Le divergenze riguardano soprattutto il controllo dei territori occupati, le garanzie di sicurezza per l'Ucraina e i meccanismi necessari per far rispettare un eventuale accordo.",
+              "La contraddizione apparente è quindi soltanto parziale: durante una guerra, le operazioni militari possono proseguire anche mentre vengono esplorate ipotesi negoziali. Gli attacchi possono essere usati per modificare i rapporti di forza prima di un tavolo. Per valutare se ci sia una svolta reale, non basteranno annunci e dichiarazioni: serviranno incontri confermati, proposte condivise e segnali verificabili sul terreno."
             ],
-            "terms": [],
-            "deepDive": "Distinguere correlazione e causalità è essenziale: due fenomeni possono variare insieme senza che uno provochi necessariamente l'altro.",
-            "sources": [],
+            "deepDive": "Un cessate il fuoco e un trattato di pace non sono sinonimi. Il primo punta a interrompere i combattimenti, spesso temporaneamente; il secondo riguarda le condizioni politiche e giuridiche di una soluzione. Le garanzie di sicurezza cercano di rispondere a una domanda decisiva: che cosa succede se l'accordo viene violato? Senza una risposta credibile, anche un'intesa annunciata può restare fragile.",
+            "terms": [
+              {
+                "term": "garanzie di sicurezza",
+                "definition": "Impegni o meccanismi pensati per proteggere uno Stato da nuove aggressioni, con forme e obblighi molto diversi."
+              },
+              {
+                "term": "cessate il fuoco",
+                "definition": "Accordo o disposizione per interrompere le ostilità; non coincide necessariamente con la fine politica di una guerra."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters — Attacchi su Kyiv e droni verso Mosca, 22 ottobre",
+                "url": "https://www.reuters.com/world/europe/missiles-strike-ukraines-kyiv-reuters-witness-says-2026-10-21/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "gaza-tregua-fragile",
+            "type": "NOTIZIA",
+            "title": "Gaza: nuove vittime e una tregua che resta fragile",
+            "dek": "Le denunce reciproche fra Israele e Hamas mostrano quanto sia difficile trasformare un cessate il fuoco in una pace stabile.",
+            "minutes": 1,
+            "paragraphs": [
+              "Il 22 ottobre funzionari sanitari palestinesi hanno riferito che attacchi e colpi d'arma da fuoco israeliani hanno ucciso almeno quattro persone in diversi episodi nella Striscia di Gaza. Reuters ha raccolto le segnalazioni relative a Gaza City, Khan Younis, Nuseirat e all'area di Jabalia. Le forze israeliane hanno confermato operazioni contro presunti militanti di Hamas in alcune delle zone indicate, mentre hanno dichiarato di non conoscere uno degli episodi riportati.",
+              "Il punto politico è la tenuta dell'intesa di cessate il fuoco mediata dagli Stati Uniti nel 2025. Israele sostiene che Hamas abbia violato l'accordo e si stia riorganizzando militarmente; Hamas respinge queste accuse e denuncia, a sua volta, violazioni israeliane. Queste affermazioni devono restare attribuite ai rispettivi attori: non sono equivalenti a una verifica indipendente di ogni singolo evento.",
+              "L'accordo avrebbe dovuto aprire anche una fase di ricostruzione, ma negoziati e condizioni di sicurezza continuano a ostacolarla. Una tregua misurata soltanto dal numero di dichiarazioni politiche rischia di nascondere la realtà quotidiana delle persone. La domanda da seguire è se esistano strumenti operativi per ridurre la violenza, garantire gli aiuti e rendere possibile una ricostruzione duratura."
+            ],
+            "deepDive": "Per leggere le notizie su Gaza è utile separare almeno tre livelli: il fatto sul terreno, il racconto degli attori e la verifica di organizzazioni indipendenti. Numero di vittime, identità dei responsabili e circostanze degli attacchi non sempre possono essere accertati immediatamente. Un articolo corretto deve dichiarare chi fornisce ciascuna informazione e quali elementi rimangono incerti.",
+            "terms": [
+              {
+                "term": "tregua",
+                "definition": "Interruzione delle ostilità concordata o attuata dalle parti; può essere parziale o temporanea."
+              },
+              {
+                "term": "ricostruzione",
+                "definition": "Insieme degli interventi necessari a ripristinare abitazioni, infrastrutture, servizi pubblici e attività economiche dopo un conflitto."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters — Vittime in diversi episodi nella Striscia di Gaza, 22 ottobre",
+                "url": "https://www.reuters.com/world/middle-east/israeli-fire-kills-four-people-gaza-medics-say-2026-10-22/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "iran-hormuz-navi",
+            "type": "NOTIZIA",
+            "title": "Hormuz: l'Iran rivendica attacchi a navi e avverte gli Stati Uniti",
+            "dek": "Le dichiarazioni dei Guardiani della rivoluzione alimentano l'incertezza su una delle rotte energetiche più importanti al mondo.",
+            "minutes": 1,
+            "paragraphs": [
+              "La Marina dei Guardiani della rivoluzione iraniani ha riferito il 22 ottobre che sette imbarcazioni sarebbero state colpite nella regione del Golfo Persico. Secondo la versione iraniana, quattro navi coinvolte in trasferimenti di petrolio ritenuti illegali sarebbero state attaccate e altre tre avrebbero urtato mine navali a ovest dello stretto di Hormuz. Reuters ha riportato le dichiarazioni delle autorità iraniane. La ricostruzione è una rivendicazione di parte: i dettagli non devono essere presentati come verificati indipendentemente.",
+              "L'importanza di Hormuz non dipende soltanto dagli episodi militari. Si tratta di un passaggio marittimo strategico per gli scambi di petrolio e gas. Anche quando le esportazioni continuano, il rischio di interruzioni può incidere sulle assicurazioni delle navi, sui costi di trasporto e sulle aspettative dei mercati.",
+              "Teheran ha anche avvertito Washington che ulteriori provocazioni potrebbero portare a una risposta più ampia. Una dichiarazione del genere segnala un rischio di escalation, non dimostra che una nuova offensiva sia già stata decisa. Per capire gli sviluppi occorrerà verificare gli eventuali danni, le risposte militari e soprattutto se la navigazione commerciale subirà restrizioni misurabili."
+            ],
+            "deepDive": "Gli operatori energetici reagiscono non soltanto alla quantità di petrolio oggi disponibile, ma anche al rischio che domani una parte delle forniture venga interrotta. È per questo che le tensioni lungo una rotta commerciale possono riflettersi sui prezzi prima ancora che si verifichi una vera carenza fisica di carburante. Le testimonianze provenienti da parti in conflitto richiedono tuttavia conferme indipendenti.",
+            "terms": [
+              {
+                "term": "mine navali",
+                "definition": "Ordigni esplosivi collocati in mare per danneggiare le imbarcazioni che attraversano un'area."
+              },
+              {
+                "term": "escalation",
+                "definition": "Aumento progressivo della gravità o dell'intensità di uno scontro."
+              },
+              {
+                "term": "Hormuz",
+                "definition": "Stretto che collega il Golfo Persico al Golfo di Oman, cruciale per una parte rilevante dei flussi energetici internazionali."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters — Dichiarazioni della Marina dei Guardiani della rivoluzione, 22 ottobre",
+                "url": "https://www.reuters.com/world/middle-east/irans-irgc-navy-says-seven-vessels-hit-warns-us-wider-response-2026-10-22/"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-22",
+                "storyId": "tir-decreto-carburanti",
+                "label": "Perché il prezzo del gasolio pesa sull'Italia",
+                "relation": "correlata"
+              }
+            ]
+          },
+          {
+            "id": "usa-midterm-regole",
+            "type": "ANALISI",
+            "title": "Stati Uniti: le regole del voto diventano parte della battaglia politica",
+            "dek": "A meno di due settimane dalle elezioni di metà mandato, decisioni della Corte suprema e controllo del Congresso si intrecciano.",
+            "minutes": 1,
+            "paragraphs": [
+              "Negli Stati Uniti si voterà il 3 novembre 2026 per rinnovare tutta la Camera dei rappresentanti e una parte del Senato. Le elezioni di metà mandato determineranno quanto potere legislativo resterà ai repubblicani, che oggi controllano entrambe le camere, e quanto spazio avranno i democratici per ostacolare o controllare l'amministrazione Trump.",
+              "Reuters ha esaminato il 22 ottobre come alcune decisioni della Corte suprema abbiano inciso sul quadro elettorale, fra criteri di ridisegno dei collegi e finanziamenti politici. Queste questioni sembrano tecniche, ma possono influire su chi riesce a ottenere una maggioranza di seggi anche quando i voti complessivi sono distribuiti in modo diverso. Non sono ancora risultati elettorali: sono regole del confronto prima del voto.",
+              "Il punto più importante è distinguere la popolarità nazionale del presidente dalla struttura istituzionale. Anche una Camera controllata dall'opposizione potrebbe avviare inchieste e rendere più difficile l'approvazione delle leggi; il presidente manterrebbe comunque poteri esecutivi e di veto. Il 3 novembre non si elegge un nuovo presidente, ma si deciderà una parte essenziale degli equilibri politici dei prossimi due anni."
+            ],
+            "deepDive": "Il gerrymandering è la costruzione di confini elettorali che favoriscono un partito o un gruppo di elettori. Negli Stati Uniti il sistema maggioritario per collegi uninominali rende particolarmente importanti le mappe dei distretti. Per valutare i rapporti di forza, oltre ai sondaggi nazionali, occorre seguire i singoli stati, le regole di voto e i seggi davvero contendibili.",
+            "terms": [
+              {
+                "term": "midterm",
+                "definition": "Elezioni che si tengono a metà del mandato quadriennale del presidente degli Stati Uniti."
+              },
+              {
+                "term": "gerrymandering",
+                "definition": "Disegno strategico dei confini dei collegi elettorali per favorire una parte politica."
+              },
+              {
+                "term": "veto",
+                "definition": "Potere del presidente di respingere una legge approvata dal Congresso, salvo specifiche maggioranze necessarie per superarlo."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters — Le sentenze della Corte suprema e le elezioni 2026",
+                "url": "https://www.reuters.com/legal/government/us-supreme-court-rulings-reshape-midterm-election-battlefield-2026-10-22/"
+              },
+              {
+                "title": "Reuters — Come le midterm possono cambiare il Congresso",
+                "url": "https://www.reuters.com/legal/government/midterm-election-outcomes-that-could-shape-trumps-final-two-years-2026-10-19/"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "europa",
+        "name": "EUROPA",
+        "stories": [
+          {
+            "id": "ue-credito-cartolarizzazioni",
+            "type": "NOTIZIA",
+            "title": "L'UE prova a liberare credito: accordo sulle cartolarizzazioni",
+            "dek": "Consiglio e Parlamento raggiungono un'intesa preliminare su uno strumento finanziario complesso, ma molto rilevante.",
+            "minutes": 1,
+            "paragraphs": [
+              "Il Consiglio dell'Unione europea e il Parlamento europeo hanno raggiunto il 21 ottobre un accordo politico provvisorio per modificare le regole europee sulle cartolarizzazioni. L'obiettivo dichiarato è rendere più agevole per le banche trasferire determinati rischi finanziari, liberare capitale e sostenere nuovi prestiti a famiglie, imprese e progetti infrastrutturali. L'intesa deve ancora essere tradotta in testi definitivi e approvata formalmente.",
+              "La cartolarizzazione funziona, in termini semplici, così: una banca raggruppa crediti come mutui o finanziamenti e li trasforma in strumenti acquistabili da investitori. In questo modo può recuperare risorse o ridurre parte del rischio che porta in bilancio. Il meccanismo è utile, ma non è privo di problemi: quando un'attività finanziaria è molto complessa, diventa più difficile capire chi sopporta davvero le perdite.",
+              "La proposta europea riduce alcuni requisiti per operazioni giudicate più sicure e introduce categorie specifiche di strumenti considerati resilienti, mantenendo regole più severe per quelli rischiosi. I sostenitori vedono più finanziamenti all'economia reale; i critici temono che una semplificazione eccessiva indebolisca i controlli. La qualità delle verifiche e la trasparenza saranno quindi decisive quanto la quantità di credito generata."
+            ],
+            "deepDive": "Prima della crisi finanziaria del 2008, alcune cartolarizzazioni di mutui statunitensi nascondevano rischi mal valutati. La risposta normativa europea ha reso l'attività più controllata, ma anche più costosa. L'attuale discussione cerca un nuovo equilibrio tra sicurezza e capacità di investimento: meno adempimenti non significa automaticamente meno protezione, ma l'esito dipende dai dettagli tecnici e dalla vigilanza.",
+            "terms": [
+              {
+                "term": "cartolarizzazione",
+                "definition": "Trasformazione di un insieme di crediti, come mutui o prestiti, in strumenti finanziari destinati agli investitori."
+              },
+              {
+                "term": "capitale",
+                "definition": "Risorse patrimoniali a disposizione di una banca per sostenere attività e assorbire possibili perdite."
+              },
+              {
+                "term": "resilienti",
+                "definition": "In questo contesto, strumenti strutturati per resistere meglio a condizioni avverse secondo criteri regolamentari specifici."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Consiglio UE — Intesa sulle cartolarizzazioni, 21 ottobre",
+                "url": "https://www.consilium.europa.eu/de/press/press-releases/2026/10/21/savings-and-investments-union-council-and-parliament-strike-deal-to-revitalise-the-eu-s-securitisation-market/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "ue-ministeri-commercio-dublino",
+            "type": "CONTESTO",
+            "title": "A Dublino i ministri UE discutono come diversificare gli scambi",
+            "dek": "Non si tratta ancora di un nuovo accordo commerciale: è una riunione di indirizzo su mercati e partner.",
+            "minutes": 1,
+            "paragraphs": [
+              "Il 22 e 23 ottobre i ministri europei responsabili del commercio si riuniscono informalmente a Dublino, sotto la presidenza irlandese del Consiglio dell'UE. Secondo l'agenda ufficiale, le discussioni riguardano trattati commerciali in negoziazione, relazioni con i grandi partner e apertura di nuovi mercati. La riunione non equivale all'approvazione automatica di nuovi accordi: è un luogo di confronto e coordinamento politico.",
+              "Il commercio internazionale è una questione che tocca direttamente la vita quotidiana. Le imprese europee importano materiali, tecnologie ed energia ed esportano prodotti e servizi. Se una parte significativa di questi scambi dipende da pochi paesi o corridoi logistici, crisi politiche e blocchi nei trasporti possono generare costi e ritardi.",
+              "La parola chiave dell'incontro è diversificazione: ridurre la dipendenza da un solo fornitore o da un unico mercato. Per valutare i risultati della riunione, dovremo aspettare comunicazioni finali e distinguere tra intenzioni annunciate e decisioni giuridicamente vincolanti."
+            ],
+            "deepDive": "Un accordo di libero scambio può ridurre dazi e altri ostacoli alla circolazione dei prodotti, ma non equivale a un mercato totalmente privo di regole. Restano in gioco norme su sicurezza, lavoro, ambiente e concorrenza. Inoltre, la diversificazione non garantisce prezzi immediatamente più bassi: aumenta soprattutto il numero di alternative disponibili in caso di interruzione delle forniture.",
+            "terms": [
+              {
+                "term": "diversificazione",
+                "definition": "Strategia per distribuire scambi o forniture tra più partner, riducendo la dipendenza da uno solo."
+              },
+              {
+                "term": "dazi",
+                "definition": "Imposte applicate ai beni che attraversano una frontiera commerciale."
+              },
+              {
+                "term": "vincolanti",
+                "definition": "Che producono obblighi giuridici, diversamente da una dichiarazione di intenti."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Consiglio UE — Riunione informale dei ministri del commercio",
+                "url": "https://www.consilium.europa.eu/en/meetings/fac/2026/10/22-23/"
+              },
+              {
+                "title": "Presidenza irlandese — Agenda dell'incontro di Dublino",
+                "url": "https://irish-presidency.consilium.europa.eu/en/events/informal-meeting-of-trade-ministers-fac-trade/"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "tecnologia",
+        "name": "TECNOLOGIA",
+        "stories": [
+          {
+            "id": "fmi-ocse-ai-disuguaglianze",
+            "type": "ANALISI",
+            "title": "L'IA promette crescita, ma potrebbe aumentare le disuguaglianze",
+            "dek": "FMI e OCSE richiamano l'attenzione sul divario tra chi dispone di infrastrutture e competenze e chi ne resta escluso.",
+            "minutes": 1,
+            "paragraphs": [
+              "Il 22 ottobre Reuters ha riportato gli avvertimenti del Fondo monetario internazionale e dell'OCSE sugli effetti economici dell'intelligenza artificiale. Gli strumenti di IA potrebbero aumentare la produttività e sostenere la crescita, ma i benefici rischiano di concentrarsi nei paesi, nelle imprese e tra i lavoratori che hanno già le risorse necessarie per adottarli.",
+              "Per utilizzare davvero l'IA in un'organizzazione non basta accedere a un assistente digitale. Servono reti, energia, dati affidabili, processi organizzativi e persone capaci di valutare gli output. Una grande azienda può investire in queste condizioni più facilmente di una piccola impresa; lo stesso divario esiste tra sistemi economici con infrastrutture molto differenti.",
+              "C'è poi il tema del lavoro. L'IA può automatizzare mansioni ripetitive e modificare la formazione sul posto di lavoro, soprattutto per chi entra oggi nel mercato professionale. Il rischio non è soltanto perdere un impiego: è vedere sparire alcune attività attraverso le quali i giovani imparano a svolgere lavori più complessi. Le stime di crescita citate dalle istituzioni sono scenari, non aumenti già osservati."
+            ],
+            "deepDive": "Produttività significa produrre più valore con una quantità data di lavoro o risorse. Un aumento di produttività non si trasforma automaticamente in salari più alti: dipende da concorrenza, contrattazione, investimenti e redistribuzione. Per capire gli effetti dell'IA conviene chiedersi non soltanto quanto aumenti la produzione, ma chi trattenga i benefici e quali competenze diventino più richieste.",
+            "terms": [
+              {
+                "term": "produttività",
+                "definition": "Rapporto tra ciò che viene prodotto e le risorse impiegate, per esempio il valore generato per ora lavorata."
+              },
+              {
+                "term": "OCSE",
+                "definition": "Organizzazione per la cooperazione e lo sviluppo economico, che analizza le politiche pubbliche e le economie dei paesi membri."
+              },
+              {
+                "term": "Fondo monetario internazionale",
+                "definition": "Istituzione internazionale che monitora l'economia mondiale e può prestare assistenza finanziaria ai paesi membri."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters — FMI e OCSE sui rischi distributivi dell'IA, 22 ottobre",
+                "url": "https://www.reuters.com/business/finance/imf-oecd-warn-ai-could-widen-rich-poor-country-divide-2026-10-22/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "eu-cookie-privacy-riforma",
+            "type": "NOTIZIA",
+            "title": "Privacy e cookie: l'UE vuole semplificare le regole digitali",
+            "dek": "Il Consiglio ha definito una posizione negoziale. Non è ancora una riforma entrata in vigore.",
+            "minutes": 1,
+            "paragraphs": [
+              "Il Consiglio dell'Unione europea ha adottato il 21 ottobre la propria posizione su un pacchetto di semplificazioni delle norme digitali. La proposta interviene su protezione dei dati personali, uso dei cookie e segnalazione degli incidenti di cybersicurezza. L'obiettivo dichiarato è ridurre oneri amministrativi per imprese e pubbliche amministrazioni mantenendo tutele per i cittadini.",
+              "Fra gli elementi discussi c'è una revisione delle condizioni in cui alcuni cookie possono essere utilizzati senza chiedere ogni volta il consenso, per esempio per funzioni strettamente necessarie, misurazioni del pubblico o sicurezza dei dispositivi. Altre parti del testo riguardano le comunicazioni dopo una violazione di dati e la creazione di punti di riferimento nazionali per certe segnalazioni informatiche.",
+              "Questo non significa che i banner spariranno domani o che il GDPR sia stato abolito. Il Consiglio ha approvato un mandato per negoziare con il Parlamento europeo, che deve definire la propria posizione. La distinzione tra proposta, accordo e norma applicabile è essenziale: il testo può cambiare prima dell'adozione definitiva."
+            ],
+            "deepDive": "La riduzione dei banner non coincide necessariamente con minore privacy. Tutto dipende da quali attività vengono considerate indispensabili e da come vengono controllate le finalità dichiarate dalle aziende. Un cookie per mantenere aperta una sessione è diverso da uno utilizzato per profilare a fini pubblicitari. La sostanza della tutela non si misura dal numero di finestre visualizzate, ma dalla possibilità reale di comprendere e controllare l'uso dei dati.",
+            "terms": [
+              {
+                "term": "GDPR",
+                "definition": "Regolamento generale europeo sulla protezione dei dati personali."
+              },
+              {
+                "term": "cookie",
+                "definition": "Piccoli dati che un sito salva nel browser per funzioni come sessioni, preferenze o tracciamento."
+              },
+              {
+                "term": "mandato negoziale",
+                "definition": "Posizione ufficiale con cui un'istituzione partecipa a negoziati su un testo che non è ancora legge."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Consiglio UE — Posizione su privacy, cookie e cybersecurity, 21 ottobre",
+                "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/21/digital-rulebook-council-agrees-position-to-simplify-data-protection-privacy-and-cyber-reporting-rules/"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "scienza",
+        "name": "SCIENZA",
+        "stories": [
+          {
+            "id": "coralli-rischio-estinzione-nature",
+            "type": "RICERCA",
+            "title": "Il 44% dei coralli costruttori di barriere è a rischio",
+            "dek": "Uno studio pubblicato su Nature aggiorna la valutazione globale e mostra anche quanto sia importante leggere correttamente il dato.",
+            "minutes": 1,
+            "paragraphs": [
+              "Un articolo scientifico pubblicato il 15 ottobre su Nature ha rivalutato il rischio di estinzione delle specie di corallo che costruiscono barriere. Tra le 774 specie per cui erano disponibili dati sufficienti, 340 — cioè il 44% — sono risultate in categorie di minaccia secondo i criteri della Lista Rossa dell'Unione internazionale per la conservazione della natura. Non significa che il 44% delle barriere coralline sia già scomparso o che tutte quelle specie si estingueranno: il dato descrive una valutazione del rischio.",
+              "I ricercatori hanno esaminato complessivamente 892 specie, ma per alcune mancavano informazioni adeguate. La stima combina le variazioni della copertura corallina e le proiezioni di stress termico futuro, adattate alle vulnerabilità delle diverse specie. L'aumento della temperatura degli oceani favorisce gli episodi di sbiancamento, durante i quali i coralli possono perdere gli organismi simbiotici da cui dipendono.",
+              "Lo studio segnala anche un limite importante: la valutazione precede i più recenti episodi di riscaldamento eccezionale e non deriva da conteggi diretti delle popolazioni di ogni specie. È una ricostruzione scientifica solida, ma non una previsione della data in cui un corallo scomparirà. Proteggere questi ecosistemi riguarda biodiversità, pesca, coste e comunità umane."
+            ],
+            "deepDive": "La Lista Rossa IUCN classifica il rischio relativo di estinzione usando criteri standardizzati come contrazione delle popolazioni, distribuzione e dimensione delle popolazioni residue. In questo studio 33 specie sono classificate in pericolo critico, 251 in pericolo e 56 vulnerabili. Le proiezioni dipendono da uno scenario climatico e da indicatori indiretti: sono preziose per identificare priorità di conservazione, ma non equivalgono a un destino inevitabile per ogni specie.",
+            "terms": [
+              {
+                "term": "Lista Rossa",
+                "definition": "Sistema internazionale IUCN che valuta il rischio di estinzione delle specie secondo criteri comparabili."
+              },
+              {
+                "term": "sbiancamento",
+                "definition": "Fenomeno per cui i coralli perdono organismi simbiotici e pigmenti, spesso a causa dello stress termico."
+              },
+              {
+                "term": "proiezioni",
+                "definition": "Stime su possibili sviluppi futuri basate su dati, modelli e ipotesi esplicite."
+              },
+              {
+                "term": "simbiotici",
+                "definition": "Organismi che vivono in stretta associazione biologica con altri organismi."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Nature — Articolo peer-reviewed originale, DOI 10.1038/s41586-026-11263-3",
+                "url": "https://www.nature.com/articles/s41586-026-11263-3"
+              },
+              {
+                "title": "IUCN — Comunicato sulla valutazione dei coralli",
+                "url": "https://iucn.org/index.php/press-release/202610/nearly-half-reef-building-coral-species-face-elevated-relative-risk-extinction"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "cultura",
+        "name": "CULTURA",
+        "stories": [
+          {
+            "id": "museo-sironi-presentazione",
+            "type": "CULTURA",
+            "title": "Un museo dedicato a Mario Sironi: perché conta il progetto",
+            "dek": "Il Ministero della Cultura presenta un nuovo centro di studi dedicato a un artista difficile da ridurre a una sola stagione.",
+            "minutes": 1,
+            "paragraphs": [
+              "Per il 22 ottobre il Ministero della Cultura ha annunciato a Roma la presentazione del nuovo Museo Mario Sironi – Centro Studi Sironiani, alla presenza del ministro Alessandro Giuli. Il comunicato ufficiale conferma l'incontro di presentazione, ma non specifica tutti i dettagli su allestimento, apertura al pubblico e programma futuro: non sarebbe corretto trattarli come già accertati.",
+              "Mario Sironi è stato un protagonista dell'arte italiana del Novecento. La sua produzione comprende pittura, grafica, architettura e progetti monumentali, attraversando un periodo storico segnato anche dal rapporto fra produzione artistica e regime fascista. Studiare il suo lavoro significa quindi affrontare insieme linguaggi visivi, spazio pubblico e responsabilità culturale.",
+              "La rilevanza di un centro studi non sta soltanto nel riunire opere. Dipenderà dalla capacità di renderle accessibili, documentare i contesti, sostenere la ricerca e presentare i nodi controversi senza cancellarli. Per questo il progetto è interessante anche per chi si occupa di design, comunicazione e relazione tra immagini e potere."
+            ],
+            "deepDive": "Un museo dedicato a una figura del Novecento può assumere forme molto diverse: esposizione permanente, archivio documentario, biblioteca di ricerca o programma di mostre temporanee. Il valore culturale dipende da come queste funzioni vengono definite. In particolare, per artisti legati a periodi politicamente controversi, è importante distinguere lo studio critico dall'omaggio celebrativo.",
+            "terms": [
+              {
+                "term": "arte monumentale",
+                "definition": "Opere concepite in rapporto a edifici, piazze o altri grandi spazi architettonici e pubblici."
+              },
+              {
+                "term": "centro studi",
+                "definition": "Istituzione dedicata alla conservazione, documentazione, ricerca e diffusione di conoscenze su un tema o autore."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Ministero della Cultura — Annuncio della presentazione, 19 ottobre",
+                "url": "https://cultura.gov.it/comunicato/29416"
+              }
+            ],
             "related": []
           }
         ]
