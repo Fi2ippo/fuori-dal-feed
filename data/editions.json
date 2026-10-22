@@ -1,0 +1,81 @@
+[
+  {
+    "date": "2026-10-22",
+    "demo": true,
+    "sections": [
+      {
+        "id": "attualita",
+        "name": "ATTUALITÀ",
+        "stories": [
+          {
+            "id": "comprendere-notizie",
+            "title": "Che cosa rende una notizia davvero importante?",
+            "dek": "Una guida dimostrativa al modo in cui leggeremo il mondo.",
+            "minutes": 4,
+            "paragraphs": [
+              "Una notizia non è importante soltanto perché compare in molti titoli. Per capire un evento dobbiamo distinguere i fatti verificati dalle interpretazioni e dalle ipotesi.",
+              "Una buona ricostruzione risponde a cinque domande: che cosa è successo, perché è successo, quale contesto lo precede, quali conseguenze potrebbe avere e che cosa non sappiamo ancora.",
+              "Nel nostro giornale ogni termine complesso può aprire una spiegazione senza interrompere la lettura. Prova a selezionare il concetto evidenziato nel prossimo paragrafo.",
+              "Il contesto è l'insieme degli avvenimenti e delle condizioni che aiutano a comprendere un fatto. Senza contesto, anche un'informazione corretta può risultare fuorviante."
+            ],
+            "terms": [
+              {
+                "term": "contesto",
+                "definition": "Le circostanze storiche, politiche, economiche e sociali che aiutano a interpretare un avvenimento."
+              }
+            ],
+            "deepDive": "Prima di trarre conclusioni, chiediti quali elementi sono confermati, quali provengono da una sola fonte e quali sono ancora oggetto di discussione.",
+            "sources": [],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "geopolitica",
+        "name": "GEOPOLITICA",
+        "stories": [
+          {
+            "id": "capire-geopolitica",
+            "title": "Perché gli eventi internazionali sono collegati?",
+            "dek": "Una lettura introduttiva, non una notizia di attualità.",
+            "minutes": 3,
+            "paragraphs": [
+              "Le decisioni di uno Stato possono influenzare gli altri attraverso commercio, sicurezza, energia e diplomazia.",
+              "Per comprendere un conflitto o un negoziato bisogna osservare gli interessi degli attori, le loro possibilità di azione e i vincoli internazionali."
+            ],
+            "terms": [],
+            "deepDive": "Una stessa decisione può avere conseguenze differenti per i Paesi coinvolti. Per questo separeremo sempre fatti, posizioni ufficiali e analisi.",
+            "sources": [],
+            "related": [
+              {
+                "date": "2026-10-22",
+                "storyId": "comprendere-notizie",
+                "label": "Come valutare una notizia"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ricerca",
+        "name": "RICERCA E CULTURA",
+        "stories": [
+          {
+            "id": "metodo-scientifico",
+            "title": "Come leggere una ricerca senza fermarsi al titolo",
+            "dek": "Dalle domande iniziali ai limiti dei risultati.",
+            "minutes": 3,
+            "paragraphs": [
+              "Un articolo scientifico non è una prova assoluta: descrive una domanda, un metodo, dei risultati e i loro limiti.",
+              "Quando parleremo di studi scientifici, indicheremo le fonti originali, i metodi impiegati e ciò che i risultati non consentono di concludere."
+            ],
+            "terms": [],
+            "deepDive": "Distinguere correlazione e causalità è essenziale: due fenomeni possono variare insieme senza che uno provochi necessariamente l'altro.",
+            "sources": [],
+            "related": []
+          }
+        ]
+      }
+    ]
+  }
+]
