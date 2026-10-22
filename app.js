@@ -374,8 +374,8 @@ function updateScroll(){
         readerState.progress[screenKey(index-1)]=1;
       }
     }
+    skipPreviousCompletion=false;
   }
-  skipPreviousCompletion=false;
   app.querySelectorAll('.rail-segment').forEach((node,i)=>{
     const maxRead=clamp(Number(readerState.progress[screenKey(i)])||0);
     node.classList.toggle('visited',maxRead>.01);
