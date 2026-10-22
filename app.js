@@ -104,7 +104,15 @@ function rememberPosition() {
 function restoreFromUrl(initial = false) {
   const params = new URLSearchParams(location.search);
   const date = params.get('date');
-  edition = editions.find(item => item.date === date) || editions[0];
+  let restoredDate=null;
+  if(initial&&!date){
+    try {
+      const saved=JSON.parse(localStorage.getItem('fdf-position'));
+      if(saved&&editions.some(e=>e.date===saved.date&&
+        (e.status||'published')===saved.editionTag))restoredDate=saved.date;
+    }catch(_){}
+  }
+  edition=editions.find(item=>item.date===(date||restoredDate))||editions[0];
   slides = buildSlides(edition);
   const story = params.get('story');
   const section = params.get('section');
@@ -252,7 +260,7 @@ function renderArticle(slide) {
 /* The edition is a single vertical stream. Sections are semantic landmarks;
    gates add gentle editorial breathing space without hiding any article. */
 let scrollEl=null,scrollTick=0,initializing=false,jumpInProgress=false;
-let boundaryBrake=null,passedGate=-1;
+let boundaryBrake=null,passedGate=-1,skipPreviousCompletion=false;
 const clamp=(v,min=0,max=1)=>Math.max(min,Math.min(max,v));
 function flowKey(){return edition.date+'|flow';}
 function renderSlide(slide,index){
@@ -357,7 +365,7 @@ function updateScroll(){
   if(!jumpInProgress){
     readerState.progress[key]=Math.max(Number(readerState.progress[key])||0,fraction);
     // A skipped article is never automatically marked read by a direct jump.
-    if(index>0){
+    if(index>0&&!skipPreviousCompletion){
       const previous=blocks[index-1];
       if(top-previous.offsetTop<viewport*2.2&&
          top+1>=previous.offsetTop+previous.offsetHeight){
@@ -365,6 +373,7 @@ function updateScroll(){
       }
     }
   }
+  skipPreviousCompletion=false;
   app.querySelectorAll('.rail-segment').forEach((node,i)=>{
     const maxRead=clamp(Number(readerState.progress[screenKey(i)])||0);
     node.classList.toggle('visited',maxRead>.01);
@@ -414,7 +423,7 @@ function render(landing={index:current,mode:'start'}){
     dateList.scrollLeft=Math.max(0,dateActive.offsetLeft-dateList.offsetLeft-
       (dateList.clientWidth-dateActive.offsetWidth)/2);
   }
-  boundaryBrake=null;passedGate=-1;jumpInProgress=false;
+  boundaryBrake=null;passedGate=-1;jumpInProgress=false;skipPreviousCompletion=true;
   requestAnimationFrame(()=>{
     const wanted=scrollEl.querySelector('#screen-'+landing.index);
     if(!wanted)return;
@@ -430,7 +439,7 @@ function render(landing={index:current,mode:'start'}){
 function navigateTo(index,smooth=true){
   const target=scrollEl?.querySelector('#screen-'+index);
   if(!target)return;
-  closeTerm();boundaryBrake=null;passedGate=-1;jumpInProgress=true;
+  closeTerm();boundaryBrake=null;passedGate=-1;jumpInProgress=true;skipPreviousCompletion=true;
   const isSmooth=smooth&&!reducedMotion.matches;
   scrollEl.scrollTo({top:target.offsetTop,behavior:isSmooth?'smooth':'instant'});
   if(isSmooth){
@@ -509,6 +518,13 @@ document.addEventListener('pointerdown',event=>{
 });
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape'){closeTerm();return;}
+  if((event.key==='ArrowDown'||event.key==='ArrowUp'||event.key==='PageDown'||event.key==='PageUp')&&
+    event.target===document.body&&scrollEl&&!event.altKey&&!event.ctrlKey&&!event.metaKey){
+    event.preventDefault();
+    const shift=event.key.startsWith('Page')?scrollEl.clientHeight*.78:65;
+    scrollEl.scrollBy({top:shift*(event.key.endsWith('Down')?1:-1),behavior:'instant'});
+    return;
+  }
   if(event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
   if(event.ctrlKey&&event.key==='Home'){event.preventDefault();navigateTo(0,false);}
   if(event.ctrlKey&&event.key==='End'){event.preventDefault();navigateTo(slides.length-1,false);}
