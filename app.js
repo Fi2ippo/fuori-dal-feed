@@ -322,7 +322,7 @@ function viewIndex(blocks,top,viewport){
 }
 function measure(block,top,viewport){
   const height=Math.max(1,block.offsetHeight);
-  const untilDone=Math.max(1,height-Math.min(viewport*.55,height*.55));
+  const untilDone=height<=viewport*1.15?height:Math.max(1,height-viewport*.6);
   return clamp((top-block.offsetTop)/untilDone);
 }
 function setRailIndex(index){
@@ -471,7 +471,7 @@ function handleWheel(e){
   const gates=scrollEl.querySelectorAll('.editorial-gate');
   for(let i=0;i<gates.length;i++){
     const gate=gates[i];
-    const stop=clamp(gate.offsetTop+gate.offsetHeight*.5-scrollEl.clientHeight*.53,
+    const stop=clamp(gate.offsetTop-scrollEl.clientHeight*.18,
       0,Math.max(0,scrollEl.scrollHeight-scrollEl.clientHeight));
     if(passedGate===i){
       if(Math.abs(top-stop)>85)passedGate=-1;
