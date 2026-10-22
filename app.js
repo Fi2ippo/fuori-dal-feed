@@ -260,7 +260,7 @@ function renderArticle(slide) {
 /* The edition is a single vertical stream. Sections are semantic landmarks;
    gates add gentle editorial breathing space without hiding any article. */
 let scrollEl=null,scrollTick=0,initializing=false,jumpInProgress=false;
-let boundaryBrake=null,passedGate=-1,skipPreviousCompletion=false;
+let boundaryBrake=null,passedGate=-1,skipPreviousCompletion=false,snapPauseTimer=0;
 const clamp=(v,min=0,max=1)=>Math.max(min,Math.min(max,v));
 function flowKey(){return edition.date+'|flow';}
 function renderSlide(slide,index){
@@ -289,7 +289,17 @@ function closeTerm(){
   app.querySelectorAll('.margin-note').forEach(n=>{n.innerHTML='';n.hidden=true;});
   termAnchor=null;
 }
+function pauseTouchSnap(){
+  if(!scrollEl)return;
+  const target=scrollEl;
+  target.classList.add('bypass-snap');
+  clearTimeout(snapPauseTimer);
+  snapPauseTimer=setTimeout(()=>{
+    if(target===scrollEl&&!jumpInProgress)target.classList.remove('bypass-snap');
+  },480);
+}
 function showTerm(button){
+  pauseTouchSnap();
   const section=button.closest('.reading-section');
   const story=slides[Number(section?.dataset.index)]?.story;
   const item=(story?.terms||[])[Number(button.dataset.term)];
@@ -520,6 +530,7 @@ function handleWheel(e){
   }
 }
 app.addEventListener('click',event=>{
+  if(event.target.closest('.reading-section summary'))pauseTouchSnap();
   const date=event.target.closest('button[data-date]');
   if(date)return changeEdition(date.dataset.date);
   const jump=event.target.closest('button[data-screen]');
