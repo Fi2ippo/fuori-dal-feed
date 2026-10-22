@@ -8,13 +8,14 @@ Edizione pilota del **22 ottobre 2026** pubblicata in `data/editions.json`: 12 a
 
 ## Esperienza di lettura
 
-- Una sezione alla volta, introduzioni di capitolo a schermo pieno.
-- Lettura verticale degli articoli, navigazione orizzontale tra schermate.
-- Timeline laterale discreta: mostra avanzamento reale nello scorrimento e schermate completate.
+- Un unico flusso verticale e finito: introduzioni delle categorie a schermo pieno, articoli e conclusione.
+- Soglie editoriali leggere tra i contenuti: separatori discreti e uno spazio di transizione; breve resistenza alla rotellina/trackpad vicino al confine e assestamento nativo di prossimità sui dispositivi touch compatibili.
+- Timeline laterale sincronizzata con lo scroll effettivo: posizione corrente, avanzamento nell'articolo, contenuti già percorsi e collegamenti diretti alle sezioni.
+- Nessun blocco obbligatorio per tastiera, tecnologie assistive o modalità con movimento ridotto.
 - Tipografia editoriale adattiva: articoli ampi su desktop, colonna unica su smartphone.
 - Spiegazioni cliccabili dei termini: annotazioni nel margine su desktop, inline sui dispositivi piccoli.
 - Sezioni facoltative: **Per capire davvero**, **Per collegare i fatti / La storia fin qui**, **Fonti e documenti**.
-- Ripresa dello stesso punto e delle sezioni aperte tramite `localStorage`, senza account.
+- Ripresa dello stesso punto del flusso verticale e delle sezioni aperte tramite `localStorage`, senza account.
 - Link precisi agli articoli e pulsante di ritorno alla lettura d'origine per le notizie correlate.
 - Archivio delle edizioni selezionabile dall'header.
 
