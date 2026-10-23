@@ -104,15 +104,10 @@ function rememberPosition() {
 function restoreFromUrl(initial = false) {
   const params = new URLSearchParams(location.search);
   const date = params.get('date');
-  let restoredDate=null;
-  if(initial&&!date){
-    try {
-      const saved=JSON.parse(localStorage.getItem('fdf-position'));
-      if(saved&&editions.some(e=>e.date===saved.date&&
-        (e.status||'published')===saved.editionTag))restoredDate=saved.date;
-    }catch(_){}
-  }
-  edition=editions.find(item=>item.date===(date||restoredDate))||editions[0];
+  // The home page always opens the newest published edition.
+  // A bookmarked ?date=... URL still opens that specific archive issue.
+  // Reading progress resumes only if the saved date is the current edition.
+  edition=editions.find(item=>item.date===date)||editions[0];
   slides = buildSlides(edition);
   const story = params.get('story');
   const section = params.get('section');
