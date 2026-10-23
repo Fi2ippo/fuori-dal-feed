@@ -611,3 +611,10 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 
 /* Timeline jumps and direct article links must not land on a nearby gate. */
 .reading-scroll.bypass-snap { scroll-snap-type: none !important; }
+
+/* Editorial accountability, 23 October 2026 */
+.editorial-meta{font-size:.72rem;line-height:1.6;letter-spacing:.025em;color:#64665e;margin:1rem 0 .7rem;overflow-wrap:anywhere}
+.editorial-meta strong{color:#393e39;font-weight:700}
+.editorial-warning{font-size:.84rem;line-height:1.55;border-left:2px solid #a67c54;padding:.55rem .8rem;color:#6c513e;background:rgba(166,124,84,.06);margin:.8rem 0 1.3rem}
+.edition-verification-notice{position:relative;z-index:3;font-size:.68rem;line-height:1.4;letter-spacing:.03em;padding:.45rem 1.1rem;background:#ede9df;color:#5d574b;text-align:center}
+@media(max-width:680px){.edition-verification-notice{font-size:.62rem;padding:.4rem .7rem}.editorial-meta{font-size:.68rem}}
