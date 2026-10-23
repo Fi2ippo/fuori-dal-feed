@@ -2,7 +2,7 @@
   {
     "date": "2026-10-23",
     "status": "published",
-    "editorialNote": "Audit 23 ottobre 2026: controllo tecnico del repository riuscito; disponibilità del sito GitHub Pages non verificabile dall'ambiente. Fonti originali confermate per tifone Champi (Reuters), quasi-Riemann (Quanta) e studio 74 paesi (Nature). Altri articoli rimangono da verificare; link generici e titoli senza conferma non equivalgono a fact-checking. Non usare questa edizione come fonte esclusiva per notizie urgenti.",
+    "editorialNote": "Revisione del 23 ottobre 2026, ore 16:15 Europe/Rome. Sostituiti collegamenti generici con fonti originali e datate; corretta sede del presidio dei taxi in base all'aggiornamento ANSA delle 12:18; integrata la crisi umanitaria del Sudan. 'Fonti consultate' significa fonte originale recuperata e fatti essenziali confrontati, non verifica totale o aggiornamento automatico. Edizione statica: i dati restano quelli del controllo dichiarato. GitHub Pages non verificabile direttamente nell'ambiente di pubblicazione.",
     "demo": false,
     "sections": [
       {
@@ -14,15 +14,16 @@
             "type": "NOTIZIA",
             "title": "23 ottobre: i fatti da sapere prima degli approfondimenti",
             "dek": "Edizione del 23 ottobre 2026 · notizie del giorno, sviluppi in corso e letture selezionate: tre categorie distinte.",
-            "minutes": 4,
+            "minutes": 7,
             "paragraphs": [
+              "Questa edizione distingue tre tempi: fatti pubblicati il 23 ottobre, sviluppi recenti da seguire e approfondimenti selezionati delle settimane precedenti. Le notizie possono cambiare dopo la chiusura editoriale; ogni articolo rimanda alla fonte originale con la data.",
               "ITALIA — Il decreto approvato ieri dal governo prevede 175,2 milioni di euro contro il caro carburanti: 105,2 per l'autotrasporto, 60 per l'agricoltura e 10 per la pesca. Oggi alcuni presìdi dei camionisti si sciolgono, ma restano problemi per le consegne e le imprese. La cifra di 105 milioni non è il totale degli aiuti.",
-              "ITALIA — Secondo l'aggiornamento ANSA del 23 ottobre, i taxi annunciano una protesta per lunedì davanti al ministero dell'Economia contro il caro carburante. È una protesta annunciata, non uno sciopero nazionale già avvenuto.",
+              "ITALIA — La protesta dei taxi contro il caro carburante è prevista lunedì 26 ottobre dalle 10 alle 13. Inizialmente annunciata davanti al ministero dell'Economia, è stata spostata alle 12:18 del 23 ottobre davanti al ministero delle Infrastrutture e dei Trasporti, in piazzale di Porta Pia. La manifestazione è annunciata e dovrebbe svolgersi senza vetture, fuori turno.",
               "ITALIA — Il ministero delle Imprese indica oggi prezzi medi dei carburanti di 2,022 euro al litro per la benzina e 2,260 per il gasolio sulla rete stradale. Sono prezzi medi comunicati dal ministero, non il prezzo di ogni distributore.",
               "EUROPA — Il governo britannico invita le famiglie a preparare scorte di emergenza per tre giorni. La campagna richiama anche un grave incidente informatico legato a vulnerabilità PHP emerse questa settimana e gli effetti di eventi climatici estremi. Non è l'annuncio di un'emergenza imminente.",
               "UCRAINA — Kyiv afferma che permangono limitazioni al servizio Starlink, nonostante un contatto telefonico fra Donald Trump ed Elon Musk citato nelle cronache del 23 ottobre. È una dichiarazione della parte ucraina, non una diagnosi tecnica indipendente.",
               "ASIA ORIENTALE — Taiwan ha cancellato quasi mille voli in previsione del tifone Champi; la Corea del Sud propone nuovi colloqui militari con il Nord per ridurre il rischio di incidenti lungo la frontiera.",
-              "AFRICA — In Tunisia la polizia ha disperso manifestanti con gas lacrimogeni dopo la morte di un uomo fermato; si tratta di fatti del 22 ottobre che richiedono ulteriori verifiche sulle responsabilità.",
+              "AFRICA — In Tunisia, gli scontri del 22 ottobre dopo la morte di un uomo fermato dalla polizia hanno riacceso tensioni sociali. Il 23 ottobre Reuters segnala inoltre per il Sudan un rischio crescente di fame a causa di guerra, siccità e insufficienza degli aiuti.",
               "EUROPA — La Grecia ha approvato il divieto di accesso ai social per i minori di 15 anni a partire dal 2027. La norma non è ancora in vigore.",
               "CISGIORDANIA — Le notizie del 23 ottobre riportano nuove tensioni e un annuncio del primo ministro israeliano sulla preparazione di una chiusura totale della Cisgiordania. Annuncio e attuazione sono due fatti diversi; la situazione richiede aggiornamenti continui.",
               "MONDO — La crisi in Medio Oriente continua ad avere ripercussioni sulle rotte commerciali e sul prezzo dell'energia. Per comprendere l'impatto occorre distinguere gli sviluppi militari verificati dalle previsioni sui mercati.",
@@ -33,16 +34,28 @@
             "terms": [],
             "sources": [
               {
-                "title": "ANSA — ultima ora, 23 ottobre",
-                "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
+                "title": "ANSA · 23 ottobre: protesta taxi spostata davanti al MIT",
+                "url": "https://videoembed.ansa.it/sito/notizie/topnews/2026/10/23/taxi-siamo-tanti-manifestazione-del-26-si-sposta-di-fronte-al-mit_433a3ab2-21b5-479d-8f61-ad8fdabd2bad.html"
               },
               {
-                "title": "ANSA — decreto aiuti del 22 ottobre",
-                "url": "https://videoembed.ansa.it/sito/notizie/cronaca/2026/10/22/il-cdm-approva-il-decreto-sugli-aiuti-105-milioni-per-i-tir-e-70-per_416e7ef3-b46a-4594-90dd-671b4eb1cc0e.html"
+                "title": "ANSA · 22 ottobre: aiuti da 175,2 milioni",
+                "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/22/dai-tir-alla-pesca-ecco-tutti-gli-aiuti-in-arrivo_b84cb587-ffc8-4a0f-a41f-b4ca360e998a.html"
               },
               {
-                "title": "Reuters — UK advises three days emergency supplies, 23 October",
+                "title": "Reuters · 23 ottobre: campagna di preparazione nel Regno Unito",
                 "url": "https://www.reuters.com/business/aerospace-defense/uk-tells-public-keep-three-days-emergency-supplies-home-2026-10-23/"
+              },
+              {
+                "title": "Reuters · 23 ottobre: Corea del Sud propone colloqui al Nord",
+                "url": "https://www.reuters.com/world/asia-pacific/south-korea-proposes-talks-with-north-korea-land-border-again-2026-10-23/"
+              },
+              {
+                "title": "ERT · 23 ottobre: voto sui social in Grecia",
+                "url": "https://www.ertnews.gr/eidiseis/ellada/politiki/vouli-yperpsifistike-to-nomosxedio-gia-tin-apagoreysi-ton-social-media-se-paidia-kato-ton-15-eton-apo-to-2027/"
+              },
+              {
+                "title": "Reuters · 23 ottobre: nuova crisi alimentare in Sudan",
+                "url": "https://www.reuters.com/world/new-famine-risk-haunts-war-torn-sudan-with-el-nio-driven-drought-2026-10-23/"
               }
             ],
             "related": [],
@@ -72,18 +85,22 @@
             "terms": [],
             "sources": [
               {
-                "title": "ANSA — vertice di maggioranza, 22 ottobre",
+                "title": "ANSA · 22 ottobre: vertice sulla manovra e misure per i giovani",
                 "url": "https://videoembed.ansa.it/sito/notizie/topnews/2026/10/22/fonti-a-vertice-su-manovra-ampio-spazio-a-prospettive-e-misure-giovani_87983c7b-7f4c-425f-9a72-a11cfb7e07cf.html"
               },
               {
-                "title": "la Repubblica — ipotesi di misure",
+                "title": "Repubblica · 23 ottobre: ipotesi bonus affitti e congedi",
                 "url": "https://www.repubblica.it/economia/2026/10/23/news/manovra_aiuti_a_giovani_e_donne_con_bonus_affitti_e_piu_congedi-425668512/"
+              },
+              {
+                "title": "ANSA · 15 ottobre: Documento programmatico di bilancio",
+                "url": "https://www.ansa.it/english/news/politics/2026/10/15/italys-2027-budget-to-feature-23.5-billion-in-new-measures-dbp_cd248c70-ea57-4b37-98e6-1a75d814501f.html"
               }
             ],
             "related": [],
-            "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           },
           {
             "id": "trasporti-carburanti-italia",
@@ -102,66 +119,78 @@
             "terms": [],
             "sources": [
               {
-                "title": "ANSA, 22 ottobre — ripartizione ufficiale del decreto",
-                "url": "https://videoembed.ansa.it/sito/notizie/cronaca/2026/10/22/il-cdm-approva-il-decreto-sugli-aiuti-105-milioni-per-i-tir-e-70-per_416e7ef3-b46a-4594-90dd-671b4eb1cc0e.html"
+                "title": "ANSA · 22 ottobre: importi, destinatari e meccanismi del decreto",
+                "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/22/dai-tir-alla-pesca-ecco-tutti-gli-aiuti-in-arrivo_b84cb587-ffc8-4a0f-a41f-b4ca360e998a.html"
               },
               {
-                "title": "Corriere della Sera, 23 ottobre — aggiornamento sui blocchi",
-                "url": "https://www.corriere.it/economia/trasporti/diretta-live/26_ottobre_23/autotrasportatori-la-protesta-in-diretta-il-garante-degli-scioperi-chiede-la-precettazione-decreto-aiuti-105-milioni-per-i-tir_amp.shtml"
+                "title": "Corriere della Sera · 23 ottobre: la protesta e i presìdi",
+                "url": "https://www.corriere.it/economia/trasporti/diretta-live/26_ottobre_23/autotrasportatori-la-protesta-in-diretta-il-garante-degli-scioperi-chiede-la-precettazione-decreto-aiuti-105-milioni-per-i-tir.shtml"
               }
             ],
             "related": [],
             "freshness": "SVILUPPO IN CORSO",
             "verificationStatus": "fonti-consultate",
-            "sourceDate": "2026-10-22"
+            "sourceDate": "2026-10-23"
           },
           {
             "id": "milano-proteste-danni",
             "type": "CONTESTO",
-            "title": "Milano, le proteste e il conto dei danni",
-            "dek": "Una manifestazione può essere raccontata attraverso la partecipazione, la risposta delle autorità o i danni: sono prospettive diverse.",
+            "title": "Milano, scontri e danni: che cosa sappiamo della mobilitazione",
+            "dek": "Gli scontri risalgono al 17 ottobre: una lettura di contesto sulla protesta, distinta dagli aggiornamenti odierni.",
             "minutes": 3,
             "paragraphs": [
-              "A Milano le proteste hanno aperto una discussione sulla gestione dell'ordine pubblico e sui danni materiali attribuiti agli scontri. Le stime circolate nel dibattito arrivano a circa un milione di euro, ma vanno considerate stime attribuite, non un bilancio giudiziario definitivo.",
-              "Per capire l'episodio occorre distinguere le ragioni della mobilitazione, il comportamento dei manifestanti, eventuali responsabilità individuali e le decisioni delle autorità. Un'immagine di scontri non descrive da sola l'intera manifestazione.",
-              "La domanda pubblica non è soltanto quanto costino i danni: è anche come garantire il diritto di protesta e accertare le responsabilità senza confondere gruppi e singoli."
+              "Tra il 17 e il 19 ottobre 2026 alcune mobilitazioni contro il caro vita a Milano sono sfociate in scontri con la polizia, saccheggi e danni a esercizi commerciali nel centro della città. Non tutti coloro che hanno partecipato alle proteste hanno preso parte alle violenze: organizzatori, manifestanti pacifici e gruppi coinvolti negli scontri vanno distinti.",
+              "Secondo El País del 19 ottobre, i danni nella città erano stimati in circa un milione di euro. È una stima riportata dalla testata in quella data, non una quantificazione giudiziaria definitiva.",
+              "Il governo ha annunciato l'invio di 500 militari aggiuntivi a Milano. La risposta delle autorità ha acceso il dibattito sul confine fra tutela dell'ordine pubblico e diritto di manifestare.",
+              "Le proteste hanno radici economiche e sociali più ampie, fra salari, costo degli alloggi e carburanti: comprenderle non significa giustificare violenza o saccheggi. Allo stesso modo, gli episodi violenti non cancellano automaticamente le ragioni di chi ha manifestato pacificamente.",
+              "Questa non è una nuova protesta del 23 ottobre: è un approfondimento su eventi dei giorni precedenti. Per valutare le misure governative bisognerà seguirne i testi e gli effetti concreti."
             ],
             "deepDive": "La stima dei danni è un dato da confermare con fonti ufficiali; in assenza di un rendiconto pubblico definitivo non va trattata come una cifra accertata.",
             "terms": [],
             "sources": [
               {
-                "title": "ANSA — archivio cronaca italiana",
-                "url": "https://www.ansa.it/"
+                "title": "El País · 19 ottobre: scontri, arresti e stima dei danni",
+                "url": "https://elpais.com/internacional/2026-10-19/meloni-envia-500-soldados-a-milan-tras-dos-noches-de-incidentes-y-saqueos.html"
+              },
+              {
+                "title": "The Guardian · 20 ottobre: 500 militari aggiuntivi a Milano",
+                "url": "https://www.theguardian.com/world/2026/oct/20/milan-luxury-shops-close-italy-to-deploy-troops-youth-protests-europe"
               }
             ],
             "related": [],
             "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-20"
           },
           {
             "id": "taxi-protesta-23",
             "type": "NOTIZIA",
-            "title": "Taxi, annunciata una protesta al ministero dell'Economia",
-            "dek": "Lunedì è prevista una mobilitazione contro il caro carburante: oggi è l'annuncio, non l'esito.",
+            "title": "Taxi, protesta il 26 ottobre: spostata dal MEF al ministero dei Trasporti",
+            "dek": "Aggiornamento delle 12:18: sede cambiata. La mobilitazione è annunciata, non ancora avvenuta.",
             "minutes": 4,
             "paragraphs": [
-              "L'associazione itTaxi annuncia per lunedì una protesta davanti al ministero dell'Economia e delle Finanze. La notizia è stata riportata da ANSA il 23 ottobre alle 09:43.",
-              "Il settore lamenta l'aumento dei costi del carburante e chiede risposte urgenti. Gli organizzatori avvertono del rischio di un blocco del servizio in assenza di interventi: si tratta di una possibilità prospettata, non di una sospensione già verificata.",
-              "La vicenda è distinta dalle proteste degli autotrasportatori: interessi e organizzazioni coinvolte non coincidono. Il punto da seguire è se l'incontro istituzionale avverrà e quali misure concrete verranno eventualmente concordate."
+              "Venerdì 23 ottobre alle 09:43 ANSA riferiva che l'associazione itTaxi aveva annunciato una protesta per lunedì 26 ottobre davanti al ministero dell'Economia e delle Finanze, contro il caro carburante.",
+              "AGGIORNAMENTO DELLE 12:18 — ANSA riporta che il presidio è stato spostato in piazzale di Porta Pia, davanti al ministero delle Infrastrutture e dei Trasporti. Secondo gli organizzatori, lo spostamento è stato concordato con la Questura per il numero previsto di partecipanti.",
+              "La manifestazione, organizzata da Uri, itTaxi e Unicoop, è annunciata dalle 10 alle 13. I partecipanti dovrebbero essere fuori turno e presentarsi a piedi, senza vetture, per assicurare la continuità del servizio pubblico.",
+              "Le associazioni chiedono interventi per contenere i costi di esercizio, inclusa l'estensione di agevolazioni sul carburante. L'eventuale blocco del servizio evocato inizialmente è un rischio dichiarato, non uno stop già avvenuto."
             ],
             "deepDive": "Verificato rispetto alla fonte indicata. Per sviluppi successivi consultare la fonte originale: non è una notizia aggiornata automaticamente.",
             "terms": [],
             "sources": [
               {
-                "title": "ANSA — ultima ora 23 ottobre, ore 09:43",
-                "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
+                "title": "ANSA · 23 ottobre, 12:18: protesta spostata al MIT",
+                "url": "https://videoembed.ansa.it/sito/notizie/topnews/2026/10/23/taxi-siamo-tanti-manifestazione-del-26-si-sposta-di-fronte-al-mit_433a3ab2-21b5-479d-8f61-ad8fdabd2bad.html"
+              },
+              {
+                "title": "ANSA · 23 ottobre, 09:43: annuncio iniziale davanti al MEF",
+                "url": "https://videoembed.ansa.it/sito/notizie/topnews/2026/10/23/lunedi-protesta-taxi-al-mef-contro-il-caro-carburante-minacciano-stop_ff67c1e9-553d-4df0-bf7c-35dded25bd84.html"
               }
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "da-verificare",
-            "sourceDate": "2026-10-23"
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23",
+            "updatedAt": "2026-10-23T12:18:00+02:00"
           },
           {
             "id": "spread-btp-23",
@@ -179,13 +208,17 @@
             "terms": [],
             "sources": [
               {
-                "title": "ANSA — Ultima ora, 23 ottobre, 09:28",
-                "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
+                "title": "ANSA · 23 ottobre, 09:28: spread oltre 126 punti",
+                "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/23/lo-spread-tra-btp-e-bund-si-allarga-oltre-i-126-punti-base_5964b6f3-2ea3-459d-bf98-2a660d19eba5.html"
+              },
+              {
+                "title": "ANSA · 22 ottobre: chiusura a 124 punti",
+                "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/22/lo-spread-tra-btp-e-bund-chiude-in-rialzo-a-124-punti_d3bb1712-54a8-41ca-bd45-ec36a83b043d.html"
               }
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "da-verificare",
+            "verificationStatus": "fonti-consultate",
             "sourceDate": "2026-10-23"
           }
         ]
@@ -210,13 +243,17 @@
             "terms": [],
             "sources": [
               {
-                "title": "Reuters via The Star — Corea, 23 ottobre",
-                "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world"
+                "title": "Reuters · 23 ottobre: proposta di colloqui militari",
+                "url": "https://www.reuters.com/world/asia-pacific/south-korea-proposes-talks-with-north-korea-land-border-again-2026-10-23/"
+              },
+              {
+                "title": "Associated Press · 23 ottobre: contesto e versioni delle due Coree",
+                "url": "https://apnews.com/article/9498c415c93ae9bc3767caf83e15b8b3"
               }
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "da-verificare",
+            "verificationStatus": "fonti-consultate",
             "sourceDate": "2026-10-23"
           },
           {
@@ -247,26 +284,34 @@
           {
             "id": "grecia-social-under15",
             "type": "NOTIZIA",
-            "title": "Grecia, vietati i social ai minori di 15 anni dal 2027",
+            "title": "Grecia, legge approvata: social vietati agli under 15 dal 2027",
             "dek": "Una decisione che riguarda diritti dei minori, piattaforme e controllo dell'età.",
             "minutes": 3,
             "paragraphs": [
-              "RaiNews riferisce il 23 ottobre che la Grecia ha approvato una legge che vieta l'accesso ai social media ai minori di 15 anni, con entrata in vigore prevista per il 1° gennaio 2027.",
-              "La misura punta a ridurre i rischi legati all'uso delle piattaforme da parte dei più giovani. La questione operativa sarà la verifica dell'età: come impedire l'accesso senza raccogliere dati personali in modo sproporzionato?",
-              "L'approvazione della legge non significa che il divieto sia già in vigore. Sarà necessario seguire l'attuazione tecnica e l'eventuale risposta delle piattaforme.",
-              "Il caso si inserisce in un dibattito europeo più ampio sul rapporto fra tutela dei minori, libertà di accesso e responsabilità delle aziende tecnologiche."
+              "Il Parlamento greco ha approvato la legge che impedisce ai minori di 15 anni di usare i principali social network. L'approvazione è avvenuta nella seduta del 22 ottobre; le testate greche ne danno notizia il 23 ottobre. Il divieto entrerà in vigore il 1° gennaio 2027.",
+              "Il ministero della Salute greco aveva illustrato il calendario legislativo già il 12 ottobre. Il governo sostiene che la misura possa ridurre l'esposizione dei bambini a scrolling prolungato, perdita di sonno e altri rischi. Questa è la motivazione pubblica del provvedimento, non una prova che il divieto produca automaticamente tutti i benefici auspicati.",
+              "La responsabilità della verifica dell'età ricadrà sulle piattaforme. Il problema è tecnico e politico insieme: come dimostrare di avere almeno 15 anni senza raccogliere più dati personali del necessario?",
+              "Il voto parlamentare non equivale all'entrata in vigore, e i dettagli pratici dipenderanno dall'attuazione. La discussione si inserisce nel confronto più ampio fra protezione dei minori, privacy e accesso ai servizi digitali."
             ],
             "deepDive": "Notizia attribuita alle fonti indicate. Per gli sviluppi successivi occorre consultare gli aggiornamenti delle testate e le comunicazioni ufficiali.",
             "terms": [],
             "sources": [
               {
-                "title": "RaiNews — Grecia, social e minori, 23 ottobre",
-                "url": "https://www.rainews.it/"
+                "title": "ERT, emittente pubblica greca · 23 ottobre: approvazione parlamentare",
+                "url": "https://www.ertnews.gr/eidiseis/ellada/politiki/vouli-yperpsifistike-to-nomosxedio-gia-tin-apagoreysi-ton-social-media-se-paidia-kato-ton-15-eton-apo-to-2027/"
+              },
+              {
+                "title": "Ministero greco della Salute · 12 ottobre: iter e entrata in vigore",
+                "url": "https://www.moh.gov.gr/articles/ministry/grafeio-typoy/press-releases/14838-sth-boylh-stis-13-oktwbrioy-to-nomosxedio-gia-thn-prosbash-twn-anhlikwn-sta-koinwnika-diktya"
+              },
+              {
+                "title": "eKathimerini · 23 ottobre: testo e verifica dell'età",
+                "url": "https://www.ekathimerini.com/in-depth/society-in-depth/1319060/greece-passes-social-media-ban-for-children-under-15/"
               }
             ],
             "related": [],
-            "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "da-verificare",
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
             "sourceDate": "2026-10-23"
           },
           {
@@ -309,14 +354,18 @@
             "terms": [],
             "sources": [
               {
-                "title": "Reuters — tensioni e proteste in Francia, 22 ottobre",
+                "title": "Reuters · 22 ottobre: Macron annuncia restrizioni alle proteste",
                 "url": "https://www.reuters.com/world/europe/frances-macron-tightens-curbs-protests-blaming-hard-left-unrest-2026-10-22/"
+              },
+              {
+                "title": "Le Monde · 23 ottobre: risposta del governo e divisioni politiche",
+                "url": "https://www.lemonde.fr/en/politics/article/2026/10/23/macron-resumes-control-of-france-s-public-order-response-amid-social-protests-and-criticism_6762243_5.html"
               }
             ],
             "related": [],
-            "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           },
           {
             "id": "ucraina-energia-europa",
@@ -334,18 +383,18 @@
             "terms": [],
             "sources": [
               {
-                "title": "Consiglio europeo — comunicati e conclusioni",
-                "url": "https://www.consilium.europa.eu/it/european-council/"
+                "title": "Reuters · 21 ottobre: attacchi a Kyiv e negoziati",
+                "url": "https://www.reuters.com/world/europe/missiles-strike-ukraines-kyiv-reuters-witness-says-2026-10-21/"
               },
               {
-                "title": "Reuters — attacchi su Kyiv",
-                "url": "https://www.reuters.com/world/europe/missiles-strike-ukraines-kyiv-reuters-witness-says-2026-10-21/"
+                "title": "Reuters · 22 ottobre: restrizioni Starlink e posizioni di Trump e Kyiv",
+                "url": "https://www.reuters.com/business/media-telecom/trump-asks-musk-lift-ukraine-starlink-restrictions-wsj-reports-2026-10-22/"
               }
             ],
             "related": [],
             "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-22"
           },
           {
             "id": "gaza-aiuti-wfp",
@@ -354,79 +403,83 @@
             "dek": "Le distribuzioni raggiungono persone reali, ma non esauriscono il bisogno umanitario.",
             "minutes": 4,
             "paragraphs": [
-              "Il Programma alimentare mondiale (WFP) descrive una crisi alimentare persistente nella Striscia di Gaza. Nelle comunicazioni umanitarie compaiono cifre sul numero di persone raggiunte, sui pasti distribuiti e sulle scorte disponibili: sono indicatori diversi.",
-              "Un calo delle persone assistite, per esempio da circa 1,6 a 1,1 milioni nei periodi riportati, non significa automaticamente che il bisogno sia diminuito. Può riflettere accesso limitato, carenze di rifornimenti, difficoltà logistiche o cambiamenti nei programmi.",
-              "Il quadro richiede di tenere insieme sicurezza dei civili, accesso degli operatori umanitari, disponibilità di cibo e condizioni sanitarie. Le organizzazioni sul campo forniscono dati preziosi, ma spesso parziali e aggiornati in momenti diversi.",
-              "La domanda fondamentale è quante persone necessitino assistenza e quante possano riceverla con regolarità, non soltanto quante siano state raggiunte una volta."
+              "Il Programma alimentare mondiale delle Nazioni Unite ha annunciato il 19 ottobre nuovi tagli all'assistenza alimentare a Gaza, a causa della carenza di finanziamenti. Si tratta di un aggiornamento specifico pubblicato prima dell'edizione del 23 ottobre, non di una cifra raccolta oggi.",
+              "Secondo il WFP, l'assistenza da cibo e denaro scende a 1,1 milioni di persone più vulnerabili rispetto ai circa 1,6 milioni raggiunti il mese precedente. L'agenzia riferisce anche il dimezzamento dei pacchi alimentari e il calo dei pasti caldi giornalieri da 250.000 a 150.000.",
+              "Il dato non significa che il bisogno di cibo sia diminuito: al contrario, il WFP attribuisce i tagli all'insufficienza delle risorse. Il numero di persone raggiunte misura la capacità di assistenza, non da solo la gravità della fame.",
+              "L'impatto sulle famiglie dipende da continuità delle distribuzioni, accesso umanitario, prezzi locali, salute pubblica e sicurezza dei civili. Le cifre cambiano nel tempo e descrivono programmi specifici, non necessariamente tutta la popolazione bisognosa.",
+              "La domanda da seguire è se arriveranno nuovi finanziamenti e se l'accesso agli aiuti potrà essere mantenuto con regolarità."
             ],
             "deepDive": "I numeri relativi alle persone raggiunte devono sempre essere letti insieme al periodo di riferimento, alla frequenza dell'assistenza e al tipo di aiuto.",
             "terms": [],
             "sources": [
               {
-                "title": "World Food Programme — emergenza Palestina",
-                "url": "https://www.wfp.org/emergencies/palestine-emergency"
+                "title": "World Food Programme · 19 ottobre: tagli agli aiuti a Gaza",
+                "url": "https://friends.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza"
               },
               {
-                "title": "OCHA — situazione umanitaria",
+                "title": "OCHA · portale di monitoraggio della crisi palestinese",
                 "url": "https://www.ochaopt.org/"
               }
             ],
             "related": [],
             "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-19"
           },
           {
             "id": "serbia-studenti-elezioni",
             "type": "CONTESTO",
-            "title": "Serbia: perché gli studenti sono diventati una forza politica",
+            "title": "Serbia, gli studenti sfidano il potere alle urne: come sono arrivati fin qui",
             "dek": "Dalle mobilitazioni alle richieste di responsabilità, una generazione sfida le istituzioni.",
             "minutes": 3,
             "paragraphs": [
-              "In Serbia la mobilitazione studentesca si è trasformata in un elemento centrale del dibattito politico. Le proteste esprimono richieste di trasparenza, responsabilità delle istituzioni e maggiore fiducia nei processi democratici.",
-              "Quando un movimento discute di elezioni o sostiene iniziative politiche, è importante distinguere l'annuncio, la convocazione ufficiale di un voto e il suo esito. La forza di una mobilitazione non coincide automaticamente con una vittoria elettorale.",
-              "Il caso serbo è interessante perché mostra il passaggio difficile dalla protesta alla rappresentanza: come si costruisce un programma comune senza perdere la pluralità delle persone che partecipano?"
+              "Il movimento studentesco serbo si è formato dopo il crollo della pensilina della stazione di Novi Sad nel novembre 2024, che ha causato 16 morti. Alle richieste iniziali di trasparenza e responsabilità si sono aggiunte mobilitazioni più ampie contro la corruzione percepita e la gestione del potere.",
+              "Un approfondimento Reuters pubblicato il 21 ottobre 2026 racconta come il movimento abbia costruito una lista elettorale e una struttura di mobilitazione civica, trasformandosi in una delle sfide più rilevanti per il presidente Aleksandar Vučić.",
+              "La presenza di una lista elettorale non equivale a una vittoria alle urne. I sondaggi citati da Reuters mostrano un quadro competitivo, ma restano previsioni e non risultati.",
+              "La domanda politica è come una rete nata dalle proteste possa governare, mantenere coesione interna e tradurre le richieste di cambiamento in politiche realizzabili. Questa è una lettura di contesto del 21 ottobre, non un risultato elettorale del 23."
             ],
             "deepDive": "Per date e risultati elettorali fanno fede gli organi elettorali ufficiali. Le rivendicazioni di un movimento non sono di per sé fatti istituzionali già avvenuti.",
             "terms": [],
             "sources": [
               {
-                "title": "Reuters — copertura internazionale dei Balcani",
-                "url": "https://www.reuters.com/world/europe/"
+                "title": "Reuters · 21 ottobre: storia del movimento e sfida elettorale",
+                "url": "https://www.reuters.com/world/europe/serbia-votes-students-emerge-greatest-threat-vucics-long-rule-2026-10-21/"
               }
             ],
             "related": [],
             "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-21"
           },
           {
             "id": "eu-bilancio-priorita",
             "type": "CONTESTO",
-            "title": "Unione europea: il bilancio è una mappa delle priorità",
+            "title": "Bilancio UE 2027: dal voto del Parlamento ai negoziati con il Consiglio",
             "dek": "Dietro le cifre ci sono scelte su ricerca, istruzione, sicurezza e coesione.",
             "minutes": 3,
             "paragraphs": [
-              "Le istituzioni europee discutono come destinare risorse a programmi e politiche comuni. I negoziati sul bilancio annuale 2027 si intrecciano con il dibattito sul prossimo quadro finanziario pluriennale.",
-              "Parlamento, Commissione e Consiglio hanno ruoli diversi. Una proposta della Commissione non è un finanziamento già approvato; un emendamento parlamentare non significa che gli Stati membri abbiano accettato la spesa.",
-              "Per leggere un bilancio europeo conviene chiedersi che cosa viene finanziato, per chi, in quali anni e con quali condizioni. Erasmus+, ricerca e politiche sociali diventano più comprensibili quando le cifre sono collegate alle persone."
+              "Il 21 ottobre 2026 il Parlamento europeo ha votato la propria posizione sul progetto di bilancio dell'Unione per il 2027. È una tappa negoziale, non l'approvazione definitiva del bilancio.",
+              "Secondo il Servizio di ricerca del Parlamento europeo (EPRS), la proposta della Commissione prevede circa 200 miliardi di euro in impegni e 212 miliardi in pagamenti, includendo strumenti speciali. Sono due grandezze diverse: gli impegni autorizzano obbligazioni di spesa, mentre i pagamenti rappresentano esborsi attesi.",
+              "La commissione Bilanci del Parlamento ha chiesto 1,17 miliardi di euro aggiuntivi rispetto al progetto della Commissione, proponendo incrementi mirati per infrastrutture, ricerca, sanità, Erasmus+ e altre priorità.",
+              "Il Consiglio ha assunto una posizione diversa, con riduzioni su alcune voci. La procedura prosegue con la conciliazione fra le due istituzioni, prevista all'inizio di novembre.",
+              "Per i cittadini la domanda concreta è quali programmi riceveranno risorse effettivamente disponibili. Le richieste politiche del Parlamento non sono ancora stanziamenti spendibili."
             ],
             "deepDive": "Bilancio annuale e quadro finanziario pluriennale non sono la stessa cosa: il secondo definisce i massimali e gli indirizzi di spesa su più anni.",
             "terms": [],
             "sources": [
               {
-                "title": "Parlamento europeo — bilancio",
-                "url": "https://www.europarl.europa.eu/topics/it/topic/eu-budget"
+                "title": "Parlamento europeo, EPRS · 15 ottobre: dossier sul bilancio 2027",
+                "url": "https://eprs.europarl.europa.eu/contents/publications/EPRS/2026/10/EPRS_ATA%282026%29796988.html"
               },
               {
-                "title": "Consiglio UE — bilancio",
-                "url": "https://www.consilium.europa.eu/it/policies/eu-budget/"
+                "title": "Parlamento europeo, Osservatorio legislativo · voto del 21 ottobre",
+                "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2026%2F0196%28BUD%29"
               }
             ],
             "related": [],
-            "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-21"
           },
           {
             "id": "tunisia-proteste-22",
@@ -444,14 +497,49 @@
             "terms": [],
             "sources": [
               {
-                "title": "Reuters via The Star — Tunisia, 22 ottobre",
-                "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world"
+                "title": "Reuters · 22 ottobre: scontri a Ettadhamen",
+                "url": "https://www.reuters.com/world/africa/tunisian-police-clash-with-protesters-capital-day-heightened-tensions-2026-10-22/"
+              },
+              {
+                "title": "Al Jazeera · 23 ottobre: crisi sociale e proteste",
+                "url": "https://www.aljazeera.com/news/2026/10/23/rare-unrest-flares-in-tunisian-capital-as-police-clash-with-protesters"
               }
             ],
             "related": [],
             "freshness": "SVILUPPO IN CORSO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": "2026-10-22"
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "sudan-siccita-fame-23",
+            "type": "NOTIZIA",
+            "title": "Sudan, la guerra incontra la siccità: cresce il rischio di una nuova carestia",
+            "dek": "Reuters, 23 ottobre: la pioggia più scarsa degli ultimi decenni minaccia raccolti e sopravvivenza mentre la guerra ostacola gli aiuti.",
+            "minutes": 4,
+            "paragraphs": [
+              "Il 23 ottobre Reuters riferisce che il Sudan affronta un rischio crescente di carestia: alla guerra civile iniziata nel 2023 si somma una grave siccità associata al fenomeno climatico El Niño. Fra luglio e settembre, periodo centrale delle piogge, le precipitazioni sono state le più basse da oltre trent'anni su scala nazionale.",
+              "Le aree agricole di Darfur, Kordofan e Gedaref sono fra quelle colpite. Raccolti perduti e scarsità di pascoli riducono sia la disponibilità di cibo sia il reddito delle famiglie che vivono di agricoltura e allevamento.",
+              "Secondo l'analisi IPC citata da Reuters, a giugno circa 5,1 milioni di persone erano già esposte a livelli gravi di insicurezza alimentare. Il Programma alimentare mondiale stima che la siccità possa aggiungere altre 350.000 persone a questa condizione entro la fine del 2026 e 1,2 milioni entro agosto 2027. Sono proiezioni, non persone che possiamo già contare come nuove vittime.",
+              "Il rischio deriva dalla combinazione di tre fattori: produzioni agricole in calo, conflitto che impedisce gli spostamenti e difficoltà di finanziamento degli aiuti umanitari. Per capire l'evoluzione della crisi occorre seguire raccolti, accesso delle organizzazioni sul campo e disponibilità effettiva di fondi.",
+              "Questa notizia merita spazio nell'apertura mondiale non perché sia vicina geograficamente all'Europa, ma perché riguarda milioni di vite e una crisi di grande rilievo umanitario."
+            ],
+            "deepDive": "La classificazione IPC misura livelli di insicurezza alimentare secondo criteri internazionali. Il rischio di carestia non è la dichiarazione che tutto il paese sia già in carestia. Dati osservati, stime e scenari futuri vanno distinti.",
+            "terms": [
+              {
+                "term": "IPC",
+                "definition": "Integrated Food Security Phase Classification: sistema di analisi condivisa sulla gravità dell'insicurezza alimentare."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters · 23 ottobre: rischio carestia e siccità in Sudan",
+                "url": "https://www.reuters.com/world/new-famine-risk-haunts-war-torn-sudan-with-el-nio-driven-drought-2026-10-23/"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           }
         ]
       },
@@ -476,18 +564,18 @@
             "terms": [],
             "sources": [
               {
-                "title": "Commissione europea — Erasmus+",
-                "url": "https://erasmus-plus.ec.europa.eu/"
+                "title": "Parlamento europeo, EPRS · 12 ottobre: proposta Erasmus+ 2028–2034",
+                "url": "https://eprs.europarl.europa.eu/contents/publications/EPRS/2026/10/EPRS_ATA%282026%29791536.html?locale=EN"
               },
               {
-                "title": "Parlamento europeo — attività commissione CULT",
-                "url": "https://www.europarl.europa.eu/committees/it/cult/home/highlights"
+                "title": "European University Association · 8 ottobre: discussione sui finanziamenti",
+                "url": "https://eua.eu/news/eua-news/erasmus-as-meps-outline-proposals-member-states-must-protect-flagship-programmes-budget-in-mff-negotiations.html"
               }
             ],
             "related": [],
             "freshness": "CONTESTO E APPROFONDIMENTO",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-12"
           }
         ]
       },
@@ -536,14 +624,14 @@
             "terms": [],
             "sources": [
               {
-                "title": "Rest of World — tecnologia e mercati globali",
-                "url": "https://restofworld.org/"
+                "title": "Rest of World · 5 ottobre: prezzi e chip di memoria negli smartphone economici",
+                "url": "https://restofworld.org/2026/ai-data-center-memory-chip-shortage-cheap-smartphones-digital-divide/"
               }
             ],
             "related": [],
             "freshness": "SCOPERTA, RICERCA O LETTURA",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-05"
           }
         ]
       },
@@ -573,8 +661,8 @@
             ],
             "related": [],
             "freshness": "SCOPERTA, RICERCA O LETTURA",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-16"
           },
           {
             "id": "microdelays-learning",
@@ -592,14 +680,14 @@
             "terms": [],
             "sources": [
               {
-                "title": "Nature Human Behaviour — Microdelays disrupt online learning",
+                "title": "Nature Human Behaviour · 8 ottobre: studio originale e DOI",
                 "url": "https://www.nature.com/articles/s41562-026-02598-y"
               }
             ],
             "related": [],
             "freshness": "SCOPERTA, RICERCA O LETTURA",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-08"
           }
         ]
       },
@@ -624,8 +712,12 @@
             "terms": [],
             "sources": [
               {
-                "title": "Nature Human Behaviour — studio originale, DOI 10.1038/s41562-026-02611-4",
+                "title": "Nature Human Behaviour · 12 ottobre: studio originale (DOI 10.1038/s41562-026-02611-4)",
                 "url": "https://www.nature.com/articles/s41562-026-02611-4"
+              },
+              {
+                "title": "PubMed · scheda e abstract di verifica",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/42864430/"
               }
             ],
             "related": [],
@@ -641,7 +733,7 @@
         "stories": [
           {
             "id": "chiusura-misurare",
-            "type": "CULTURA",
+            "type": "EDITORIALE",
             "title": "Quello che riusciamo a misurare non è tutto ciò che conta",
             "dek": "Una riflessione per chiudere il giornale senza chiudere le domande.",
             "minutes": 2,
@@ -655,14 +747,14 @@
             "terms": [],
             "sources": [],
             "related": [],
-            "freshness": "SCOPERTA, RICERCA O LETTURA",
-            "verificationStatus": "da-verificare",
+            "freshness": "RIFLESSIONE EDITORIALE",
+            "verificationStatus": "editoriale",
             "sourceDate": null
           }
         ]
       }
     ],
-    "lastEditorialCheck": "2026-10-23T14:45:00+02:00",
+    "lastEditorialCheck": "2026-10-23T16:15:00+02:00",
     "verificationStatus": "verifica-parziale"
   },
   {
