@@ -15,6 +15,30 @@ let termAnchor = null;
 let readerState = { positions: {}, progress: {}, details: {} };
 let saveTimer = null;
 
+// An explicit reset link clears saved reading progress on this device before rendering.
+const resetRequested = new URLSearchParams(location.search).get('reset') === '1';
+if (resetRequested) {
+  try {
+    const saved = JSON.parse(localStorage.getItem('fdf-reader-v1') || '{}');
+    const date = new URLSearchParams(location.search).get('date') || '2026-10-23';
+    for (const field of ['positions', 'progress', 'details']) {
+      if (saved[field] && typeof saved[field] === 'object') {
+        for (const key of Object.keys(saved[field])) {
+          if (key.startsWith(date + '|')) delete saved[field][key];
+        }
+      }
+    }
+    localStorage.setItem('fdf-reader-v1', JSON.stringify(saved));
+    const position = JSON.parse(localStorage.getItem('fdf-position') || 'null');
+    if (position?.date === date) localStorage.removeItem('fdf-position');
+  } catch (_) {
+    try { localStorage.removeItem('fdf-reader-v1'); localStorage.removeItem('fdf-position'); } catch (_) {}
+  }
+  const cleanUrl = new URL(location.href);
+  cleanUrl.searchParams.delete('reset');
+  history.replaceState({}, '', cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+}
+
 try {
   const stored = JSON.parse(localStorage.getItem('fdf-reader-v1'));
   if (stored && typeof stored === 'object') {
