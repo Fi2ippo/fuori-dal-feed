@@ -1,0 +1,26 @@
+name: Editorial integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/editions.json'
+      - 'scripts/validate-editions.mjs'
+      - '.github/workflows/editorial-integrity.yml'
+  pull_request:
+    paths:
+      - 'data/editions.json'
+      - 'scripts/validate-editions.mjs'
+      - '.github/workflows/editorial-integrity.yml'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate edition data
+        run: node scripts/validate-editions.mjs
