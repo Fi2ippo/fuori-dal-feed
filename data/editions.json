@@ -1,12 +1,12 @@
 [
   {
     "date": "2026-10-23",
-    "status": "pubblicata",
+    "status": "published",
     "editorialNote": "Edizione del 23 ottobre 2026, fonti verificate intorno alle 09:00 Europe/Madrid (07:00 UTC). La prima pagina distingue fatti confermati, dichiarazioni, ipotesi e dati di mercato parziali. Archivio culturale confrontato con l'edizione del 22 ottobre e con la lista di temi già trattati: nessuna scoperta culturale riciclata.",
     "sections": [
       {
         "id": "prima-pagina",
-        "name": "PRIMA PAGINA",
+        "name": "IL QUADRO GENERALE",
         "stories": [
           {
             "id": "otto-notizie-23-ottobre",
@@ -389,73 +389,179 @@
         ]
       },
       {
-        "id": "tecnologia",
-        "name": "TECNOLOGIA",
+        "id": "dentro-notizia",
+        "name": "DENTRO LA NOTIZIA",
         "stories": [
           {
-            "id": "php-sicurezza-siti",
-            "type": "NOTIZIA",
-            "title": "Un problema di PHP manda in allarme siti, banche e governi",
-            "dek": "Le correzioni sono disponibili, ma installarle ovunque richiede tempo. Un caso di infrastruttura digitale invisibile.",
-            "minutes": 2,
+            "id": "erasmus-futuro-bilancio",
+            "type": "ANALISI",
+            "title": "Erasmus+ è una scelta sul futuro dell'Europa",
+            "dek": "La proposta di bilancio 2028–2034 apre una discussione su mobilità, costi della vita e accessibilità.",
+            "minutes": 4,
             "paragraphs": [
-              "Il 22 ottobre aziende e amministrazioni di vari paesi hanno accelerato l'aggiornamento dei sistemi che utilizzano PHP, un linguaggio impiegato da molti siti web. Reuters riferisce che vulnerabilità critiche, individuate anche con l'aiuto dell'intelligenza artificiale, sono diventate pubbliche e hanno provocato numerosi tentativi di attacco. Gli sviluppatori hanno distribuito correzioni e invitato gli operatori ad aggiornare rapidamente.",
-              "Secondo i dati riportati da Cloudflare, i tentativi osservati sulla sua rete sono cresciuti rapidamente dopo la divulgazione dei problemi. In Giappone diversi operatori, fra cui servizi finanziari e di trasporto, hanno sospeso temporaneamente alcune funzioni online; anche in Finlandia sono state applicate misure preventive. Attenzione: una sospensione per precauzione non dimostra che il sito sia stato violato. Il fornitore pubblico finlandese Valtori ha specificato di non avere notizia di intrusioni effettive nei propri sistemi.",
-              "Per gli utenti la lezione non è imparare a sfruttare una falla, ma capire la dipendenza collettiva da software mantenuto per decenni. Per chi gestisce un sito servono aggiornamenti tempestivi, inventario delle dipendenze, backup e verifica dei servizi dopo la correzione. Non esiste un modo serio di affermare che 'tutto Internet' sia stato compromesso."
+              "La Commissione europea ha proposto 40,8 miliardi di euro per Erasmus+ nel periodo 2028–2034; la commissione Cultura e Istruzione del Parlamento europeo ha chiesto 47,38 miliardi. Le cifre rappresentano proposte e richieste in negoziazione, non finanziamenti definitivamente stanziati.",
+              "La questione non è soltanto quanti studenti possano partire, ma chi possa permetterselo. Un contributo identico può coprire quote molto diverse dell'affitto e del costo della vita a seconda della città di destinazione.",
+              "La posizione parlamentare mira a migliorare l'accesso dei partecipanti con minori opportunità. Occorre distinguere il voto di una commissione dal risultato finale dell'intero procedimento legislativo."
             ],
-            "deepDive": "Una vulnerabilità è una debolezza del software che, in certe condizioni, può essere sfruttata. Una patch è una modifica che corregge il problema. Il fatto che un attacco venga tentato non significa che abbia avuto successo. Molte piattaforme si basano su librerie e componenti condivisi: un difetto in un solo componente può coinvolgere sistemi apparentemente diversi.",
-            "terms": [
-              {
-                "term": "PHP",
-                "definition": "Linguaggio di programmazione utilizzato soprattutto per creare contenuti e funzioni di siti web sul server."
-              },
-              {
-                "term": "vulnerabilità",
-                "definition": "Difetto di un sistema che può esporlo a comportamenti non previsti o attacchi."
-              },
-              {
-                "term": "patch",
-                "definition": "Aggiornamento software progettato per correggere errori o problemi di sicurezza."
-              }
-            ],
+            "deepDive": "Interpretazione: il bilancio misura una priorità politica, ma gli effetti sulle persone dipenderanno anche da criteri di assegnazione, cofinanziamenti e costi effettivi delle destinazioni.",
+            "terms": [],
             "sources": [
               {
-                "title": "Reuters, aggiornamenti e tentativi di attacco dopo la scoperta, 22 ottobre",
-                "url": "https://www.reuters.com/world/asia-pacific/cloudflare-sees-millions-exploit-attempts-after-php-disclosure-2026-10-22/"
+                "title": "Servizio di ricerca del Parlamento europeo",
+                "url": "https://eprs.europarl.europa.eu/contents/publications/EPRS/2026/10/EPRS_ATA%282026%29791536.html?locale=EN"
+              },
+              {
+                "title": "Erasmus+ — Commissione europea",
+                "url": "https://erasmus-plus.ec.europa.eu/"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "scoperte",
+        "name": "SCOPERTE INATTESE",
+        "stories": [
+          {
+            "id": "complessita-trasversale",
+            "type": "RICERCA",
+            "title": "Il cervello riconosce la complessità anche quando cambia forma?",
+            "dek": "Una ricerca sulla percezione della complessità attraverso stimoli differenti.",
+            "minutes": 4,
+            "paragraphs": [
+              "Una melodia, un disegno geometrico e una sequenza di lettere sono stimoli diversi. Eppure le persone possono esprimere giudizi sulla loro complessità che presentano caratteristiche condivise.",
+              "Tal Boger e Chaz Firestone hanno esaminato questo tema attraverso undici esperimenti con complessivamente circa 1.500 partecipanti, utilizzando stimoli visivi, sonori e di altre modalità.",
+              "Il risultato suggerisce rappresentazioni almeno parzialmente comuni della complessità. Non dimostra l'esistenza di un unico centro cerebrale, né fornisce una formula immediata per progettare interfacce."
+            ],
+            "deepDive": "Possibile collegamento con la UX: la difficoltà percepita non dipende necessariamente solo dal numero di elementi visibili. È una pista interpretativa, non una regola di design validata direttamente dallo studio.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Nature Human Behaviour — studio originale",
+                "url": "https://doi.org/10.1038/s41562-026-02502-8"
               }
             ],
             "related": []
           },
           {
-            "id": "ai-investimenti-mercati",
-            "type": "CONTESTO",
-            "title": "L'IA costa centinaia di miliardi: i mercati iniziano a chiedere risultati",
-            "dek": "Le spese per i data center non sono automaticamente profitti: il rischio finanziario è tornato al centro del dibattito.",
+            "id": "maria-lai-legarsi-montagna",
+            "type": "CULTURA",
+            "title": "Maria Lai: quando un paese intero diventò un'opera d'arte",
+            "dek": "Nel 1981 a Ulassai un nastro azzurro collegò le case alla montagna. L'opera era la relazione tra le persone.",
             "minutes": 2,
             "paragraphs": [
-              "Il 23 ottobre Reuters descrive una brusca reazione dei mercati alle prospettive di investimento nell'intelligenza artificiale. Dopo indicazioni di spesa molto elevata da parte di Meta, il titolo della società aveva perso quasi il 7% e quello di CoreWeave circa il 10% nella seduta precedente. Sono movimenti di borsa, non una prova che l'IA sia destinata a fallire.",
-              "Un data center richiede edifici, energia, chip, raffreddamento, reti e personale. Le aziende anticipano spese oggi sperando che domani gli utenti e le imprese paghino abbastanza servizi da recuperarle. Il problema per gli investitori è capire se i ricavi cresceranno allo stesso ritmo degli investimenti. Il costo di costruzione può essere certo prima che il modello economico sia verificato.",
-              "Reuters segnala anche un forte acquisto di titoli del Tesoro statunitensi, con una diminuzione dei rendimenti decennali di 19 punti base. È compatibile con una ricerca di investimenti percepiti come più sicuri, ma non autorizza a ricondurre l'intero movimento a un solo fattore. Petrolio elevato, tassi e incertezza geopolitica stanno agendo insieme."
+              "Nel 1981 l'artista sarda Maria Lai realizzò a Ulassai, suo paese natale, 'Legarsi alla montagna'. Secondo la Fondazione Maria Lai, coinvolse gli abitanti in un intervento collettivo che collegò le case al monte Tisiddu attraverso un nastro di tessuto jeans azzurro. Non era una scultura da guardare a distanza: richiedeva partecipazione, dialogo e decisioni condivise.",
+              "La scelta del filo non era casuale. Negli anni precedenti Lai aveva sperimentato telai, tele cucite, libri e geografie realizzate con stoffa e cuciture. Il gesto del legare trasformava un materiale quotidiano in una metafora visibile dei rapporti fra persone e territorio. La Fondazione la descrive come un primo intervento di arte partecipata: il pubblico non era soltanto spettatore, ma parte del processo.",
+              "Il motivo per cui vale la pena scoprirla oggi è una domanda sul design: chi produce davvero il significato di un'esperienza? L'autore che la progetta o le persone che vi prendono parte? L'opera del 1981 non dimostra che ogni progetto partecipativo sia riuscito; mostra però come un'azione semplice possa cambiare temporaneamente il modo in cui una comunità percepisce i propri legami."
             ],
-            "deepDive": "Capex è l'abbreviazione di capital expenditure: spesa per acquistare o costruire beni durevoli come server e impianti. Un'azienda può avere ricavi in crescita ma generare poca cassa se deve investire continuamente somme enormi. Per valutare la sostenibilità dell'IA occorre distinguere utenti, fatturato, margini e ritorno sul capitale investito.",
+            "deepDive": "Arte partecipata indica pratiche in cui il contributo del pubblico è parte essenziale dell'opera, non un'aggiunta successiva. Maria Lai (1919-2013) lavorò fra disegno, tessuto, libro d'artista e interventi ambientali. La scoperta di oggi non riprende gli artisti già presentati nelle precedenti edizioni: è un percorso nuovo, verificato nella biografia della sua Fondazione.",
             "terms": [
               {
-                "term": "data center",
-                "definition": "Struttura che ospita server, sistemi di rete, alimentazione elettrica e raffreddamento."
-              },
-              {
-                "term": "capex",
-                "definition": "Spesa per investimenti in beni destinati a essere utilizzati per più anni."
-              },
-              {
-                "term": "rendimento",
-                "definition": "Guadagno percentuale richiesto o ottenuto da un investimento, per esempio un titolo di Stato."
+                "term": "arte partecipata",
+                "definition": "Pratica artistica che richiede la partecipazione attiva di altre persone alla realizzazione o al significato dell'opera."
               }
             ],
             "sources": [
               {
-                "title": "Reuters, Morning Bid sui mercati, 23 ottobre",
-                "url": "https://www.reuters.com/world/china/global-markets-view-europe-2026-10-23/"
+                "title": "Fondazione Maria Lai, biografia e Legarsi alla montagna, 1981",
+                "url": "https://fondazionemarialai.it/biografia-maria-lai/"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "letture",
+        "name": "DUE LETTURE PER TE",
+        "stories": [
+          {
+            "id": "benchmark-ai-hardt",
+            "type": "CULTURA",
+            "title": "E se i test con cui misuriamo l'AI fossero sbagliati?",
+            "dek": "Un'intervista di Quanta Magazine a Moritz Hardt mette in discussione l'uso superficiale dei benchmark.",
+            "minutes": 3,
+            "paragraphs": [
+              "I benchmark sono prove standardizzate che confrontano le prestazioni dei modelli. Un punteggio alto, però, non equivale automaticamente a competenza affidabile in contesti nuovi.",
+              "Il ricercatore Moritz Hardt discute il problema della costruzione dei test e del loro uso pubblico. Un sistema può diventare molto bravo a superare un esame senza avere tutte le capacità che il voto sembra suggerire.",
+              "La domanda da portarsi dietro è semplice: stiamo misurando ciò che ci interessa davvero o soltanto ciò che riusciamo a trasformare in un test?"
+            ],
+            "deepDive": "Questa è un'intervista critica, non una dimostrazione sperimentale che tutti i benchmark siano inutili.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Quanta Magazine — intervista, 16 ottobre",
+                "url": "https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "intuizioni-aeon",
+            "type": "CULTURA",
+            "title": "E se le intuizioni fossero una forma di conoscenza?",
+            "dek": "Un saggio filosofico su ciò che crediamo di sapere prima di saperlo spiegare.",
+            "minutes": 3,
+            "paragraphs": [
+              "Ti è mai capitato di sentire che qualcosa non andava, senza riuscire a spiegarne il motivo? Marc A. Moffett esamina il valore epistemico di queste intuizioni.",
+              "La proposta filosofica è che alcune intuizioni possano offrire ragioni iniziali per credere qualcosa, in modo per certi aspetti simile alla percezione. Non equivale a dire che ogni sensazione sia vera.",
+              "Il punto interessante per la psicologia quotidiana è distinguere l'impressione iniziale dalla verifica: un'intuizione può essere un indizio, ma anche riflettere abitudini o pregiudizi."
+            ],
+            "deepDive": "Saggio argomentativo, non studio peer-reviewed. Da leggere per ragionare sul concetto di conoscenza, non per ricavare una regola clinica.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Aeon — How intuitions work",
+                "url": "https://aeon.co/essays/sometimes-you-just-know-somethings-off-but-how"
+              }
+            ],
+            "related": []
+          }
+        ]
+      },
+      {
+        "id": "ricerca",
+        "name": "LETTURA SCIENTIFICA",
+        "stories": [
+          {
+            "id": "ai-persone-simulate",
+            "type": "RICERCA",
+            "title": "L'AI può simulare davvero le opinioni delle persone?",
+            "dek": "Un confronto internazionale mostra perché le persone sintetiche non sostituiscono automaticamente le ricerche sul campo.",
+            "minutes": 5,
+            "paragraphs": [
+              "Un gruppo di ricerca ha confrontato risposte generate da modelli linguistici con quelle di 67.201 partecipanti reali in 74 paesi, su preferenze economiche e sociali.",
+              "I modelli hanno riprodotto meglio alcune associazioni demografiche rispetto alle differenze culturali. Nello studio la direzione di circa il 77,8% delle associazioni demografiche e del 48,1% di quelle culturali è stata ricostruita correttamente: non sono percentuali di accuratezza generale.",
+              "Per la ricerca UX il messaggio è importante: una persona artificiale può essere utile per esplorare ipotesi, ma non è automaticamente un sostituto affidabile di interviste e dati raccolti da persone reali."
+            ],
+            "deepDive": "I risultati dipendono da modelli, prompt, dati di confronto e periodi di raccolta. La peer review non elimina questi limiti.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Nature Human Behaviour — articolo originale e DOI",
+                "url": "https://doi.org/10.1038/s41562-026-02611-4"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "ritardi-apprendimento",
+            "type": "RICERCA",
+            "title": "Un ritardo di due secondi può cambiare il modo in cui impariamo",
+            "dek": "Una ricerca collega piccoli ritardi digitali all'impegno e ai risultati nell'apprendimento.",
+            "minutes": 4,
+            "paragraphs": [
+              "Un sito lento non è soltanto fastidioso. Nei contesti educativi, attese ripetute possono interrompere il ritmo e influenzare il comportamento degli studenti.",
+              "Una ricerca pubblicata su Nature Human Behaviour ha analizzato l'associazione tra ritardi digitali di uno o due secondi e risultati educativi attraverso due studi longitudinali quasi-sperimentali.",
+              "Il collegamento con la UX è concreto: le prestazioni sono parte dell'esperienza, non soltanto una questione tecnica. Restano importanti il contesto dello studio e i limiti nell'attribuire causalità."
+            ],
+            "deepDive": "Uno studio quasi-sperimentale può rafforzare l'analisi di un rapporto causale, ma non equivale sempre a un esperimento randomizzato. I risultati non vanno generalizzati a ogni sito o studente.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Nature Human Behaviour — studio originale",
+                "url": "https://www.nature.com/articles/s41562-026-02598-y"
               }
             ],
             "related": []
@@ -516,123 +622,9 @@
         ]
       },
       {
-        "id": "scienza",
-        "name": "LETTURA SCIENTIFICA CONSIGLIATA",
+        "id": "finale",
+        "name": "PER FINIRE",
         "stories": [
-          {
-            "id": "science-diagnosi-sequenziale-2026",
-            "type": "RICERCA",
-            "title": "Uno studio su Science: un'IA che fa domande prima di formulare una diagnosi",
-            "dek": "Nori e colleghi, 2026. DOI 10.1126/science.aeh7930. Tempo consigliato: 8-12 minuti per leggere abstract, metodo e limiti.",
-            "minutes": 3,
-            "paragraphs": [
-              "ARTICOLO VERIFICATO — Harsha Nori, Mayank Daswani, Christopher Kelly, Scott Lundberg, Marco Tulio Ribeiro, Marc Wilson, Xiaoxuan Liu e altri otto autori hanno pubblicato il 22 ottobre 2026 su Science lo studio peer-reviewed 'Sequential diagnosis with language models' (DOI: 10.1126/science.aeh7930; volume 394, numero 6822, pagine 423-428). Il gruppo di ricerca è legato a Microsoft. La scheda bibliografica e il benchmark sono disponibili anche sul sito del progetto SDBench e su PhysioNet.",
-              "DOMANDA E METODO — Molti test dell'IA medica presentano tutti i sintomi in un unico testo e chiedono la diagnosi. Qui gli autori hanno progettato una simulazione più sequenziale: il sistema riceve una descrizione iniziale breve, chiede informazioni o esami a un simulatore che possiede i dati del caso, aggiorna le ipotesi e decide quando formulare la diagnosi. I test comprendono 304 casi clinici complessi già pubblicati dal New England Journal of Medicine e 325 casi derivati da registrazioni di pronto soccorso. La valutazione considera accuratezza e costo stimato degli esami.",
-              "RISULTATI — Nella configurazione riportata per i casi complessi, il sistema MAI-DxO ha raggiunto l'83,2% di diagnosi corrette, contro il 36,1% dei medici generalisti che potevano consultare materiale di riferimento; sui 325 casi di pronto soccorso i risultati riportati sono circa 80,3% contro 46,8%. Sono percentuali di benchmark e non tassi di successo in ospedale. L'architettura non sostituisce un medico: coordina modelli linguistici e ruoli simulati, decidendo quali domande ed esami proporre.",
-              "LIMITI — I casi sono storici, trasformati in simulazioni testuali, e non coinvolgono pazienti seguiti in tempo reale. Il confronto è con singoli medici generalisti, non con équipe specialistiche; costi ed esiti dipendono dalle regole del simulatore. Tutti gli autori appartengono al gruppo che sviluppa il sistema e i risultati non costituiscono una replica indipendente. È previsto uno studio prospettico al Beth Israel Deaconess Medical Center di Boston. Il passaggio dalla simulazione alla pratica clinica resta la prova decisiva.",
-              "PERCHÉ LEGGERLO — Per chi studia UX, il risultato più interessante non è 'l'IA batte i medici', ma il disegno dell'interazione: quali informazioni mostrare subito, quando chiedere chiarimenti, come rendere visibili le ipotesi e come misurare il costo delle decisioni. È un caso concreto di progettazione di un processo, non soltanto di un'interfaccia."
-            ],
-            "deepDive": "Peer review significa che la rivista ha sottoposto il manoscritto a valutazione scientifica prima della pubblicazione; non equivale a una certificazione clinica né garantisce che il risultato sia riproducibile ovunque. DOI è un identificatore persistente per ritrovare la pubblicazione. Il tempo di lettura stimato riguarda le sezioni essenziali; la lettura completa e critica può richiedere più tempo.",
-            "terms": [
-              {
-                "term": "peer-reviewed",
-                "definition": "Pubblicazione valutata da esperti del settore prima dell'accettazione da parte della rivista."
-              },
-              {
-                "term": "DOI",
-                "definition": "Identificatore digitale permanente usato per trovare una pubblicazione scientifica."
-              },
-              {
-                "term": "benchmark",
-                "definition": "Insieme di prove standardizzate usate per confrontare sistemi secondo criteri definiti."
-              },
-              {
-                "term": "studio prospettico",
-                "definition": "Ricerca che osserva risultati futuri seguendo un protocollo stabilito in anticipo."
-              }
-            ],
-            "sources": [
-              {
-                "title": "Science, articolo peer-reviewed e DOI ufficiale",
-                "url": "https://www.science.org/doi/10.1126/science.aeh7930"
-              },
-              {
-                "title": "Microsoft SDBench, metodologia e autori",
-                "url": "https://microsoft.github.io/sdbench/"
-              },
-              {
-                "title": "PhysioNet, dati e riferimento bibliografico ufficiale, 22 ottobre",
-                "url": "https://physionet.org/content/mimic-iv-ext-sdbench/1.0.0/"
-              },
-              {
-                "title": "Reuters, presentazione e limiti del sistema, 23 ottobre",
-                "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/microsoft-develops-ai-tool-that-can-diagnose-sequentially-like-doctor-2026-10-23/"
-              }
-            ],
-            "related": []
-          }
-        ]
-      },
-      {
-        "id": "cultura",
-        "name": "CULTURA E SCOPERTE",
-        "stories": [
-          {
-            "id": "sulawesi-arte-incendi",
-            "type": "CULTURA",
-            "title": "In Indonesia il fuoco minaccia pitture rupestri di 67.800 anni",
-            "dek": "Una scoperta fuori dai soliti riferimenti europei: l'arte preistorica non ha una sola culla.",
-            "minutes": 2,
-            "paragraphs": [
-              "Nelle grotte calcaree di Sulawesi, in Indonesia, si conservano alcune delle più antiche testimonianze conosciute di immagini realizzate da esseri umani. Reuters riferisce il 23 ottobre che incendi e fumo rischiano di accelerarne il deterioramento. Sull'isola di Muna, vicina a Sulawesi, una sagoma di mano colorata è stata datata ad almeno 67.800 anni; nell'area di Maros-Pangkep una scena con figure simili a esseri umani e un maiale risale ad almeno 51.200 anni fa.",
-              "Il problema non è soltanto che il fuoco raggiunga fisicamente le pareti. L'archeologo Basran Burhan della Griffith University spiega che il calore può modificare le condizioni della roccia e accelerare processi di degrado, mentre il fumo deposita fuliggine sulle immagini. Secondo il pompiere Muhammad Ikfar, le fiamme si sono avvicinate fino a circa 800 metri da una delle grotte; oltre 270 ettari del parco sono bruciati fra il 30 settembre e il 18 ottobre.",
-              "Queste pitture spostano la nostra immaginazione della preistoria. Non sono un'appendice remota delle celebri grotte europee: testimoniano una lunga tradizione di rappresentazione in Asia sudorientale. La datazione indica un'età minima stimata delle immagini, non il giorno in cui furono dipinte. Proteggerle significa conservare una parte della storia umana che non può essere ricostruita se la superficie viene distrutta."
-            ],
-            "deepDive": "Le datazioni archeologiche possono basarsi su depositi minerali associati a un'immagine: spesso stabiliscono che l'opera è almeno antica quanto uno strato, non un'età esatta. Il paesaggio carsico di Maros-Pangkep è formato da rocce calcaree e grotte. L'incendio del 2026 costituisce una minaccia documentata; l'entità dei danni già subiti dalle singole pitture deve essere verificata sul posto.",
-            "terms": [
-              {
-                "term": "pitture rupestri",
-                "definition": "Immagini realizzate su superfici rocciose, spesso in grotte o ripari naturali."
-              },
-              {
-                "term": "carsico",
-                "definition": "Relativo a paesaggi formati dalla dissoluzione di rocce come il calcare, con grotte e cavità."
-              }
-            ],
-            "sources": [
-              {
-                "title": "Reuters, incendio e pitture rupestri di Sulawesi, 23 ottobre",
-                "url": "https://www.reuters.com/world/asia-pacific/worlds-oldest-cave-paintings-indonesia-under-threat-wildfires-2026-10-23/"
-              }
-            ],
-            "related": []
-          },
-          {
-            "id": "maria-lai-legarsi-montagna",
-            "type": "CULTURA",
-            "title": "Maria Lai: quando un paese intero diventò un'opera d'arte",
-            "dek": "Nel 1981 a Ulassai un nastro azzurro collegò le case alla montagna. L'opera era la relazione tra le persone.",
-            "minutes": 2,
-            "paragraphs": [
-              "Nel 1981 l'artista sarda Maria Lai realizzò a Ulassai, suo paese natale, 'Legarsi alla montagna'. Secondo la Fondazione Maria Lai, coinvolse gli abitanti in un intervento collettivo che collegò le case al monte Tisiddu attraverso un nastro di tessuto jeans azzurro. Non era una scultura da guardare a distanza: richiedeva partecipazione, dialogo e decisioni condivise.",
-              "La scelta del filo non era casuale. Negli anni precedenti Lai aveva sperimentato telai, tele cucite, libri e geografie realizzate con stoffa e cuciture. Il gesto del legare trasformava un materiale quotidiano in una metafora visibile dei rapporti fra persone e territorio. La Fondazione la descrive come un primo intervento di arte partecipata: il pubblico non era soltanto spettatore, ma parte del processo.",
-              "Il motivo per cui vale la pena scoprirla oggi è una domanda sul design: chi produce davvero il significato di un'esperienza? L'autore che la progetta o le persone che vi prendono parte? L'opera del 1981 non dimostra che ogni progetto partecipativo sia riuscito; mostra però come un'azione semplice possa cambiare temporaneamente il modo in cui una comunità percepisce i propri legami."
-            ],
-            "deepDive": "Arte partecipata indica pratiche in cui il contributo del pubblico è parte essenziale dell'opera, non un'aggiunta successiva. Maria Lai (1919-2013) lavorò fra disegno, tessuto, libro d'artista e interventi ambientali. La scoperta di oggi non riprende gli artisti già presentati nelle precedenti edizioni: è un percorso nuovo, verificato nella biografia della sua Fondazione.",
-            "terms": [
-              {
-                "term": "arte partecipata",
-                "definition": "Pratica artistica che richiede la partecipazione attiva di altre persone alla realizzazione o al significato dell'opera."
-              }
-            ],
-            "sources": [
-              {
-                "title": "Fondazione Maria Lai, biografia e Legarsi alla montagna, 1981",
-                "url": "https://fondazionemarialai.it/biografia-maria-lai/"
-              }
-            ],
-            "related": []
-          },
           {
             "id": "riflessione-23-ottobre",
             "type": "CULTURA",
@@ -660,7 +652,8 @@
           }
         ]
       }
-    ]
+    ],
+    "demo": false
   },
   {
     "date": "2026-10-22",
