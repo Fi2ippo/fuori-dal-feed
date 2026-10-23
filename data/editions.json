@@ -2,7 +2,7 @@
   {
     "date": "2026-10-23",
     "status": "published",
-    "editorialNote": "Terza edizione pilota approvata — pubblicazione editoriale ricostruita e ampliata, 23 ottobre 2026. I testi sono una rielaborazione fedele dei temi approvati, non una trascrizione parola per parola. La verifica delle notizie è riferita alle fonti indicate, non a un aggiornamento in tempo reale.",
+    "editorialNote": "Revisione verificata il 23 ottobre 2026: apertura con fatti e sviluppi datati e fonti attribuite; correzione aiuti carburanti (175,2 milioni complessivi); aggiunte notizie su taxi e preparazione emergenze UK. Gli approfondimenti precedenti sono letture di contesto, non notizie odierne. Non è una diretta né una verifica esaustiva di tutte le notizie internazionali; alcune sezioni precedenti restano da sottoporre a verifica puntuale.",
     "demo": false,
     "sections": [
       {
@@ -12,32 +12,34 @@
           {
             "id": "apertura-terza-edizione",
             "type": "NOTIZIA",
-            "title": "Il mondo, prima di tutto: le notizie da conoscere",
-            "dek": "23 ottobre 2026 · Una bussola per orientarsi, poi il tempo per capire davvero.",
+            "title": "23 ottobre: i fatti da sapere prima degli approfondimenti",
+            "dek": "Edizione del 23 ottobre 2026 · notizie del giorno, sviluppi in corso e letture selezionate: tre categorie distinte.",
             "minutes": 4,
             "paragraphs": [
-              "ITALIA — La discussione sulla manovra economica 2027 è aperta: le promesse su giovani, famiglie e servizi pubblici devono ancora diventare norme finanziate. Nel frattempo, il caro carburanti mette sotto pressione trasportatori e agricoltori.",
-              "EUROPA — In Francia le proteste e le misure di ordine pubblico alimentano uno scontro sul diritto di manifestare. La Banca centrale europea si prepara a valutare inflazione e costo del credito in un contesto di tensione finanziaria.",
-              "UCRAINA — La guerra continua a colpire infrastrutture e reti energetiche, mentre i governi europei discutono sostegno e sicurezza. Gli annunci diplomatici non sono un cessate il fuoco.",
-              "GAZA — Le organizzazioni umanitarie descrivono una crisi alimentare e logistica persistente. I numeri delle persone raggiunte dagli aiuti non equivalgono al numero di persone che hanno bisogno di assistenza.",
-              "SERBIA — La mobilitazione studentesca mette in discussione il rapporto tra istituzioni, responsabilità pubblica e fiducia democratica. Le iniziative elettorali vanno distinte dai risultati già accertati.",
-              "SCIENZA E IDEE — Una dimostrazione matematica assistita dall'IA, i limiti dei benchmark, gli effetti dei micro-ritardi nell'apprendimento e uno studio internazionale sulle persone simulate dall'IA ci chiedono che cosa significhi davvero 'misurare'.",
-              "Questa apertura serve a orientarti. Gli articoli successivi distinguono fatti documentati, dichiarazioni, ipotesi e interpretazioni, con link alle fonti per approfondire."
+              "ITALIA — Il decreto approvato ieri dal governo prevede 175,2 milioni di euro contro il caro carburanti: 105,2 per l'autotrasporto, 60 per l'agricoltura e 10 per la pesca. Oggi alcuni presìdi dei camionisti si sciolgono, ma restano problemi per le consegne e le imprese. La cifra di 105 milioni non è il totale degli aiuti.",
+              "ITALIA — Secondo l'aggiornamento ANSA del 23 ottobre, i taxi annunciano una protesta per lunedì davanti al ministero dell'Economia contro il caro carburante. È una protesta annunciata, non uno sciopero nazionale già avvenuto.",
+              "ITALIA — Il ministero delle Imprese indica oggi prezzi medi dei carburanti di 2,022 euro al litro per la benzina e 2,260 per il gasolio sulla rete stradale. Sono prezzi medi comunicati dal ministero, non il prezzo di ogni distributore.",
+              "EUROPA — Il governo britannico invita le famiglie a preparare scorte di emergenza per tre giorni. La campagna richiama anche un grave incidente informatico legato a vulnerabilità PHP emerse questa settimana e gli effetti di eventi climatici estremi. Non è l'annuncio di un'emergenza imminente.",
+              "UCRAINA — Kyiv afferma che permangono limitazioni al servizio Starlink, nonostante un contatto telefonico fra Donald Trump ed Elon Musk citato nelle cronache del 23 ottobre. È una dichiarazione della parte ucraina, non una diagnosi tecnica indipendente.",
+              "CISGIORDANIA — Le notizie del 23 ottobre riportano nuove tensioni e un annuncio del primo ministro israeliano sulla preparazione di una chiusura totale della Cisgiordania. Annuncio e attuazione sono due fatti diversi; la situazione richiede aggiornamenti continui.",
+              "MONDO — La crisi in Medio Oriente continua ad avere ripercussioni sulle rotte commerciali e sul prezzo dell'energia. Per comprendere l'impatto occorre distinguere gli sviluppi militari verificati dalle previsioni sui mercati.",
+              "LETTURE DI CONTESTO, NON NOTIZIE DI OGGI — Gli articoli su Erasmus+ 2028–2034, Quanta Magazine, Rest of World e Nature Human Behaviour sono approfondimenti selezionati. Sono chiaramente separati dai fatti del 23 ottobre e non vanno presentati come pubblicazioni odierne.",
+              "METODO — Questa apertura privilegia sviluppi datati e attribuiti. Le notizie possono cambiare nel corso della giornata; le fonti linkate indicano il punto da cui verificare gli aggiornamenti successivi."
             ],
-            "deepDive": "Le notizie possono evolvere nel corso della giornata. Questa edizione è una selezione editoriale datata 23 ottobre, non un flusso in tempo reale.",
+            "deepDive": "Le date degli articoli di approfondimento non coincidono necessariamente con la data dell'edizione. Le informazioni riportate sono verificate rispetto alle fonti elencate, ma questa non è una diretta aggiornata in tempo reale.",
             "terms": [],
             "sources": [
               {
-                "title": "ANSA — notizie Italia",
-                "url": "https://www.ansa.it/"
+                "title": "ANSA — ultima ora, 23 ottobre",
+                "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
               },
               {
-                "title": "Reuters — notizie internazionali",
-                "url": "https://www.reuters.com/"
+                "title": "ANSA — decreto aiuti del 22 ottobre",
+                "url": "https://videoembed.ansa.it/sito/notizie/cronaca/2026/10/22/il-cdm-approva-il-decreto-sugli-aiuti-105-milioni-per-i-tir-e-70-per_416e7ef3-b46a-4594-90dd-671b4eb1cc0e.html"
               },
               {
-                "title": "World Food Programme — Gaza",
-                "url": "https://www.wfp.org/emergencies/palestine-emergency"
+                "title": "Reuters — UK advises three days emergency supplies, 23 October",
+                "url": "https://www.reuters.com/business/aerospace-defense/uk-tells-public-keep-three-days-emergency-supplies-home-2026-10-23/"
               }
             ],
             "related": []
@@ -77,25 +79,26 @@
           {
             "id": "trasporti-carburanti-italia",
             "type": "NOTIZIA",
-            "title": "Trasporti e agricoltura: gli aiuti contro il caro carburanti",
-            "dek": "Un decreto prova a rispondere alle proteste, ma l'effetto reale dipende dall'attuazione.",
+            "title": "Carburanti, 175,2 milioni di aiuti: che cosa cambia davvero per i trasporti",
+            "dek": "Il decreto è del 22 ottobre. Oggi 23 ottobre proseguono le conseguenze delle proteste e si sciolgono alcuni presìdi.",
             "minutes": 3,
             "paragraphs": [
-              "Il rincaro dei carburanti ha provocato proteste di autotrasportatori e difficoltà nella distribuzione delle merci, soprattutto in alcune aree del Sud. La questione coinvolge anche agricoltori e pescatori, per i quali il carburante rappresenta un costo operativo rilevante.",
-              "Il Consiglio dei ministri ha approvato il 22 ottobre un pacchetto di sostegno. Secondo le ricostruzioni giornalistiche, l'intervento vale circa 105 milioni di euro. È importante verificare la distribuzione effettiva delle risorse e i requisiti dei beneficiari.",
-              "Un credito d'imposta non riduce automaticamente il prezzo alla pompa: consente, a determinate condizioni, di compensare imposte. L'aiuto può quindi arrivare con tempi e modalità differenti da quelli immaginati leggendo soltanto il titolo.",
-              "Il punto da osservare nei giorni successivi è se i blocchi e i ritardi nella circolazione delle merci diminuiscano, e se le imprese più esposte riescano davvero ad accedere alle misure."
+              "IL FATTO — Il Consiglio dei ministri ha approvato il 22 ottobre un decreto con 175,2 milioni di euro di aiuti: 105,2 milioni per gli autotrasportatori, 60 milioni per l'agricoltura e 10 milioni per la pesca. Non sono 105 milioni complessivi: quella cifra riguarda soltanto il trasporto merci.",
+              "COME FUNZIONA — Per gli autotrasportatori sono previsti ulteriori 45,2 milioni per il credito d'imposta relativo al gasolio acquistato fra marzo e agosto e altri 60 milioni per il periodo dal 1° settembre al 5 ottobre. Per agricoltori e pescatori sono previsti contributi a fondo perduto, con condizioni e periodi di riferimento specifici.",
+              "CHE COSA È SUCCESSO OGGI — Il 23 ottobre le cronache riferiscono lo scioglimento del presidio dei camionisti nella zona orientale di Napoli, mentre in diverse regioni i blocchi risultano in riduzione. Restano difficoltà nelle consegne di merci e carburante, e la situazione non è identica in ogni territorio.",
+              "PERCHÉ CONTA — I ritardi nelle consegne colpiscono filiere molto diverse: prodotti alimentari deperibili, carburante e altri beni essenziali. Le agevolazioni fiscali non significano automaticamente un abbassamento immediato dei prezzi alla pompa.",
+              "CHE COSA OSSERVARE — L'effettivo pagamento degli aiuti, la normalizzazione dei trasporti e l'eventuale ripresa delle proteste. Gli annunci governativi e le critiche delle opposizioni sono posizioni politiche: i risultati si misureranno nell'attuazione."
             ],
-            "deepDive": "L'efficacia di un provvedimento dipende da importi, destinatari e velocità di erogazione. Il prezzo internazionale del petrolio non coincide con il prezzo finale del carburante.",
+            "deepDive": "Cronologia: 22 ottobre approvazione del decreto; 23 ottobre sviluppi dei presìdi. Distinguere sempre le risorse nuove dai fondi già stanziati e i crediti d'imposta dai contributi diretti.",
             "terms": [],
             "sources": [
               {
-                "title": "RaiNews — approvazione del decreto, 22 ottobre",
-                "url": "https://www.rainews.it/video/2026/10/caro-carburante-blocco-tir-decreto-via-libera-del-cdm-al-decreto-per-autotrasporto-e-agricoltura-ad9d995e-8ade-4f8a-9461-de9e2ead7843.html"
+                "title": "ANSA, 22 ottobre — ripartizione ufficiale del decreto",
+                "url": "https://videoembed.ansa.it/sito/notizie/cronaca/2026/10/22/il-cdm-approva-il-decreto-sugli-aiuti-105-milioni-per-i-tir-e-70-per_416e7ef3-b46a-4594-90dd-671b4eb1cc0e.html"
               },
               {
-                "title": "Reuters — proteste degli autotrasportatori",
-                "url": "https://www.reuters.com/world/southern-italy-truckers-ease-protests-government-lines-up-aid-2026-10-22/"
+                "title": "Corriere della Sera, 23 ottobre — aggiornamento sui blocchi",
+                "url": "https://www.corriere.it/economia/trasporti/diretta-live/26_ottobre_23/autotrasportatori-la-protesta-in-diretta-il-garante-degli-scioperi-chiede-la-precettazione-decreto-aiuti-105-milioni-per-i-tir_amp.shtml"
               }
             ],
             "related": []
@@ -120,6 +123,27 @@
               }
             ],
             "related": []
+          },
+          {
+            "id": "taxi-protesta-23",
+            "type": "NOTIZIA",
+            "title": "Taxi, annunciata una protesta al ministero dell'Economia",
+            "dek": "Lunedì è prevista una mobilitazione contro il caro carburante: oggi è l'annuncio, non l'esito.",
+            "minutes": 4,
+            "paragraphs": [
+              "L'associazione itTaxi annuncia per lunedì una protesta davanti al ministero dell'Economia e delle Finanze. La notizia è stata riportata da ANSA il 23 ottobre alle 09:43.",
+              "Il settore lamenta l'aumento dei costi del carburante e chiede risposte urgenti. Gli organizzatori avvertono del rischio di un blocco del servizio in assenza di interventi: si tratta di una possibilità prospettata, non di una sospensione già verificata.",
+              "La vicenda è distinta dalle proteste degli autotrasportatori: interessi e organizzazioni coinvolte non coincidono. Il punto da seguire è se l'incontro istituzionale avverrà e quali misure concrete verranno eventualmente concordate."
+            ],
+            "deepDive": "Verificato rispetto alla fonte indicata. Per sviluppi successivi consultare la fonte originale: non è una notizia aggiornata automaticamente.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "ANSA — ultima ora 23 ottobre, ore 09:43",
+                "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
+              }
+            ],
+            "related": []
           }
         ]
       },
@@ -127,6 +151,28 @@
         "id": "mondo",
         "name": "EUROPA E MONDO",
         "stories": [
+          {
+            "id": "uk-emergency-supplies-23",
+            "type": "NOTIZIA",
+            "title": "Regno Unito: scorte per tre giorni, dopo il grave incidente informatico",
+            "dek": "La nuova campagna britannica collega resilienza digitale e preparazione alle emergenze.",
+            "minutes": 4,
+            "paragraphs": [
+              "Il 23 ottobre il governo britannico ha invitato i cittadini a tenere in casa acqua e alimenti non deperibili sufficienti per tre giorni, nell'ambito della campagna 'Be Ready'. Reuters riporta l'annuncio pubblicato in giornata.",
+              "La comunicazione arriva dopo un grave problema di sicurezza relativo al linguaggio PHP, le cui vulnerabilità sono state rese note mercoledì. Alcuni servizi sono stati interrotti e sono stati segnalati numerosi tentativi di attacco. Le autorità citano anche gli effetti di un'estate caratterizzata da caldo, siccità e incendi.",
+              "Non è corretto leggere la raccomandazione come l'annuncio di un attacco imminente o di un'emergenza già in corso. È una misura di preparazione generale a interruzioni di servizi essenziali.",
+              "La notizia è importante perché mostra quanto infrastrutture digitali, servizi pubblici e vita quotidiana siano interdipendenti: un difetto software può trasformarsi in un problema sociale, non soltanto tecnico."
+            ],
+            "deepDive": "Verificato rispetto alla fonte indicata. Per sviluppi successivi consultare la fonte originale: non è una notizia aggiornata automaticamente.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Reuters, 23 ottobre 2026 — UK emergency supplies",
+                "url": "https://www.reuters.com/business/aerospace-defense/uk-tells-public-keep-three-days-emergency-supplies-home-2026-10-23/"
+              }
+            ],
+            "related": []
+          },
           {
             "id": "francia-proteste-sicurezza",
             "type": "ANALISI",
