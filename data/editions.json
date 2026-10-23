@@ -2,7 +2,7 @@
   {
     "date": "2026-10-23",
     "status": "published",
-    "editorialNote": "Revisione verificata il 23 ottobre 2026: apertura con fatti e sviluppi datati e fonti attribuite; correzione aiuti carburanti (175,2 milioni complessivi); aggiunte notizie su taxi e preparazione emergenze UK. Gli approfondimenti precedenti sono letture di contesto, non notizie odierne. Non è una diretta né una verifica esaustiva di tutte le notizie internazionali; alcune sezioni precedenti restano da sottoporre a verifica puntuale.",
+    "editorialNote": "Revisione del 23 ottobre 2026. L'apertura è stata integrata con notizie datate e attribuite. ATTENZIONE: non tutti gli approfondimenti della presente edizione hanno superato la verifica integrale delle fonti originali; non interpretare la data dell'edizione come data di pubblicazione di ogni articolo. Questo sito statico non si aggiorna automaticamente.",
     "demo": false,
     "sections": [
       {
@@ -21,6 +21,9 @@
               "ITALIA — Il ministero delle Imprese indica oggi prezzi medi dei carburanti di 2,022 euro al litro per la benzina e 2,260 per il gasolio sulla rete stradale. Sono prezzi medi comunicati dal ministero, non il prezzo di ogni distributore.",
               "EUROPA — Il governo britannico invita le famiglie a preparare scorte di emergenza per tre giorni. La campagna richiama anche un grave incidente informatico legato a vulnerabilità PHP emerse questa settimana e gli effetti di eventi climatici estremi. Non è l'annuncio di un'emergenza imminente.",
               "UCRAINA — Kyiv afferma che permangono limitazioni al servizio Starlink, nonostante un contatto telefonico fra Donald Trump ed Elon Musk citato nelle cronache del 23 ottobre. È una dichiarazione della parte ucraina, non una diagnosi tecnica indipendente.",
+              "ASIA ORIENTALE — Taiwan ha cancellato quasi mille voli in previsione del tifone Champi; la Corea del Sud propone nuovi colloqui militari con il Nord per ridurre il rischio di incidenti lungo la frontiera.",
+              "AFRICA — In Tunisia la polizia ha disperso manifestanti con gas lacrimogeni dopo la morte di un uomo fermato; si tratta di fatti del 22 ottobre che richiedono ulteriori verifiche sulle responsabilità.",
+              "EUROPA — La Grecia ha approvato il divieto di accesso ai social per i minori di 15 anni a partire dal 2027. La norma non è ancora in vigore.",
               "CISGIORDANIA — Le notizie del 23 ottobre riportano nuove tensioni e un annuncio del primo ministro israeliano sulla preparazione di una chiusura totale della Cisgiordania. Annuncio e attuazione sono due fatti diversi; la situazione richiede aggiornamenti continui.",
               "MONDO — La crisi in Medio Oriente continua ad avere ripercussioni sulle rotte commerciali e sul prezzo dell'energia. Per comprendere l'impatto occorre distinguere gli sviluppi militari verificati dalle previsioni sui mercati.",
               "LETTURE DI CONTESTO, NON NOTIZIE DI OGGI — Gli articoli su Erasmus+ 2028–2034, Quanta Magazine, Rest of World e Nature Human Behaviour sono approfondimenti selezionati. Sono chiaramente separati dai fatti del 23 ottobre e non vanno presentati come pubblicazioni odierne.",
@@ -42,7 +45,10 @@
                 "url": "https://www.reuters.com/business/aerospace-defense/uk-tells-public-keep-three-days-emergency-supplies-home-2026-10-23/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           }
         ]
       },
@@ -74,7 +80,10 @@
                 "url": "https://www.repubblica.it/economia/2026/10/23/news/manovra_aiuti_a_giovani_e_donne_con_bonus_affitti_e_piu_congedi-425668512/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "trasporti-carburanti-italia",
@@ -101,7 +110,10 @@
                 "url": "https://www.corriere.it/economia/trasporti/diretta-live/26_ottobre_23/autotrasportatori-la-protesta-in-diretta-il-garante-degli-scioperi-chiede-la-precettazione-decreto-aiuti-105-milioni-per-i-tir_amp.shtml"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-22"
           },
           {
             "id": "milano-proteste-danni",
@@ -122,7 +134,10 @@
                 "url": "https://www.ansa.it/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "taxi-protesta-23",
@@ -143,7 +158,35 @@
                 "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "spread-btp-23",
+            "type": "NOTIZIA",
+            "title": "BTP, lo spread supera 126 punti: perché conta per il debito italiano",
+            "dek": "Il 23 ottobre i rendimenti restano elevati: il costo del finanziamento dello Stato è sotto osservazione.",
+            "minutes": 3,
+            "paragraphs": [
+              "ANSA segnala alle 09:28 del 23 ottobre che lo spread fra BTP italiani e Bund tedeschi supera 126 punti base. Il rendimento del titolo italiano decennale si colloca intorno al 4,58%.",
+              "Lo spread misura la differenza di rendimento fra titoli di Stato italiani e tedeschi della stessa durata. Se aumenta, il mercato richiede un premio maggiore per detenere debito italiano rispetto a quello tedesco.",
+              "Un singolo dato di apertura non equivale al bilancio di tutta la seduta. I rendimenti possono cambiare anche rapidamente, influenzati da inflazione, politica monetaria, aspettative sulla crescita e percezione del rischio.",
+              "Per le finanze pubbliche la questione è il costo con cui il Tesoro rifinanzia gradualmente il debito; non significa che tutti gli interessi sul debito già emesso cambino immediatamente."
+            ],
+            "deepDive": "Notizia attribuita alle fonti indicate. Per gli sviluppi successivi occorre consultare gli aggiornamenti delle testate e le comunicazioni ufficiali.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "ANSA — Ultima ora, 23 ottobre, 09:28",
+                "url": "https://videoembed.ansa.it/sito/notizie/topnews/index.shtml"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           }
         ]
       },
@@ -151,6 +194,81 @@
         "id": "mondo",
         "name": "EUROPA E MONDO",
         "stories": [
+          {
+            "id": "coree-colloqui-confine",
+            "type": "NOTIZIA",
+            "title": "Seul propone nuovi colloqui militari a Pyongyang sul confine",
+            "dek": "L'obiettivo dichiarato è ridurre il rischio di scontri accidentali.",
+            "minutes": 3,
+            "paragraphs": [
+              "Il ministero della Difesa della Corea del Sud ha nuovamente proposto il 23 ottobre colloqui militari con la Corea del Nord per concordare la posizione esatta della frontiera terrestre.",
+              "Reuters descrive l'iniziativa come un tentativo di ridurre il rischio di incidenti fra le forze dei due paesi. È una proposta di dialogo: non significa che Pyongyang l'abbia accettata.",
+              "La linea di confine è uno dei punti più sensibili della penisola coreana, dove una violazione reale o percepita può innescare un'escalation.",
+              "Per capire se ci sarà una svolta, bisognerà osservare la risposta nordcoreana e l'eventuale apertura di canali militari diretti."
+            ],
+            "deepDive": "Notizia attribuita alle fonti indicate. Per gli sviluppi successivi occorre consultare gli aggiornamenti delle testate e le comunicazioni ufficiali.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Reuters via The Star — Corea, 23 ottobre",
+                "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "taiwan-tifone-champi",
+            "type": "NOTIZIA",
+            "title": "Taiwan si ferma per il tifone Champi: quasi mille voli cancellati",
+            "dek": "Una perturbazione in arrivo mette alla prova trasporti e sistemi di protezione civile.",
+            "minutes": 3,
+            "paragraphs": [
+              "Reuters riferisce il 23 ottobre che Taiwan ha sospeso gran parte delle attività in previsione dell'arrivo del tifone Champi, con quasi mille voli cancellati.",
+              "Secondo le previsioni citate, la tempesta potrebbe portare venti forti e piogge torrenziali, pur mostrando segnali di indebolimento. Le autorità mantengono misure precauzionali per il rischio di allagamenti e interruzioni dei trasporti.",
+              "La cancellazione preventiva di voli e attività non è un'indicazione che il peggio sia già accaduto: serve a limitare l'esposizione al rischio prima dell'arrivo della perturbazione.",
+              "Gli sviluppi da seguire sono la traiettoria effettiva, eventuali evacuazioni e danni, e il ripristino dei collegamenti."
+            ],
+            "deepDive": "Notizia attribuita alle fonti indicate. Per gli sviluppi successivi occorre consultare gli aggiornamenti delle testate e le comunicazioni ufficiali.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Reuters via The Star — Taiwan, 23 ottobre",
+                "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "grecia-social-under15",
+            "type": "NOTIZIA",
+            "title": "Grecia, vietati i social ai minori di 15 anni dal 2027",
+            "dek": "Una decisione che riguarda diritti dei minori, piattaforme e controllo dell'età.",
+            "minutes": 3,
+            "paragraphs": [
+              "RaiNews riferisce il 23 ottobre che la Grecia ha approvato una legge che vieta l'accesso ai social media ai minori di 15 anni, con entrata in vigore prevista per il 1° gennaio 2027.",
+              "La misura punta a ridurre i rischi legati all'uso delle piattaforme da parte dei più giovani. La questione operativa sarà la verifica dell'età: come impedire l'accesso senza raccogliere dati personali in modo sproporzionato?",
+              "L'approvazione della legge non significa che il divieto sia già in vigore. Sarà necessario seguire l'attuazione tecnica e l'eventuale risposta delle piattaforme.",
+              "Il caso si inserisce in un dibattito europeo più ampio sul rapporto fra tutela dei minori, libertà di accesso e responsabilità delle aziende tecnologiche."
+            ],
+            "deepDive": "Notizia attribuita alle fonti indicate. Per gli sviluppi successivi occorre consultare gli aggiornamenti delle testate e le comunicazioni ufficiali.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "RaiNews — Grecia, social e minori, 23 ottobre",
+                "url": "https://www.rainews.it/"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
           {
             "id": "uk-emergency-supplies-23",
             "type": "NOTIZIA",
@@ -171,7 +289,10 @@
                 "url": "https://www.reuters.com/business/aerospace-defense/uk-tells-public-keep-three-days-emergency-supplies-home-2026-10-23/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           },
           {
             "id": "francia-proteste-sicurezza",
@@ -192,7 +313,10 @@
                 "url": "https://www.reuters.com/world/europe/frances-macron-tightens-curbs-protests-blaming-hard-left-unrest-2026-10-22/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "ucraina-energia-europa",
@@ -218,7 +342,10 @@
                 "url": "https://www.reuters.com/world/europe/missiles-strike-ukraines-kyiv-reuters-witness-says-2026-10-21/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "gaza-aiuti-wfp",
@@ -244,7 +371,10 @@
                 "url": "https://www.ochaopt.org/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "serbia-studenti-elezioni",
@@ -265,7 +395,10 @@
                 "url": "https://www.reuters.com/world/europe/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "eu-bilancio-priorita",
@@ -290,7 +423,35 @@
                 "url": "https://www.consilium.europa.eu/it/policies/eu-budget/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
+          },
+          {
+            "id": "tunisia-proteste-22",
+            "type": "NOTIZIA",
+            "title": "Tunisia, scontri fra polizia e manifestanti: che cosa sappiamo",
+            "dek": "Una notizia del 22 ottobre che segnala tensioni sociali oltre i consueti riflettori internazionali.",
+            "minutes": 3,
+            "paragraphs": [
+              "Reuters riferisce che il 22 ottobre la polizia tunisina ha usato gas lacrimogeni per disperdere manifestanti a Ettadhamen, periferia di Tunisi, dopo la morte di un uomo fermato per sospetti legati alla droga.",
+              "La testata segnala tensioni anche in due città meridionali. La causa immediata delle proteste e le responsabilità relative alla morte devono essere distinte dalle ricostruzioni non ancora accertate.",
+              "La vicenda conta perché mostra come la fiducia nelle istituzioni e il rapporto con le forze dell'ordine possano diventare rapidamente temi di mobilitazione.",
+              "Questo articolo è un aggiornamento su eventi del giorno precedente, non un fatto verificatosi necessariamente il 23 ottobre."
+            ],
+            "deepDive": "Notizia attribuita alle fonti indicate. Per gli sviluppi successivi occorre consultare gli aggiornamenti delle testate e le comunicazioni ufficiali.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Reuters via The Star — Tunisia, 22 ottobre",
+                "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world"
+              }
+            ],
+            "related": [],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-22"
           }
         ]
       },
@@ -323,7 +484,10 @@
                 "url": "https://www.europarl.europa.eu/committees/it/cult/home/highlights"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "CONTESTO E APPROFONDIMENTO",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           }
         ]
       },
@@ -351,7 +515,10 @@
                 "url": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "restofworld-memorie-smartphone",
@@ -373,7 +540,10 @@
                 "url": "https://restofworld.org/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           }
         ]
       },
@@ -401,7 +571,10 @@
                 "url": "https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           },
           {
             "id": "microdelays-learning",
@@ -423,7 +596,10 @@
                 "url": "https://www.nature.com/articles/s41562-026-02598-y"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           }
         ]
       },
@@ -452,7 +628,10 @@
                 "url": "https://www.nature.com/articles/s41562-026-02611-4"
               }
             ],
-            "related": []
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           }
         ]
       },
@@ -475,11 +654,16 @@
             "deepDive": "Riflessione editoriale, non una notizia né una conclusione scientifica.",
             "terms": [],
             "sources": [],
-            "related": []
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "da-verificare",
+            "sourceDate": null
           }
         ]
       }
-    ]
+    ],
+    "lastEditorialCheck": "2026-10-23T14:45:00+02:00",
+    "verificationStatus": "verifica-parziale"
   },
   {
     "date": "2026-10-22",
