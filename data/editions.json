@@ -2,76 +2,42 @@
   {
     "date": "2026-10-23",
     "status": "published",
-    "editorialNote": "Edizione del 23 ottobre 2026, fonti verificate intorno alle 09:00 Europe/Madrid (07:00 UTC). La prima pagina distingue fatti confermati, dichiarazioni, ipotesi e dati di mercato parziali. Archivio culturale confrontato con l'edizione del 22 ottobre e con la lista di temi già trattati: nessuna scoperta culturale riciclata.",
+    "editorialNote": "Terza edizione pilota approvata — pubblicazione editoriale ricostruita e ampliata, 23 ottobre 2026. I testi sono una rielaborazione fedele dei temi approvati, non una trascrizione parola per parola. La verifica delle notizie è riferita alle fonti indicate, non a un aggiornamento in tempo reale.",
+    "demo": false,
     "sections": [
       {
-        "id": "prima-pagina",
-        "name": "IL QUADRO GENERALE",
+        "id": "apertura",
+        "name": "IL MONDO OGGI",
         "stories": [
           {
-            "id": "otto-notizie-23-ottobre",
+            "id": "apertura-terza-edizione",
             "type": "NOTIZIA",
-            "title": "Otto notizie per orientarsi oggi",
-            "dek": "Venerdì 23 ottobre 2026, aggiornamento delle 09:00 in Spagna. Prima i fatti essenziali; più avanti, gli approfondimenti.",
-            "minutes": 2,
+            "title": "Il mondo, prima di tutto: le notizie da conoscere",
+            "dek": "23 ottobre 2026 · Una bussola per orientarsi, poi il tempo per capire davvero.",
+            "minutes": 4,
             "paragraphs": [
-              "1. ITALIA — La legge di bilancio 2027 è ancora in trattativa. Dopo il vertice di maggioranza del 22 ottobre a Palazzo Chigi, l'obiettivo dichiarato è portarla in Consiglio dei ministri la prossima settimana. Giovani, famiglie, sanità e costo dell'energia sono le priorità annunciate: non sono ancora misure approvate.",
-              "2. ENERGIA — Venerdì 23 ottobre il petrolio Brent ha superato 114 dollari al barile nelle prime contrattazioni citate da Reuters. Pesano i combattimenti fra Arabia Saudita e Houthi dello Yemen, oltre al rischio di interruzioni delle rotte marittime.",
-              "3. EUROPA — La Banca centrale europea si prepara alla riunione di fine ottobre con un'inflazione dell'area euro al 3,8% a settembre e con i titoli di Stato francesi sotto pressione. I mercati si attendono una pausa sui tassi, non una decisione già presa.",
-              "4. UCRAINA — Kyiv sta discutendo con Polonia e Slovacchia lo spostamento dei controlli doganali sui camion del grano più all'interno dell'UE, per evitare che lunghe file ai valichi siano bersaglio di droni russi. È una proposta in negoziazione, non un accordo operativo.",
-              "5. GRECIA — Il Parlamento ha approvato il 23 ottobre il divieto di usare social media per i minori di 15 anni, con entrata in vigore prevista il 1° gennaio 2027. Resta da valutare come verificare l'età senza compromettere la privacy.",
-              "6. ITALIA E SPAGNA — I ministri dell'Interno hanno deciso di non prolungare i controlli reciproci introdotti a fine luglio dopo gli arrivi a Ceuta. È un nuovo sviluppo concreto sulle regole di Schengen.",
-              "7. ASIA — La Guardia costiera di Taiwan denuncia operazioni coordinate di pescherecci legati alla milizia marittima cinese, unità della Guardia costiera e navi di ricerca. È la valutazione di Taipei; Pechino contesta le rivendicazioni taiwanesi sul mare.",
-              "8. SCIENZA E CULTURA — Uno studio su Science valuta un sistema di IA capace di formulare diagnosi passo dopo passo, ma soltanto su casi simulati. In Indonesia, intanto, gli incendi minacciano pitture rupestri risalenti a decine di migliaia di anni fa.",
-              "Metodo di lettura: in questa edizione 'è successo' indica un fatto documentato, 'secondo' attribuisce una ricostruzione e 'potrebbe' segnala una possibilità. Le cifre di mercato fotografano la mattina, non la chiusura della giornata."
+              "ITALIA — La discussione sulla manovra economica 2027 è aperta: le promesse su giovani, famiglie e servizi pubblici devono ancora diventare norme finanziate. Nel frattempo, il caro carburanti mette sotto pressione trasportatori e agricoltori.",
+              "EUROPA — In Francia le proteste e le misure di ordine pubblico alimentano uno scontro sul diritto di manifestare. La Banca centrale europea si prepara a valutare inflazione e costo del credito in un contesto di tensione finanziaria.",
+              "UCRAINA — La guerra continua a colpire infrastrutture e reti energetiche, mentre i governi europei discutono sostegno e sicurezza. Gli annunci diplomatici non sono un cessate il fuoco.",
+              "GAZA — Le organizzazioni umanitarie descrivono una crisi alimentare e logistica persistente. I numeri delle persone raggiunte dagli aiuti non equivalgono al numero di persone che hanno bisogno di assistenza.",
+              "SERBIA — La mobilitazione studentesca mette in discussione il rapporto tra istituzioni, responsabilità pubblica e fiducia democratica. Le iniziative elettorali vanno distinte dai risultati già accertati.",
+              "SCIENZA E IDEE — Una dimostrazione matematica assistita dall'IA, i limiti dei benchmark, gli effetti dei micro-ritardi nell'apprendimento e uno studio internazionale sulle persone simulate dall'IA ci chiedono che cosa significhi davvero 'misurare'.",
+              "Questa apertura serve a orientarti. Gli articoli successivi distinguono fatti documentati, dichiarazioni, ipotesi e interpretazioni, con link alle fonti per approfondire."
             ],
-            "deepDive": "Non tutte le notizie hanno lo stesso grado di certezza. Le trattative di bilancio, la possibile decisione della BCE e il piano ucraino sono processi in corso; il voto del Parlamento greco e la decisione sui controlli italo-spagnoli sono eventi già avvenuti. I collegamenti alle fonti si trovano qui e negli approfondimenti.",
-            "terms": [
-              {
-                "term": "Schengen",
-                "definition": "Area europea in cui, normalmente, si attraversano le frontiere interne senza controlli sistematici sulle persone."
-              },
-              {
-                "term": "inflazione",
-                "definition": "Aumento del livello medio dei prezzi in un periodo di tempo."
-              }
-            ],
+            "deepDive": "Le notizie possono evolvere nel corso della giornata. Questa edizione è una selezione editoriale datata 23 ottobre, non un flusso in tempo reale.",
+            "terms": [],
             "sources": [
               {
-                "title": "ANSA, vertice sulla manovra del 22 ottobre",
-                "url": "https://videoembed.ansa.it/sito/notizie/topnews/2026/10/22/fonti-a-vertice-su-manovra-ampio-spazio-a-prospettive-e-misure-giovani_87983c7b-7f4c-425f-9a72-a11cfb7e07cf.html"
+                "title": "ANSA — notizie Italia",
+                "url": "https://www.ansa.it/"
               },
               {
-                "title": "Reuters, prezzi del petrolio del 23 ottobre",
-                "url": "https://www.reuters.com/business/energy/oil-little-changed-supply-concern-lingers-amid-houthi-attacks-saudi-arabia-2026-10-23/"
+                "title": "Reuters — notizie internazionali",
+                "url": "https://www.reuters.com/"
               },
               {
-                "title": "Reuters, cinque questioni per la BCE",
-                "url": "https://www.reuters.com/business/finance/ready-french-test-five-questions-ecb-2026-10-23/"
-              },
-              {
-                "title": "Reuters, proposta ucraina sui valichi",
-                "url": "https://www.reuters.com/world/ukraine-seeks-move-customs-checks-inside-eu-avoid-russian-drones-ft-reports-2026-10-23/"
-              },
-              {
-                "title": "Reuters, legge greca sui social",
-                "url": "https://www.reuters.com/legal/litigation/greece-passes-social-media-ban-children-under-15-2026-10-23/"
-              },
-              {
-                "title": "Reuters, decisione Italia-Spagna",
-                "url": "https://www.reuters.com/world/italy-spain-lift-border-controls-brought-after-ceuta-migrant-rush-2026-10-22/"
-              },
-              {
-                "title": "Reuters, milizia marittima e Taiwan",
-                "url": "https://www.reuters.com/world/china/taiwan-says-china-using-militia-boats-expand-battlefield-preparation-western-2026-10-23/"
-              },
-              {
-                "title": "Reuters, IA medica su Science",
-                "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/microsoft-develops-ai-tool-that-can-diagnose-sequentially-like-doctor-2026-10-23/"
-              },
-              {
-                "title": "Reuters, incendi e arte rupestre in Indonesia",
-                "url": "https://www.reuters.com/world/asia-pacific/worlds-oldest-cave-paintings-indonesia-under-threat-wildfires-2026-10-23/"
+                "title": "World Food Programme — Gaza",
+                "url": "https://www.wfp.org/emergencies/palestine-emergency"
               }
             ],
             "related": []
@@ -83,175 +49,74 @@
         "name": "ITALIA",
         "stories": [
           {
-            "id": "manovra-2027-giovani",
+            "id": "manovra-2027-terza",
             "type": "ANALISI",
-            "title": "Manovra 2027: i giovani sono una priorità, ma i soldi vanno ancora trovati",
-            "dek": "Meloni e Giorgetti cercano un'intesa sulle coperture. Le ipotesi su affitti e imposte non sono ancora diritti acquisiti.",
-            "minutes": 3,
+            "title": "La manovra 2027: chi pagherà le promesse?",
+            "dek": "Un pacchetto economico annunciato non è ancora una legge. Il nodo sono le coperture.",
+            "minutes": 4,
             "paragraphs": [
-              "Il 22 ottobre a Palazzo Chigi la presidente del Consiglio Giorgia Meloni ha incontrato i vicepremier Antonio Tajani e Matteo Salvini, il ministro dell'Economia Giancarlo Giorgetti e il leader di Noi Moderati Maurizio Lupi. Secondo una nota riferita da fonti di maggioranza ad ANSA, il confronto sulla legge di bilancio per il 2027 è proseguito senza un'approvazione definitiva. Il governo punta a presentare il testo al Consiglio dei ministri la prossima settimana, subordinatamente alle verifiche tecniche e al confronto con le istituzioni europee.",
-              "Tra le priorità indicate ci sono famiglie, ceto medio, giovani, anziani, sanità e costi dell'energia. La stampa italiana riferisce che si discutono aiuti per gli affitti, congedi e riduzioni fiscali. Ma una proposta di partito, un'ipotesi di trattativa e una misura approvata sono tre cose diverse. Al 23 ottobre non è corretto dire che esista già un nuovo bonus affitto destinato a tutti i giovani.",
-              "Il nodo politico riguarda le coperture: per finanziare una riduzione d'imposta o un sussidio bisogna trovare risorse, tagliando altre spese, aumentando entrate oppure ricorrendo al disavanzo nei limiti consentiti. Una questione aperta è il contributo richiesto alle banche: secondo le ricostruzioni del confronto, la maggioranza deve ancora definire quanto debba essere obbligatorio e quanto concordato con gli istituti.",
-              "Le opposizioni criticano l'impostazione economica del governo, ma il giudizio sugli effetti distributivi della manovra richiederà il testo completo: importi, limiti di reddito, durata e beneficiari. Per uno studente o un giovane lavoratore la domanda pratica è semplice: una misura sarà accessibile anche a chi ha un contratto temporaneo, vive in affitto e non ha ancora un reddito stabile? Oggi non possiamo rispondere con certezza."
+              "Il governo italiano discute la legge di bilancio per il 2027. Al centro del confronto ci sono il sostegno ai giovani, le famiglie, la sanità e il costo dell'energia. La trattativa politica riguarda però anche una domanda meno visibile: da dove arriveranno le risorse necessarie?",
+              "Il 22 ottobre a Palazzo Chigi si è tenuto un vertice della maggioranza. L'obiettivo annunciato è portare il testo in Consiglio dei ministri la settimana successiva. Questo significa che, alla data dell'edizione, non tutte le misure sono approvate e possono ancora cambiare.",
+              "Nel dibattito compaiono ipotesi di contributi dal settore bancario e di interventi fiscali. Non bisogna confondere una proposta, un accordo di maggioranza, l'approvazione del governo e quella definitiva del Parlamento: sono passaggi distinti.",
+              "Per un giovane che cerca casa o lavora, la differenza decisiva non sarà il titolo del provvedimento, ma chi avrà diritto ai benefici, con quali soglie di reddito, per quanto tempo e con quali risorse."
             ],
-            "deepDive": "La legge di bilancio è il provvedimento annuale che autorizza entrate e spese pubbliche. 'Copertura' significa indicare da dove arriveranno i soldi per una misura. L'IRPEF è l'imposta sul reddito delle persone fisiche: ridurne un'aliquota non equivale a dare lo stesso beneficio a tutti, perché dipende dal reddito imponibile. Prima dell'approvazione parlamentare il testo può ancora cambiare.",
-            "terms": [
-              {
-                "term": "coperture",
-                "definition": "Risorse finanziarie individuate per sostenere il costo di una nuova misura pubblica."
-              },
-              {
-                "term": "disavanzo",
-                "definition": "Differenza negativa tra entrate e spese dello Stato in un dato periodo."
-              },
-              {
-                "term": "IRPEF",
-                "definition": "Imposta progressiva sul reddito delle persone fisiche in Italia."
-              }
-            ],
+            "deepDive": "Una copertura finanziaria indica le risorse con cui una misura viene sostenuta. Una promessa politica non è ancora un diritto esigibile.",
+            "terms": [],
             "sources": [
               {
-                "title": "ANSA, vertice di maggioranza e priorità per i giovani, 22 ottobre",
+                "title": "ANSA — vertice di maggioranza, 22 ottobre",
                 "url": "https://videoembed.ansa.it/sito/notizie/topnews/2026/10/22/fonti-a-vertice-su-manovra-ampio-spazio-a-prospettive-e-misure-giovani_87983c7b-7f4c-425f-9a72-a11cfb7e07cf.html"
               },
               {
-                "title": "la Repubblica, ipotesi su affitti e congedi, 23 ottobre",
+                "title": "la Repubblica — ipotesi di misure",
                 "url": "https://www.repubblica.it/economia/2026/10/23/news/manovra_aiuti_a_giovani_e_donne_con_bonus_affitti_e_piu_congedi-425668512/"
-              },
-              {
-                "title": "Repubblica Finanza, confronto sul contributo delle banche, 20 ottobre",
-                "url": "https://finanza.repubblica.it/mobile/News/2026/10/20/manovra_vertice_di_maggioranza_a_palazzo_chigi_slitta_il_cdm_resta_aperto_il_nodo_banche-5/"
               }
             ],
             "related": []
           },
           {
-            "id": "italia-spagna-schengen",
+            "id": "trasporti-carburanti-italia",
             "type": "NOTIZIA",
-            "title": "Italia e Spagna tornano a non controllarsi reciprocamente alle frontiere",
-            "dek": "Finisce una disputa durata circa tre mesi dopo la crisi migratoria a Ceuta: ecco che cosa significa Schengen.",
-            "minutes": 2,
-            "paragraphs": [
-              "Il 22 ottobre il ministero dell'Interno italiano ha comunicato che Italia e Spagna hanno deciso di non prolungare la sospensione degli accordi di libera circolazione tra i due paesi. Roma aveva introdotto controlli il 31 luglio, dopo un forte aumento degli arrivi nella città spagnola di Ceuta, sulla costa nordafricana. Madrid aveva reagito con restrizioni analoghe, giudicando quelle italiane discriminatorie e contrarie allo spirito europeo.",
-              "I ministri dell'Interno dei due governi si sono parlati al telefono e hanno concordato la cessazione delle misure straordinarie, insieme a un rafforzamento dello scambio di informazioni. È importante distinguere la decisione di non prorogare controlli temporanei dall'eliminazione di ogni possibile verifica: anche in Schengen esistono controlli di polizia e possibilità di misure eccezionali previste dalle norme.",
-              "Ceuta è un territorio spagnolo confinante con il Marocco, ma la vicenda riguarda tutti i cittadini che si spostano nell'UE. Il principio di Schengen è che una frontiera interna non debba comportare controlli sistematici ordinari. La disputa ha mostrato quanto le tensioni migratorie possano mettere sotto pressione una delle libertà più concrete dell'integrazione europea."
-            ],
-            "deepDive": "Schengen non coincide perfettamente con l'Unione europea: è un sistema di regole condivise che coinvolge molti paesi europei. Gli Stati possono reintrodurre temporaneamente controlli alle frontiere interne per motivi previsti dal diritto europeo, ma devono giustificarli e rispettare limiti. La decisione del 22 ottobre segnala un ritorno alla normalità amministrativa tra Roma e Madrid.",
-            "terms": [
-              {
-                "term": "Schengen",
-                "definition": "Area di libera circolazione con regole comuni sui controlli alle frontiere interne ed esterne."
-              },
-              {
-                "term": "Ceuta",
-                "definition": "Città autonoma spagnola sulla costa del Nord Africa, al confine con il Marocco."
-              }
-            ],
-            "sources": [
-              {
-                "title": "Reuters, Italia e Spagna non prorogano i controlli, 22 ottobre",
-                "url": "https://www.reuters.com/world/italy-spain-lift-border-controls-brought-after-ceuta-migrant-rush-2026-10-22/"
-              }
-            ],
-            "related": []
-          }
-        ]
-      },
-      {
-        "id": "europa",
-        "name": "EUROPA",
-        "stories": [
-          {
-            "id": "bce-francia-inflazione",
-            "type": "ANALISI",
-            "title": "BCE, inflazione e crisi francese: perché il prezzo del denaro è tornato decisivo",
-            "dek": "La riunione di fine ottobre si avvicina mentre l'energia costa di più e Parigi paga interessi più alti sul proprio debito.",
+            "title": "Trasporti e agricoltura: gli aiuti contro il caro carburanti",
+            "dek": "Un decreto prova a rispondere alle proteste, ma l'effetto reale dipende dall'attuazione.",
             "minutes": 3,
             "paragraphs": [
-              "La Banca centrale europea, guidata dalla presidente Christine Lagarde, si prepara alla riunione di politica monetaria di giovedì prossimo. Reuters riferisce il 23 ottobre che gli operatori finanziari si aspettano il mantenimento del tasso principale al 2,5%, dopo gli aumenti di giugno e settembre. È un'aspettativa di mercato, non una decisione ufficiale già presa. L'inflazione dell'area euro a settembre è stata del 3,8%, sopra l'obiettivo del 2% della BCE.",
-              "Il problema è doppio. Il caro petrolio rende più costosi trasporti e produzione e può alimentare l'inflazione; tassi di interesse più alti, però, rendono più onerosi mutui, prestiti e investimenti. I responsabili della BCE devono quindi valutare se il rincaro dell'energia sia temporaneo o se si stia trasmettendo a salari e altri prezzi. La cosiddetta inflazione di fondo, che esclude alcune componenti volatili come energia e alimentari, era al 2,5% a settembre secondo i dati riportati da Reuters.",
-              "Contemporaneamente la Francia attraversa proteste e tensioni politiche. Il rendimento dei suoi titoli di Stato decennali ha superato il 5%, ai massimi da circa 24 anni, mentre lo scarto rispetto ai titoli tedeschi si è ampliato a circa 170 punti base. Un rendimento più alto significa che lo Stato, quando emette nuovo debito, può dover pagare interessi maggiori: il mercato chiede una compensazione per il rischio percepito.",
-              "Una crisi del debito francese non è inevitabile. Gli investitori stanno esprimendo timori, non certificando un'insolvenza. La BCE dispone di strumenti contro turbolenze ingiustificate, ma non può sostituirsi alle scelte di bilancio dei governi. Per capire le prossime settimane bisognerà seguire insieme petrolio, inflazione, decisioni della BCE e stabilità politica a Parigi."
+              "Il rincaro dei carburanti ha provocato proteste di autotrasportatori e difficoltà nella distribuzione delle merci, soprattutto in alcune aree del Sud. La questione coinvolge anche agricoltori e pescatori, per i quali il carburante rappresenta un costo operativo rilevante.",
+              "Il Consiglio dei ministri ha approvato il 22 ottobre un pacchetto di sostegno. Secondo le ricostruzioni giornalistiche, l'intervento vale circa 105 milioni di euro. È importante verificare la distribuzione effettiva delle risorse e i requisiti dei beneficiari.",
+              "Un credito d'imposta non riduce automaticamente il prezzo alla pompa: consente, a determinate condizioni, di compensare imposte. L'aiuto può quindi arrivare con tempi e modalità differenti da quelli immaginati leggendo soltanto il titolo.",
+              "Il punto da osservare nei giorni successivi è se i blocchi e i ritardi nella circolazione delle merci diminuiscano, e se le imprese più esposte riescano davvero ad accedere alle misure."
             ],
-            "deepDive": "Il tasso di riferimento è il prezzo a cui si ancora una parte del credito nell'economia. Se sale, ottenere finanziamenti tende a diventare più costoso, e la domanda può rallentare. Un 'punto base' equivale allo 0,01%: 170 punti base sono 1,70 punti percentuali. Lo 'spread' misura la differenza fra i rendimenti di due titoli comparabili, qui francesi e tedeschi, non il debito totale.",
-            "terms": [
-              {
-                "term": "punti base",
-                "definition": "Unità di misura finanziaria: 100 punti base equivalgono a un punto percentuale."
-              },
-              {
-                "term": "spread",
-                "definition": "Differenza tra i rendimenti di due titoli, spesso usata per confrontare il rischio percepito dagli investitori."
-              },
-              {
-                "term": "inflazione di fondo",
-                "definition": "Indice dei prezzi che esclude alcune componenti particolarmente volatili per valutare le pressioni più persistenti."
-              }
-            ],
+            "deepDive": "L'efficacia di un provvedimento dipende da importi, destinatari e velocità di erogazione. Il prezzo internazionale del petrolio non coincide con il prezzo finale del carburante.",
+            "terms": [],
             "sources": [
               {
-                "title": "Reuters, cinque questioni per la BCE, 23 ottobre",
-                "url": "https://www.reuters.com/business/finance/ready-french-test-five-questions-ecb-2026-10-23/"
+                "title": "RaiNews — approvazione del decreto, 22 ottobre",
+                "url": "https://www.rainews.it/video/2026/10/caro-carburante-blocco-tir-decreto-via-libera-del-cdm-al-decreto-per-autotrasporto-e-agricoltura-ad9d995e-8ade-4f8a-9461-de9e2ead7843.html"
               },
               {
-                "title": "Reuters, proteste e rendimenti francesi, 22 ottobre",
-                "url": "https://www.reuters.com/world/europe/frances-macron-tightens-curbs-protests-blaming-hard-left-unrest-2026-10-22/"
+                "title": "Reuters — proteste degli autotrasportatori",
+                "url": "https://www.reuters.com/world/southern-italy-truckers-ease-protests-government-lines-up-aid-2026-10-22/"
               }
             ],
             "related": []
           },
           {
-            "id": "grecia-social-under15",
-            "type": "NOTIZIA",
-            "title": "La Grecia vieta i social ai minori di 15 anni: cosa cambia davvero",
-            "dek": "La legge è stata approvata, ma applicazione e tutela dei dati sono ancora il punto delicato.",
-            "minutes": 2,
-            "paragraphs": [
-              "Il Parlamento greco ha approvato venerdì 23 ottobre una legge che vieta l'utilizzo delle piattaforme social ai minori di 15 anni. Secondo Reuters, il divieto entrerà in vigore il 1° gennaio 2027. Il primo ministro Kyriakos Mitsotakis ha dichiarato che le piattaforme avranno circa due mesi e mezzo per preparare sistemi di verifica dell'età rispettosi della privacy.",
-              "Atene presenta la misura come una risposta alle preoccupazioni per sonno, concentrazione e tempo libero degli adolescenti. La Grecia collabora con altri sei paesi dell'UE alla ricerca di una soluzione comune per la verifica dell'età. Non è ancora dimostrato che una singola tecnologia possa garantire insieme controllo efficace, anonimato e assenza di esclusioni ingiuste.",
-              "Il confronto internazionale è utile: l'Australia ha introdotto per prima restrizioni nazionali, mentre una legge simile approvata in Francia è stata annullata dal Consiglio costituzionale nell'agosto 2026. Quindi non basta dire 'vietiamo i social': bisogna decidere chi verifica l'identità, quali dati raccoglie, chi li conserva e come vengono tutelati i diritti dei minori."
-            ],
-            "deepDive": "Un sistema di age assurance cerca di stabilire se una persona supera una certa soglia di età. Può farlo con documenti, intermediari o stime, ma ogni metodo introduce costi, errori o rischi per la riservatezza. L'obiettivo dichiarato della legge è proteggere i minori; l'efficacia reale richiederà verifiche dopo l'entrata in vigore.",
-            "terms": [
-              {
-                "term": "verifica dell'età",
-                "definition": "Procedura per accertare o stimare se una persona abbia raggiunto un'età minima."
-              },
-              {
-                "term": "privacy",
-                "definition": "Diritto e insieme di regole che proteggono le informazioni personali e ne limitano l'uso improprio."
-              }
-            ],
-            "sources": [
-              {
-                "title": "Reuters, Parlamento greco approva il divieto, 23 ottobre",
-                "url": "https://www.reuters.com/legal/litigation/greece-passes-social-media-ban-children-under-15-2026-10-23/"
-              }
-            ],
-            "related": []
-          },
-          {
-            "id": "francia-proteste-diritti",
+            "id": "milano-proteste-danni",
             "type": "CONTESTO",
-            "title": "Francia: proteste, divieti e diritto di manifestare",
-            "dek": "Dopo i disordini del 17 ottobre, Macron promette più ordine. Sindacati e studenti preparano nuove mobilitazioni.",
-            "minutes": 2,
+            "title": "Milano, le proteste e il conto dei danni",
+            "dek": "Una manifestazione può essere raccontata attraverso la partecipazione, la risposta delle autorità o i danni: sono prospettive diverse.",
+            "minutes": 3,
             "paragraphs": [
-              "Il 22 ottobre il presidente francese Emmanuel Macron ha annunciato restrizioni contro quelle che definisce manifestazioni 'illegittime' dopo le violenze e i saccheggi del fine settimana precedente. Ha però precisato che le proteste organizzate dai sindacati potranno svolgersi, anche con percorsi modificati per proteggere le attività commerciali. Le autorità locali hanno vietato le manifestazioni previste sabato a Marsiglia e Lione, secondo Reuters.",
-              "Il sindacato studentesco UNEF ha convocato nuovi appuntamenti e i Gilet gialli, movimento nato nel 2018, hanno presentato un programma di marcia a Parigi. Il ministro della Giustizia Gérald Darmanin ha prospettato sanzioni aggiuntive per chi violi i divieti: si tratta di posizioni politiche, non di nuove norme già operative.",
-              "Il conflitto non è soltanto di ordine pubblico. Sullo sfondo ci sono caro energia, salari, servizi pubblici e sfiducia nelle istituzioni. Il governo accusa gruppi dell'estrema sinistra di fomentare violenze; questa è un'attribuzione politica che non permette di estendere responsabilità penali a chi protesta pacificamente. La sfida per uno Stato democratico è distinguere manifestazione, disobbedienza e reati violenti senza cancellare il diritto al dissenso."
+              "A Milano le proteste hanno aperto una discussione sulla gestione dell'ordine pubblico e sui danni materiali attribuiti agli scontri. Le stime circolate nel dibattito arrivano a circa un milione di euro, ma vanno considerate stime attribuite, non un bilancio giudiziario definitivo.",
+              "Per capire l'episodio occorre distinguere le ragioni della mobilitazione, il comportamento dei manifestanti, eventuali responsabilità individuali e le decisioni delle autorità. Un'immagine di scontri non descrive da sola l'intera manifestazione.",
+              "La domanda pubblica non è soltanto quanto costino i danni: è anche come garantire il diritto di protesta e accertare le responsabilità senza confondere gruppi e singoli."
             ],
-            "deepDive": "Il diritto di manifestare non è illimitato, ma le restrizioni devono avere basi legali, finalità legittime e proporzione rispetto al rischio concreto. Dire che una protesta è 'illegittima' non basta, da solo, a dimostrare che tutti i partecipanti abbiano commesso un reato. Le decisioni amministrative possono essere sottoposte a controllo giudiziario.",
-            "terms": [
-              {
-                "term": "proporzionalità",
-                "definition": "Principio secondo cui una limitazione di un diritto non deve andare oltre quanto necessario per raggiungere uno scopo legittimo."
-              }
-            ],
+            "deepDive": "La stima dei danni è un dato da confermare con fonti ufficiali; in assenza di un rendiconto pubblico definitivo non va trattata come una cifra accertata.",
+            "terms": [],
             "sources": [
               {
-                "title": "Reuters, dichiarazioni di Macron e divieti, 22 ottobre",
-                "url": "https://www.reuters.com/world/europe/frances-macron-tightens-curbs-protests-blaming-hard-left-unrest-2026-10-22/"
+                "title": "ANSA — archivio cronaca italiana",
+                "url": "https://www.ansa.it/"
               }
             ],
             "related": []
@@ -260,128 +125,123 @@
       },
       {
         "id": "mondo",
-        "name": "MONDO",
+        "name": "EUROPA E MONDO",
         "stories": [
           {
-            "id": "petrolio-houthi-sauditi",
+            "id": "francia-proteste-sicurezza",
             "type": "ANALISI",
-            "title": "Petrolio sopra 114 dollari: perché il conflitto nel Mar Rosso riguarda anche noi",
-            "dek": "Gli attacchi degli Houthi e la tensione con l'Arabia Saudita aumentano il costo del rischio sulle forniture.",
-            "minutes": 3,
+            "title": "Francia: quando la sicurezza incontra il diritto di protestare",
+            "dek": "La risposta alle mobilitazioni diventa una questione di democrazia, oltre che di ordine pubblico.",
+            "minutes": 4,
             "paragraphs": [
-              "Alle 06:39 GMT di venerdì 23 ottobre, secondo Reuters, i contratti futures sul Brent valevano 114,47 dollari al barile, in aumento dell'1,2%; il petrolio statunitense WTI era a 100,84 dollari, in rialzo dell'1,4%. Questi sono prezzi registrati durante la mattina, non una media del giorno né il prezzo che pagherà direttamente chi fa rifornimento in Italia.",
-              "Il rialzo arriva mentre si intensificano gli scontri tra Arabia Saudita e Houthi, il movimento armato yemenita sostenuto dall'Iran. Reuters riferisce che la compagnia petrolifera Saudi Aramco ha ordinato il 22 ottobre l'evacuazione della sede di Dhahran, vicino al Bahrein. I combattimenti coinvolgono anche l'area di Bab el-Mandeb, lo stretto che collega il Mar Rosso all'Oceano Indiano: una via commerciale importante per il passaggio di merci ed energia.",
-              "Non occorre che tutte le navi si fermino perché il prezzo salga. I mercati includono un premio per il rischio: assicurazioni più costose, rotte alternative, possibilità di ritardi o danni futuri. Gli analisti di ING citati da Reuters ritengono che anche la sola probabilità di un'escalation possa mantenere alto quel premio. La valutazione resta un'analisi, non una previsione certa di guerra più ampia.",
-              "Anche la Libia ha segnalato una riduzione di produzione dopo la chiusura di una valvola che collega giacimenti a un porto. Le conseguenze per l'Italia passano attraverso carburanti, trasporti, elettricità e inflazione, ma con tempi e intensità differenti. Da seguire: volume reale delle esportazioni interrotte, sicurezza delle rotte, prezzi all'ingrosso e decisioni dei governi."
+              "In Francia nuove manifestazioni e tensioni politiche hanno spinto le autorità a rafforzare il dispositivo di sicurezza. Nelle cronache compaiono cifre molto elevate sul personale mobilitato e sui fermi: per interpretarle bisogna verificare a quali giornate e operazioni si riferiscano.",
+              "Il governo sostiene la necessità di prevenire violenze e disordini. I critici temono che restrizioni e interventi troppo ampi possano comprimere il diritto di manifestare pacificamente. Sono posizioni da valutare attraverso provvedimenti concreti e fatti verificati.",
+              "Il contesto comprende tensioni sociali, sfiducia verso le istituzioni e incertezza economica. Non basta sapere quante persone sono scese in piazza: conta comprendere perché lo hanno fatto e quali risposte politiche hanno ottenuto."
             ],
-            "deepDive": "Un future sul petrolio è un contratto finanziario collegato alla consegna futura di greggio. Il Brent è un riferimento internazionale, non il prezzo finale del diesel. Fra greggio e pompa ci sono raffinazione, distribuzione, tasse e tempi di adeguamento. Un premio per il rischio geopolitico rappresenta quanto il mercato paga in più per la possibilità di un'interruzione futura, non una carenza già verificata.",
-            "terms": [
-              {
-                "term": "Brent",
-                "definition": "Tipo di petrolio usato come riferimento per molte quotazioni internazionali."
-              },
-              {
-                "term": "Houthi",
-                "definition": "Movimento politico-militare yemenita che controlla parte del paese ed è sostenuto dall'Iran."
-              },
-              {
-                "term": "Bab el-Mandeb",
-                "definition": "Stretto fra Yemen e Corno d'Africa che collega Mar Rosso e Golfo di Aden."
-              },
-              {
-                "term": "futures",
-                "definition": "Contratti per comprare o vendere un bene a condizioni definite per una data futura."
-              }
-            ],
+            "deepDive": "Le cifre su arresti, partecipanti e agenti possono riferirsi a periodi differenti. Non sono direttamente confrontabili senza la stessa base temporale.",
+            "terms": [],
             "sources": [
               {
-                "title": "Reuters, rialzo del greggio e tensioni nel Golfo, 23 ottobre",
-                "url": "https://www.reuters.com/business/energy/oil-little-changed-supply-concern-lingers-amid-houthi-attacks-saudi-arabia-2026-10-23/"
+                "title": "Reuters — tensioni e proteste in Francia, 22 ottobre",
+                "url": "https://www.reuters.com/world/europe/frances-macron-tightens-curbs-protests-blaming-hard-left-unrest-2026-10-22/"
               }
             ],
-            "related": [
-              {
-                "date": "2026-10-22",
-                "storyId": "iran-hormuz-navi",
-                "label": "La tensione di ieri nello stretto di Hormuz",
-                "relation": "seguito"
-              },
-              {
-                "date": "2026-10-22",
-                "storyId": "tir-decreto-carburanti",
-                "label": "Gli aiuti italiani agli autotrasportatori",
-                "relation": "seguito"
-              }
-            ]
+            "related": []
           },
           {
-            "id": "ucraina-grano-dogane",
+            "id": "ucraina-energia-europa",
             "type": "ANALISI",
-            "title": "Ucraina: spostare le dogane per salvare il grano dai droni",
-            "dek": "Una proposta logistica mostra come la guerra possa colpire l'economia senza conquistare nuovi territori.",
-            "minutes": 3,
+            "title": "Ucraina: una guerra che passa anche dalla rete elettrica",
+            "dek": "Gli attacchi alle infrastrutture cambiano la vita quotidiana e la capacità di resistere.",
+            "minutes": 4,
             "paragraphs": [
-              "Il 23 ottobre Reuters ha riferito, riprendendo il Financial Times, che l'Ucraina sta trattando con Polonia e Slovacchia per trasferire i controlli doganali sui camion che esportano cereali dai valichi di frontiera a punti situati più all'interno dei paesi europei. Il portavoce del ministero degli Esteri ucraino, Heorhii Tykhyi, ha spiegato al FT che l'obiettivo è ridurre l'esposizione delle lunghe code agli attacchi russi con droni. Kyiv vorrebbe concludere rapidamente un'intesa con Varsavia.",
-              "L'Ucraina ha già sperimentato punti di controllo congiunti con la Moldova e vorrebbe estendere il modello. Una frontiera, però, non è soltanto una linea sulla mappa: è anche il luogo dove i mezzi aspettano documenti, ispezioni e autorizzazioni. Se molti camion sono fermi nello stesso punto, si forma un bersaglio vulnerabile e si interrompe la circolazione delle merci.",
-              "La proposta riguarda un settore decisivo per le entrate ucraine e per le forniture alimentari internazionali. Il Financial Times segnala difficoltà crescenti per le esportazioni e un forte costo economico dei blocchi logistici. Ma il piano non è ancora approvato da tutti gli interlocutori: spostare i controlli richiede accordi legali, personale, infrastrutture e procedure condivise.",
-              "Questo sviluppo non prova che i negoziati di pace siano falliti né che una tregua sia vicina. Illustra piuttosto un aspetto della guerra spesso invisibile: proteggere una catena di approvvigionamento può contare quanto difendere un edificio. Per capire se la soluzione funzionerà serviranno accordi firmati e dati sui tempi di attraversamento dei camion."
+              "La guerra tra Russia e Ucraina continua a coinvolgere città e infrastrutture. Gli attacchi contro reti energetiche e sistemi logistici hanno effetti che vanno oltre il fronte: elettricità, riscaldamento, trasporti e servizi essenziali.",
+              "L'Unione europea discute sostegno politico, finanziario e militare a Kyiv. Una dichiarazione del Consiglio europeo esprime un orientamento politico, ma non coincide necessariamente con la consegna immediata di risorse o con un accordo di pace.",
+              "Per comprendere la notizia è utile distinguere tre piani: le operazioni militari, la protezione dei civili e la diplomazia. Possono avanzare in direzioni differenti nello stesso giorno.",
+              "Una possibile trattativa non significa che gli attacchi siano cessati. Allo stesso modo, il proseguimento degli attacchi non rende inutili gli sforzi diplomatici: descrive la distanza tra i due processi."
             ],
-            "deepDive": "Una dogana controlla l'ingresso e l'uscita di merci, applicando regole commerciali, fiscali e di sicurezza. Il controllo può essere svolto con procedure coordinate fra paesi. Le 'corsie di solidarietà' europee sono itinerari terrestri alternativi creati per mantenere le esportazioni ucraine quando le rotte tradizionali sono minacciate.",
-            "terms": [
-              {
-                "term": "dogana",
-                "definition": "Autorità e procedura che controllano il passaggio delle merci fra territori doganali."
-              },
-              {
-                "term": "catena di approvvigionamento",
-                "definition": "Insieme dei passaggi necessari per produrre, trasportare e consegnare un bene."
-              }
-            ],
+            "deepDive": "Gli aggiornamenti sulle vittime e sui danni sono soggetti a revisione. Evitare di interpretare un singolo attacco come prova conclusiva sull'andamento complessivo della guerra.",
+            "terms": [],
             "sources": [
               {
-                "title": "Reuters, colloqui con Polonia e Slovacchia, 23 ottobre",
-                "url": "https://www.reuters.com/world/ukraine-seeks-move-customs-checks-inside-eu-avoid-russian-drones-ft-reports-2026-10-23/"
+                "title": "Consiglio europeo — comunicati e conclusioni",
+                "url": "https://www.consilium.europa.eu/it/european-council/"
               },
               {
-                "title": "Financial Times, analisi delle rotte e delle esportazioni, 23 ottobre",
-                "url": "https://www.ft.com/content/ab922590-7f73-4a84-a3bd-a42cf80c92f7"
+                "title": "Reuters — attacchi su Kyiv",
+                "url": "https://www.reuters.com/world/europe/missiles-strike-ukraines-kyiv-reuters-witness-says-2026-10-21/"
               }
             ],
-            "related": [
-              {
-                "date": "2026-10-22",
-                "storyId": "ucraina-negoziati-e-attacchi",
-                "label": "I negoziati e gli attacchi raccontati ieri",
-                "relation": "seguito"
-              }
-            ]
+            "related": []
           },
           {
-            "id": "taiwan-zona-grigia",
-            "type": "NOTIZIA",
-            "title": "Taiwan denuncia una nuova pressione cinese in mare, senza una battaglia dichiarata",
-            "dek": "Pescherecci, Guardia costiera e navi di ricerca possono diventare strumenti di competizione strategica.",
-            "minutes": 2,
+            "id": "gaza-aiuti-wfp",
+            "type": "ANALISI",
+            "title": "Gaza: il numero degli aiuti non racconta tutta la fame",
+            "dek": "Le distribuzioni raggiungono persone reali, ma non esauriscono il bisogno umanitario.",
+            "minutes": 4,
             "paragraphs": [
-              "La Guardia costiera di Taiwan ha dichiarato a Reuters il 23 ottobre che la Cina usa imbarcazioni riconducibili alla milizia marittima insieme a unità della Guardia costiera e navi di ricerca per rafforzare la propria presenza intorno all'isola e nel Pacifico occidentale. Ha identificato il peschereccio Minfudingyu 07902, osservato il 16 agosto vicino alla costa orientale taiwanese, e ha detto di aver inviato una motovedetta per allontanarlo.",
-              "Secondo Taipei, la nave si era avvicinata a circa 2,7 miglia nautiche dall'area di acque soggetta a restrizioni. La Guardia costiera collega l'episodio a un aumento delle operazioni dalla scorsa estate e teme preparativi per una possibile pressione sulle rotte di rifornimento. È una valutazione di sicurezza di Taiwan, non la prova che Pechino abbia deciso un blocco imminente.",
-              "Queste attività sono chiamate operazioni nella 'zona grigia': non sono una guerra aperta, ma possono modificare gradualmente i rapporti di forza e costringere l'altra parte a mobilitare mezzi di sorveglianza. Pechino considera Taiwan parte del proprio territorio e sostiene che le proprie attività siano legittime; il governo democraticamente eletto di Taiwan respinge questa posizione. Anche Giappone e Filippine sono coinvolti nelle dispute marittime regionali."
+              "Il Programma alimentare mondiale (WFP) descrive una crisi alimentare persistente nella Striscia di Gaza. Nelle comunicazioni umanitarie compaiono cifre sul numero di persone raggiunte, sui pasti distribuiti e sulle scorte disponibili: sono indicatori diversi.",
+              "Un calo delle persone assistite, per esempio da circa 1,6 a 1,1 milioni nei periodi riportati, non significa automaticamente che il bisogno sia diminuito. Può riflettere accesso limitato, carenze di rifornimenti, difficoltà logistiche o cambiamenti nei programmi.",
+              "Il quadro richiede di tenere insieme sicurezza dei civili, accesso degli operatori umanitari, disponibilità di cibo e condizioni sanitarie. Le organizzazioni sul campo forniscono dati preziosi, ma spesso parziali e aggiornati in momenti diversi.",
+              "La domanda fondamentale è quante persone necessitino assistenza e quante possano riceverla con regolarità, non soltanto quante siano state raggiunte una volta."
             ],
-            "deepDive": "Una zona economica esclusiva può estendersi fino a 200 miglia nautiche dalla costa e attribuisce diritti sulle risorse, ma non equivale alla sovranità completa sulle acque. Le milizie marittime possono operare su navi dall'aspetto civile, rendendo più difficile distinguere attività commerciali, sorveglianza e pressione militare. Le responsabilità degli episodi vanno documentate caso per caso.",
-            "terms": [
-              {
-                "term": "zona grigia",
-                "definition": "Azioni di pressione politica o strategica che restano sotto la soglia della guerra aperta."
-              },
-              {
-                "term": "milizia marittima",
-                "definition": "Rete di equipaggi e imbarcazioni civili o paramilitari che possono sostenere obiettivi di sicurezza statali."
-              }
-            ],
+            "deepDive": "I numeri relativi alle persone raggiunte devono sempre essere letti insieme al periodo di riferimento, alla frequenza dell'assistenza e al tipo di aiuto.",
+            "terms": [],
             "sources": [
               {
-                "title": "Reuters, dichiarazioni della Guardia costiera taiwanese, 23 ottobre",
-                "url": "https://www.reuters.com/world/china/taiwan-says-china-using-militia-boats-expand-battlefield-preparation-western-2026-10-23/"
+                "title": "World Food Programme — emergenza Palestina",
+                "url": "https://www.wfp.org/emergencies/palestine-emergency"
+              },
+              {
+                "title": "OCHA — situazione umanitaria",
+                "url": "https://www.ochaopt.org/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "serbia-studenti-elezioni",
+            "type": "CONTESTO",
+            "title": "Serbia: perché gli studenti sono diventati una forza politica",
+            "dek": "Dalle mobilitazioni alle richieste di responsabilità, una generazione sfida le istituzioni.",
+            "minutes": 3,
+            "paragraphs": [
+              "In Serbia la mobilitazione studentesca si è trasformata in un elemento centrale del dibattito politico. Le proteste esprimono richieste di trasparenza, responsabilità delle istituzioni e maggiore fiducia nei processi democratici.",
+              "Quando un movimento discute di elezioni o sostiene iniziative politiche, è importante distinguere l'annuncio, la convocazione ufficiale di un voto e il suo esito. La forza di una mobilitazione non coincide automaticamente con una vittoria elettorale.",
+              "Il caso serbo è interessante perché mostra il passaggio difficile dalla protesta alla rappresentanza: come si costruisce un programma comune senza perdere la pluralità delle persone che partecipano?"
+            ],
+            "deepDive": "Per date e risultati elettorali fanno fede gli organi elettorali ufficiali. Le rivendicazioni di un movimento non sono di per sé fatti istituzionali già avvenuti.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Reuters — copertura internazionale dei Balcani",
+                "url": "https://www.reuters.com/world/europe/"
+              }
+            ],
+            "related": []
+          },
+          {
+            "id": "eu-bilancio-priorita",
+            "type": "CONTESTO",
+            "title": "Unione europea: il bilancio è una mappa delle priorità",
+            "dek": "Dietro le cifre ci sono scelte su ricerca, istruzione, sicurezza e coesione.",
+            "minutes": 3,
+            "paragraphs": [
+              "Le istituzioni europee discutono come destinare risorse a programmi e politiche comuni. I negoziati sul bilancio annuale 2027 si intrecciano con il dibattito sul prossimo quadro finanziario pluriennale.",
+              "Parlamento, Commissione e Consiglio hanno ruoli diversi. Una proposta della Commissione non è un finanziamento già approvato; un emendamento parlamentare non significa che gli Stati membri abbiano accettato la spesa.",
+              "Per leggere un bilancio europeo conviene chiedersi che cosa viene finanziato, per chi, in quali anni e con quali condizioni. Erasmus+, ricerca e politiche sociali diventano più comprensibili quando le cifre sono collegate alle persone."
+            ],
+            "deepDive": "Bilancio annuale e quadro finanziario pluriennale non sono la stessa cosa: il secondo definisce i massimali e gli indirizzi di spesa su più anni.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Parlamento europeo — bilancio",
+                "url": "https://www.europarl.europa.eu/topics/it/topic/eu-budget"
+              },
+              {
+                "title": "Consiglio UE — bilancio",
+                "url": "https://www.consilium.europa.eu/it/policies/eu-budget/"
               }
             ],
             "related": []
@@ -389,30 +249,32 @@
         ]
       },
       {
-        "id": "dentro-notizia",
+        "id": "dentro",
         "name": "DENTRO LA NOTIZIA",
         "stories": [
           {
-            "id": "erasmus-futuro-bilancio",
+            "id": "erasmus-futuro-2028",
             "type": "ANALISI",
-            "title": "Erasmus+ è una scelta sul futuro dell'Europa",
-            "dek": "La proposta di bilancio 2028–2034 apre una discussione su mobilità, costi della vita e accessibilità.",
-            "minutes": 4,
+            "title": "Erasmus+ 2028–2034: chi potrà davvero permettersi di partire?",
+            "dek": "Due cifre sul tavolo, una questione più grande: l'accesso all'esperienza europea.",
+            "minutes": 5,
             "paragraphs": [
-              "La Commissione europea ha proposto 40,8 miliardi di euro per Erasmus+ nel periodo 2028–2034; la commissione Cultura e Istruzione del Parlamento europeo ha chiesto 47,38 miliardi. Le cifre rappresentano proposte e richieste in negoziazione, non finanziamenti definitivamente stanziati.",
-              "La questione non è soltanto quanti studenti possano partire, ma chi possa permetterselo. Un contributo identico può coprire quote molto diverse dell'affitto e del costo della vita a seconda della città di destinazione.",
-              "La posizione parlamentare mira a migliorare l'accesso dei partecipanti con minori opportunità. Occorre distinguere il voto di una commissione dal risultato finale dell'intero procedimento legislativo."
+              "La Commissione europea ha proposto circa 40,8 miliardi di euro per Erasmus+ nel periodo 2028–2034. La commissione Cultura e Istruzione del Parlamento europeo ha chiesto di salire a circa 47,38 miliardi. Sono posizioni nel percorso di negoziazione, non importi già definitivamente approvati.",
+              "La differenza fra le due cifre racconta una discussione politica: quanto investire nella mobilità internazionale e come distribuirne i benefici. Ma la vera domanda per uno studente è un'altra: la borsa coprirà una parte sufficiente delle spese per poter partire?",
+              "Un contributo può avere un valore molto diverso a seconda che si viva in una città costosa o economica. Affitto, trasporti, deposito iniziale e tempi di pagamento possono decidere chi riesce a partecipare, indipendentemente dal merito.",
+              "L'inclusione non si misura soltanto contando i posti disponibili. Occorre guardare alle condizioni reali di accesso, ai sostegni aggiuntivi e alle opportunità per chi parte con meno risorse.",
+              "Il prossimo passaggio da seguire è l'accordo fra le istituzioni europee: soltanto allora sarà possibile distinguere la volontà politica dal programma finanziato."
             ],
-            "deepDive": "Interpretazione: il bilancio misura una priorità politica, ma gli effetti sulle persone dipenderanno anche da criteri di assegnazione, cofinanziamenti e costi effettivi delle destinazioni.",
+            "deepDive": "Una proposta pluriennale non stabilisce da sola l'importo della borsa individuale: contano regolamenti, programmi annuali e criteri di assegnazione.",
             "terms": [],
             "sources": [
               {
-                "title": "Servizio di ricerca del Parlamento europeo",
-                "url": "https://eprs.europarl.europa.eu/contents/publications/EPRS/2026/10/EPRS_ATA%282026%29791536.html?locale=EN"
+                "title": "Commissione europea — Erasmus+",
+                "url": "https://erasmus-plus.ec.europa.eu/"
               },
               {
-                "title": "Erasmus+ — Commissione europea",
-                "url": "https://erasmus-plus.ec.europa.eu/"
+                "title": "Parlamento europeo — attività commissione CULT",
+                "url": "https://www.europarl.europa.eu/committees/it/cult/home/highlights"
               }
             ],
             "related": []
@@ -424,48 +286,45 @@
         "name": "SCOPERTE INATTESE",
         "stories": [
           {
-            "id": "complessita-trasversale",
-            "type": "RICERCA",
-            "title": "Il cervello riconosce la complessità anche quando cambia forma?",
-            "dek": "Una ricerca sulla percezione della complessità attraverso stimoli differenti.",
+            "id": "quanta-quasi-riemann",
+            "type": "CULTURA",
+            "title": "Un'IA ha dimostrato una congettura matematica. E adesso?",
+            "dek": "La storia di Quanta Magazine sulla quasi-ipotesi di Riemann apre una domanda su scoperta e comprensione.",
             "minutes": 4,
             "paragraphs": [
-              "Una melodia, un disegno geometrico e una sequenza di lettere sono stimoli diversi. Eppure le persone possono esprimere giudizi sulla loro complessità che presentano caratteristiche condivise.",
-              "Tal Boger e Chaz Firestone hanno esaminato questo tema attraverso undici esperimenti con complessivamente circa 1.500 partecipanti, utilizzando stimoli visivi, sonori e di altre modalità.",
-              "Il risultato suggerisce rappresentazioni almeno parzialmente comuni della complessità. Non dimostra l'esistenza di un unico centro cerebrale, né fornisce una formula immediata per progettare interfacce."
+              "La matematica è spesso raccontata come il luogo in cui una dimostrazione vale soltanto se può essere controllata passo dopo passo. Per questo è interessante la notizia, raccontata da Quanta Magazine il 19 ottobre, di una dimostrazione assistita dall'intelligenza artificiale legata alla cosiddetta quasi-ipotesi di Riemann.",
+              "Il nome ricorda la celebre ipotesi di Riemann, ma non va confuso con essa: una dimostrazione relativa a una versione o a un problema collegato non equivale a risolvere automaticamente il problema del millennio.",
+              "La parte sorprendente non è semplicemente che una macchina abbia prodotto un risultato. È il rapporto fra generare una dimostrazione, verificarne la correttezza e comprenderne l'idea matematica.",
+              "Se un sistema trova un percorso che nessuno aveva immaginato, la comunità scientifica deve comunque poterlo esaminare, riprodurre e integrare nella conoscenza condivisa."
             ],
-            "deepDive": "Possibile collegamento con la UX: la difficoltà percepita non dipende necessariamente solo dal numero di elementi visibili. È una pista interpretativa, non una regola di design validata direttamente dallo studio.",
+            "deepDive": "Articolo divulgativo di matematica. Una dimostrazione assistita dall'IA non equivale alla soluzione dell'ipotesi di Riemann classica.",
             "terms": [],
             "sources": [
               {
-                "title": "Nature Human Behaviour — studio originale",
-                "url": "https://doi.org/10.1038/s41562-026-02502-8"
+                "title": "Quanta Magazine — AI Proved the Quasi-Riemann Hypothesis, 19 ottobre",
+                "url": "https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/"
               }
             ],
             "related": []
           },
           {
-            "id": "maria-lai-legarsi-montagna",
+            "id": "restofworld-memorie-smartphone",
             "type": "CULTURA",
-            "title": "Maria Lai: quando un paese intero diventò un'opera d'arte",
-            "dek": "Nel 1981 a Ulassai un nastro azzurro collegò le case alla montagna. L'opera era la relazione tra le persone.",
-            "minutes": 2,
+            "title": "Perché la corsa all'IA potrebbe rendere meno accessibili gli smartphone",
+            "dek": "Un mercato invisibile collega i data center ai telefoni economici.",
+            "minutes": 4,
             "paragraphs": [
-              "Nel 1981 l'artista sarda Maria Lai realizzò a Ulassai, suo paese natale, 'Legarsi alla montagna'. Secondo la Fondazione Maria Lai, coinvolse gli abitanti in un intervento collettivo che collegò le case al monte Tisiddu attraverso un nastro di tessuto jeans azzurro. Non era una scultura da guardare a distanza: richiedeva partecipazione, dialogo e decisioni condivise.",
-              "La scelta del filo non era casuale. Negli anni precedenti Lai aveva sperimentato telai, tele cucite, libri e geografie realizzate con stoffa e cuciture. Il gesto del legare trasformava un materiale quotidiano in una metafora visibile dei rapporti fra persone e territorio. La Fondazione la descrive come un primo intervento di arte partecipata: il pubblico non era soltanto spettatore, ma parte del processo.",
-              "Il motivo per cui vale la pena scoprirla oggi è una domanda sul design: chi produce davvero il significato di un'esperienza? L'autore che la progetta o le persone che vi prendono parte? L'opera del 1981 non dimostra che ogni progetto partecipativo sia riuscito; mostra però come un'azione semplice possa cambiare temporaneamente il modo in cui una comunità percepisce i propri legami."
+              "L'intelligenza artificiale viene raccontata spesso attraverso chatbot e nuovi modelli. Ma il suo sviluppo richiede anche grandi quantità di hardware, in particolare memoria e capacità produttiva.",
+              "Rest of World ha esaminato come la domanda di componenti per l'IA possa comprimere la disponibilità di memoria per altri dispositivi, contribuendo a rincari e difficoltà nella fascia più economica degli smartphone.",
+              "La storia conta soprattutto nei mercati in cui un telefono da meno di 100 dollari rappresenta il principale accesso a internet. Una decisione industriale presa per alimentare data center può avere effetti sulla possibilità di studiare, lavorare e comunicare.",
+              "Questo articolo è un seguito consapevole di un tema già apparso nelle prove precedenti: lo riprendiamo perché offre un collegamento utile fra tecnologia e disuguaglianze, non perché sia una notizia completamente nuova."
             ],
-            "deepDive": "Arte partecipata indica pratiche in cui il contributo del pubblico è parte essenziale dell'opera, non un'aggiunta successiva. Maria Lai (1919-2013) lavorò fra disegno, tessuto, libro d'artista e interventi ambientali. La scoperta di oggi non riprende gli artisti già presentati nelle precedenti edizioni: è un percorso nuovo, verificato nella biografia della sua Fondazione.",
-            "terms": [
-              {
-                "term": "arte partecipata",
-                "definition": "Pratica artistica che richiede la partecipazione attiva di altre persone alla realizzazione o al significato dell'opera."
-              }
-            ],
+            "deepDive": "La relazione fra domanda di chip per l'IA e prezzo finale dei telefoni coinvolge diversi fattori, non un'unica causa. Le percentuali di mercato dipendono da segmento, regione e periodo.",
+            "terms": [],
             "sources": [
               {
-                "title": "Fondazione Maria Lai, biografia e Legarsi alla montagna, 1981",
-                "url": "https://fondazionemarialai.it/biografia-maria-lai/"
+                "title": "Rest of World — tecnologia e mercati globali",
+                "url": "https://restofworld.org/"
               }
             ],
             "related": []
@@ -474,93 +333,47 @@
       },
       {
         "id": "letture",
-        "name": "DUE LETTURE PER TE",
+        "name": "LETTURE PER TE",
         "stories": [
           {
-            "id": "benchmark-ai-hardt",
+            "id": "quanta-hardt-benchmark",
             "type": "CULTURA",
-            "title": "E se i test con cui misuriamo l'AI fossero sbagliati?",
-            "dek": "Un'intervista di Quanta Magazine a Moritz Hardt mette in discussione l'uso superficiale dei benchmark.",
-            "minutes": 3,
+            "title": "Misuriamo davvero l'intelligenza artificiale?",
+            "dek": "Moritz Hardt vuole trasformare i benchmark da classifiche a scienza.",
+            "minutes": 4,
             "paragraphs": [
-              "I benchmark sono prove standardizzate che confrontano le prestazioni dei modelli. Un punteggio alto, però, non equivale automaticamente a competenza affidabile in contesti nuovi.",
-              "Il ricercatore Moritz Hardt discute il problema della costruzione dei test e del loro uso pubblico. Un sistema può diventare molto bravo a superare un esame senza avere tutte le capacità che il voto sembra suggerire.",
-              "La domanda da portarsi dietro è semplice: stiamo misurando ciò che ci interessa davvero o soltanto ciò che riusciamo a trasformare in un test?"
+              "Un modello di intelligenza artificiale ottiene un punteggio altissimo in un test. Ma che cosa sappiamo davvero, dopo aver letto quel numero? Che il sistema ha imparato a risolvere una particolare famiglia di prove, non necessariamente che saprà affrontare qualunque problema nuovo.",
+              "In un'intervista pubblicata da Quanta Magazine il 16 ottobre, il ricercatore Moritz Hardt sostiene la necessità di studiare i benchmark con più rigore: come vengono costruiti, quali capacità misurano e come possono essere distorti.",
+              "La riflessione va oltre l'IA. Nella scuola, nel lavoro e perfino nella vita quotidiana tendiamo a sostituire concetti complessi con numeri semplici. Il vantaggio è poter confrontare; il rischio è dimenticare ciò che il numero lascia fuori.",
+              "Da leggere per capire perché una classifica convincente non è sempre una prova convincente."
             ],
-            "deepDive": "Questa è un'intervista critica, non una dimostrazione sperimentale che tutti i benchmark siano inutili.",
+            "deepDive": "Intervista e discussione metodologica, non uno studio sperimentale che confuta tutti i benchmark.",
             "terms": [],
             "sources": [
               {
-                "title": "Quanta Magazine — intervista, 16 ottobre",
+                "title": "Quanta Magazine — He Wants AI Benchmarking to Be a Science, 16 ottobre",
                 "url": "https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/"
               }
             ],
             "related": []
           },
           {
-            "id": "intuizioni-aeon",
-            "type": "CULTURA",
-            "title": "E se le intuizioni fossero una forma di conoscenza?",
-            "dek": "Un saggio filosofico su ciò che crediamo di sapere prima di saperlo spiegare.",
-            "minutes": 3,
-            "paragraphs": [
-              "Ti è mai capitato di sentire che qualcosa non andava, senza riuscire a spiegarne il motivo? Marc A. Moffett esamina il valore epistemico di queste intuizioni.",
-              "La proposta filosofica è che alcune intuizioni possano offrire ragioni iniziali per credere qualcosa, in modo per certi aspetti simile alla percezione. Non equivale a dire che ogni sensazione sia vera.",
-              "Il punto interessante per la psicologia quotidiana è distinguere l'impressione iniziale dalla verifica: un'intuizione può essere un indizio, ma anche riflettere abitudini o pregiudizi."
-            ],
-            "deepDive": "Saggio argomentativo, non studio peer-reviewed. Da leggere per ragionare sul concetto di conoscenza, non per ricavare una regola clinica.",
-            "terms": [],
-            "sources": [
-              {
-                "title": "Aeon — How intuitions work",
-                "url": "https://aeon.co/essays/sometimes-you-just-know-somethings-off-but-how"
-              }
-            ],
-            "related": []
-          }
-        ]
-      },
-      {
-        "id": "ricerca",
-        "name": "LETTURA SCIENTIFICA",
-        "stories": [
-          {
-            "id": "ai-persone-simulate",
+            "id": "microdelays-learning",
             "type": "RICERCA",
-            "title": "L'AI può simulare davvero le opinioni delle persone?",
-            "dek": "Un confronto internazionale mostra perché le persone sintetiche non sostituiscono automaticamente le ricerche sul campo.",
-            "minutes": 5,
-            "paragraphs": [
-              "Un gruppo di ricerca ha confrontato risposte generate da modelli linguistici con quelle di 67.201 partecipanti reali in 74 paesi, su preferenze economiche e sociali.",
-              "I modelli hanno riprodotto meglio alcune associazioni demografiche rispetto alle differenze culturali. Nello studio la direzione di circa il 77,8% delle associazioni demografiche e del 48,1% di quelle culturali è stata ricostruita correttamente: non sono percentuali di accuratezza generale.",
-              "Per la ricerca UX il messaggio è importante: una persona artificiale può essere utile per esplorare ipotesi, ma non è automaticamente un sostituto affidabile di interviste e dati raccolti da persone reali."
-            ],
-            "deepDive": "I risultati dipendono da modelli, prompt, dati di confronto e periodi di raccolta. La peer review non elimina questi limiti.",
-            "terms": [],
-            "sources": [
-              {
-                "title": "Nature Human Behaviour — articolo originale e DOI",
-                "url": "https://doi.org/10.1038/s41562-026-02611-4"
-              }
-            ],
-            "related": []
-          },
-          {
-            "id": "ritardi-apprendimento",
-            "type": "RICERCA",
-            "title": "Un ritardo di due secondi può cambiare il modo in cui impariamo",
-            "dek": "Una ricerca collega piccoli ritardi digitali all'impegno e ai risultati nell'apprendimento.",
+            "title": "Uno o due secondi di attesa possono cambiare l'apprendimento",
+            "dek": "Una ricerca mette in relazione piccoli ritardi digitali e comportamento degli studenti.",
             "minutes": 4,
             "paragraphs": [
-              "Un sito lento non è soltanto fastidioso. Nei contesti educativi, attese ripetute possono interrompere il ritmo e influenzare il comportamento degli studenti.",
-              "Una ricerca pubblicata su Nature Human Behaviour ha analizzato l'associazione tra ritardi digitali di uno o due secondi e risultati educativi attraverso due studi longitudinali quasi-sperimentali.",
-              "Il collegamento con la UX è concreto: le prestazioni sono parte dell'esperienza, non soltanto una questione tecnica. Restano importanti il contesto dello studio e i limiti nell'attribuire causalità."
+              "Quando un sito impiega due secondi in più a rispondere, di solito lo consideriamo un difetto tecnico minore. In un ambiente educativo, però, la stessa attesa può interrompere il ritmo di studio e influenzare il coinvolgimento.",
+              "Uno studio pubblicato l'8 ottobre su Nature Human Behaviour, intitolato 'Microdelays disrupt online learning', esamina gli effetti di ritardi molto brevi nell'interazione con strumenti didattici digitali.",
+              "La domanda non è soltanto se gli studenti trovino l'esperienza fastidiosa, ma se cambino i loro comportamenti e risultati. Per progettare bene un'interfaccia, la velocità non è un dettaglio decorativo: è una condizione dell'esperienza.",
+              "È una lettura particolarmente utile per chi si occupa di UX, ma non va trasformata nella regola universale secondo cui ogni ritardo di due secondi produce sempre lo stesso danno."
             ],
-            "deepDive": "Uno studio quasi-sperimentale può rafforzare l'analisi di un rapporto causale, ma non equivale sempre a un esperimento randomizzato. I risultati non vanno generalizzati a ogni sito o studente.",
+            "deepDive": "Lo studio va interpretato nei limiti del disegno di ricerca e dei contesti osservati; non autorizza generalizzazioni automatiche a ogni piattaforma.",
             "terms": [],
             "sources": [
               {
-                "title": "Nature Human Behaviour — studio originale",
+                "title": "Nature Human Behaviour — Microdelays disrupt online learning",
                 "url": "https://www.nature.com/articles/s41562-026-02598-y"
               }
             ],
@@ -569,52 +382,28 @@
         ]
       },
       {
-        "id": "opportunita",
-        "name": "OPPORTUNITÀ CONCRETE",
+        "id": "ricerca",
+        "name": "RICERCA SCIENTIFICA",
         "stories": [
           {
-            "id": "bandi-aperti-23-ottobre",
-            "type": "CONTESTO",
-            "title": "Tre opportunità con scadenza verificabile, e una cautela importante",
-            "dek": "Premi in Italia e mobilità Erasmus+ a Málaga: solo ciò che risulta aperto o con una fase di candidatura indicata.",
-            "minutes": 3,
+            "id": "ai-synthetic-people-74",
+            "type": "RICERCA",
+            "title": "Le persone simulate dall'IA non sono persone vere",
+            "dek": "Uno studio internazionale confronta risposte artificiali e reali in 74 paesi.",
+            "minutes": 6,
             "paragraphs": [
-              "1. PREMIO GIUSEPPE TALIERCIO 2026 — Stato: APERTO, scadenza 8 novembre 2026. Fondirigenti assegna tre premi da 3.000 euro a tesi magistrali sul management e sulla formazione manageriale nelle imprese industriali, comprese tesi in comunicazione e marketing. Requisiti: età non superiore a 29 anni, voto almeno 105/110, tesi discussa tra il 30 ottobre 2025 e l'8 novembre 2026. La domanda richiede il modulo e gli allegati previsti. È adatto a chi ha già concluso la magistrale entro la data indicata, non a chi sta ancora studiando senza una tesi discussa.",
-              "2. PREMIO MATTEO 2026 — Stato: APERTO, scadenza 26 novembre 2026. Il Rotaract Club Firenze Brunelleschi premia con 1.000 euro un lavoro sulla sicurezza stradale. Possono concorrere tesi discusse tra il 16 novembre 2025 e il 15 novembre 2026 oppure un progetto innovativo sul miglioramento della sicurezza stradale. Il bando, pubblicato anche dalla LUMSA, richiede domanda firmata e documenti specifici da inviare entro la scadenza. Un progetto di design o comunicazione è pertinente solo se dimostra una relazione concreta con la sicurezza.",
-              "3. ERASMUS+ PRÁCTICAS UMA 2026/27 — La Universidad de Málaga indica una procedura straordinaria con termine al 15 maggio 2027 per tirocini all'estero di 2-6 mesi rivolti a studenti di laurea e master. La pagina ufficiale Talent Tank, tuttavia, durante il controllo ha mostrato un messaggio di indisponibilità temporanea: il calendario è documentato, ma non posso certificare in questa edizione che la piattaforma di domanda sia accessibile oggi. Inoltre il bando è rivolto agli studenti UMA e non va considerato automaticamente aperto agli Erasmus incoming iscritti a un ateneo italiano. Importo individuale e condizioni di finanziamento dipendono dalla destinazione e dal bando: non invento una cifra.",
-              "ATTENZIONE AI BANDI CHIUSI — La finestra Blue Book della Commissione europea per marzo 2027 si è chiusa il 4 settembre 2026. La prossima finestra ufficialmente indicata apre il 15 febbraio 2027 per la sessione di ottobre 2027: non è una candidatura aperta oggi. Per PhD e posizioni di ricerca compatibili con comunicazione/UX non ho trovato, in questa verifica, una selezione individuale sufficientemente documentata da presentare come aperta con finanziamento e scadenza certi. Meglio segnalarne l'assenza che suggerire una candidatura inesistente."
+              "Immagina di voler capire come le persone di paesi diversi prendano decisioni o esprimano preferenze. Invece di intervistarle, potresti chiedere a un modello linguistico di impersonare migliaia di individui. È più rapido ed economico, ma funziona?",
+              "Un articolo pubblicato il 12 ottobre su Nature Human Behaviour ha confrontato risposte sintetiche con quelle di 67.201 partecipanti reali provenienti da 74 paesi. I ricercatori hanno analizzato circa 27,8 milioni di risposte simulate per valutare quanto i modelli riproducessero relazioni osservate nei dati umani.",
+              "Secondo i risultati riportati, i modelli hanno riprodotto la direzione del 77,8% delle associazioni demografiche, ma soltanto del 48,1% di quelle culturali. Le percentuali non misurano una generica 'accuratezza del 77,8%': riguardano un criterio preciso di confronto.",
+              "Il divario è significativo perché la cultura non si riduce facilmente a poche caratteristiche di profilo. Un modello può produrre risposte plausibili e tuttavia appiattire differenze importanti fra comunità.",
+              "Per la ricerca sociale e la UX la conseguenza pratica è chiara: i partecipanti sintetici possono aiutare a esplorare ipotesi, ma non sostituiscono automaticamente interviste, osservazioni e ricerche con persone reali."
             ],
-            "deepDive": "Un'opportunità è realmente 'concreta' soltanto se la scadenza è futura, il soggetto promotore è identificabile e i requisiti sono compatibili con il profilo del candidato. Un premio per tesi già discussa non è una borsa per chi deve ancora laurearsi. Una call destinata agli studenti dell'università ospitante non è automaticamente accessibile a uno studente in scambio.",
-            "terms": [
-              {
-                "term": "bando",
-                "definition": "Avviso ufficiale che stabilisce chi può candidarsi, con quali documenti e entro quale termine."
-              },
-              {
-                "term": "Erasmus+",
-                "definition": "Programma dell'Unione europea per istruzione, formazione, giovani e sport."
-              }
-            ],
+            "deepDive": "Articolo peer-reviewed. I risultati dipendono da modelli, prompt, variabili e dati di confronto; riprodurre una correlazione non significa riprodurre l'intera esperienza umana.",
+            "terms": [],
             "sources": [
               {
-                "title": "LUMSA, Premio Giuseppe Taliercio: stato, requisiti, 8 novembre",
-                "url": "https://lumsa.it/it/bandi/premio-di-laurea-giuseppe-taliercio-2026"
-              },
-              {
-                "title": "LUMSA, Premio Matteo: requisiti e 26 novembre",
-                "url": "https://lumsa.it/it/bandi/premio-matteo-2026-insieme-la-sicurezza-stradale"
-              },
-              {
-                "title": "UMA Talent Tank, Erasmus+ Prácticas 2026/27, pagina temporaneamente non disponibile al controllo",
-                "url": "https://talentank.uma.es/practicas/erasmus-grado-master/"
-              },
-              {
-                "title": "UMA, pagina generale Erasmus+ Prácticas",
-                "url": "https://www.uma.es/relaciones-internacionales/cms/menu/erasmus/estudiantes-uma/practicas-internacionales/practicas-erasmus-plus/"
-              },
-              {
-                "title": "Commissione europea, calendario Blue Book 2027",
-                "url": "https://traineeships.ec.europa.eu/about/calendar-sessions_en?prefLang=lt"
+                "title": "Nature Human Behaviour — studio originale, DOI 10.1038/s41562-026-02611-4",
+                "url": "https://www.nature.com/articles/s41562-026-02611-4"
               }
             ],
             "related": []
@@ -622,38 +411,29 @@
         ]
       },
       {
-        "id": "finale",
-        "name": "PER FINIRE",
+        "id": "chiusura",
+        "name": "UNA DOMANDA DA PORTARE VIA",
         "stories": [
           {
-            "id": "riflessione-23-ottobre",
+            "id": "chiusura-misurare",
             "type": "CULTURA",
-            "title": "Una domanda per chiudere: che cosa non vediamo quando guardiamo soltanto il risultato?",
-            "dek": "Dalle diagnosi simulate alle frontiere, dalle grotte alle opere collettive: i processi contano quanto gli esiti.",
-            "minutes": 1,
+            "title": "Quello che riusciamo a misurare non è tutto ciò che conta",
+            "dek": "Una riflessione per chiudere il giornale senza chiudere le domande.",
+            "minutes": 2,
             "paragraphs": [
-              "Un titolo dice che il petrolio sale; per capirlo dobbiamo guardare rotte, assicurazioni, guerre e aspettative. Un annuncio dice che un governo aiuterà i giovani; per giudicarlo dobbiamo leggere il testo, le coperture e i requisiti. Un sistema di IA produce una diagnosi; per valutarlo dobbiamo sapere quali domande ha fatto, quali dati gli sono stati dati e in quale simulazione ha lavorato.",
-              "Anche l'arte di Maria Lai e le immagini di Sulawesi ci ricordano qualcosa di simile: ciò che appare come un risultato finale è il frammento visibile di una storia più lunga. Leggere senza un feed significa forse proprio questo: non fermarsi all'immagine conclusiva, ma ricostruire il percorso che l'ha resa possibile.",
-              "La domanda di oggi non è 'quale notizia devo condividere?', ma 'quale passaggio decisivo mi manca ancora per comprenderla?'."
+              "Oggi abbiamo attraversato bilanci, proteste, guerra, aiuti umanitari, matematica e intelligenza artificiale. Sembrano argomenti lontanissimi. Eppure molti ruotano intorno allo stesso problema: il rapporto fra ciò che è visibile e ciò che resta fuori dall'inquadratura.",
+              "Un bilancio europeo è una cifra, ma non racconta da solo chi potrà partire per un Erasmus. Un numero sugli aiuti non descrive tutta la fame. Un benchmark non contiene tutta l'intelligenza. Una risposta generata dall'IA non coincide con l'esperienza di una persona.",
+              "Il compito di un buon giornale non è soltanto consegnare informazioni. È aiutarti a capire che cosa significano, quali domande mancano e dove cercare risposte migliori.",
+              "Quello che riusciamo a misurare non coincide necessariamente con tutto ciò che conta."
             ],
-            "deepDive": "Questa è una riflessione editoriale, non una nuova notizia né una conclusione scientifica. Le affermazioni fattuali cui si riferisce sono documentate negli articoli precedenti; l'interpretazione finale è dichiaratamente una proposta di lettura.",
+            "deepDive": "Riflessione editoriale, non una notizia né una conclusione scientifica.",
             "terms": [],
-            "sources": [
-              {
-                "title": "Fonti dell'edizione, a partire dall'apertura",
-                "url": "https://www.reuters.com/business/energy/oil-little-changed-supply-concern-lingers-amid-houthi-attacks-saudi-arabia-2026-10-23/"
-              },
-              {
-                "title": "Fondazione Maria Lai, progetto partecipato del 1981",
-                "url": "https://fondazionemarialai.it/biografia-maria-lai/"
-              }
-            ],
+            "sources": [],
             "related": []
           }
         ]
       }
-    ],
-    "demo": false
+    ]
   },
   {
     "date": "2026-10-22",
