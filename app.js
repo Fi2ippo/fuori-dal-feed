@@ -222,7 +222,7 @@ function returnToReadingLink(storyId) {
 
 function renderArticle(slide) {
   const story = slide.story;
-  const validKinds = ['NOTIZIA', 'ANALISI', 'CONTESTO', 'RICERCA', 'CULTURA'];
+  const validKinds = ['NOTIZIA', 'ANALISI', 'CONTESTO', 'RICERCA', 'CULTURA', 'EDITORIALE'];
   const kind = validKinds.includes(story.type) ? story.type : 'NOTIZIA';
   const head = '<div class="article-meta"><span><strong class="article-kind">' +
     escapeHtml(kind) + '</strong><span class="meta-separator"> / </span>' +
@@ -233,13 +233,17 @@ function renderArticle(slide) {
       edition.status === 'edizione-pilota' ? ' <span class="demo-flag">· EDIZIONE PILOTA</span>' : '') +
     '</span></div>';
 
+  const isEditorial = story.verificationStatus === 'editoriale';
+  const sourceDateLabel = story.sourceDate ? shortDateFormat.format(new Date(story.sourceDate + 'T12:00:00')) : 'non disponibile';
+  const updateLabel = story.updatedAt ? ' · Aggiornamento: ' + escapeHtml(story.updatedAt.slice(11, 16)) + ' (ora italiana)' : '';
   const editorialMeta = '<p class="editorial-meta">' +
     '<strong>' + escapeHtml(story.freshness || 'CATEGORIA NON VERIFICATA') + '</strong>' +
-    ' · Fonte: ' + escapeHtml(story.sourceDate || 'data da verificare') +
-    ' · Controllo: ' + escapeHtml(story.verificationStatus === 'fonti-consultate' ? 'fonti consultate, non verifica esaustiva' : 'verifica da completare') +
+    (isEditorial ? ' · Opinione della redazione, non notizia' :
+      ' · Fonte: ' + escapeHtml(sourceDateLabel) + updateLabel +
+      ' · ' + escapeHtml(story.verificationStatus === 'fonti-consultate' ? 'fonti originali consultate' : 'verifica da completare')) +
     '</p>';
-  const editorialWarning = story.verificationStatus !== 'fonti-consultate' ?
-    '<p class="editorial-warning">Questo contenuto non ha ancora superato la verifica integrale delle fonti originali. Non considerarlo una notizia confermata del giorno.</p>' : '';
+  const editorialWarning = !isEditorial && story.verificationStatus !== 'fonti-consultate' ?
+    '<p class="editorial-warning">Questa ricostruzione non è ancora stata verificata sulle fonti originali. Non considerarla una notizia confermata del giorno.</p>' : '';
 
   const paragraphs = (story.paragraphs || [])
     .map(paragraph => '<p>' + richText(paragraph, story.terms) + '</p>').join('');
@@ -458,9 +462,9 @@ function render(landing={index:current,mode:'start'}){
     const notice = document.createElement('div');
     notice.className = 'edition-verification-notice';
     notice.setAttribute('role', 'status');
-    notice.textContent = 'EDIZIONE IN VERIFICA · Ultimo controllo dichiarato: ' +
+    notice.textContent = 'EDIZIONE A CONTROLLO MANUALE · Ultimo controllo: ' +
       (edition.lastEditorialCheck || 'non disponibile') +
-      '. Alcuni approfondimenti non sono ancora verificati integralmente.';
+      '. Le fonti sono consultate, ma la pagina non si aggiorna automaticamente. Verifica sempre la data prima di prendere decisioni importanti.';
     const main = app.querySelector('.reading-main');
     if (main) main.prepend(notice);
   }
