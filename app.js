@@ -233,6 +233,14 @@ function renderArticle(slide) {
       edition.status === 'edizione-pilota' ? ' <span class="demo-flag">· EDIZIONE PILOTA</span>' : '') +
     '</span></div>';
 
+  const editorialMeta = '<p class="editorial-meta">' +
+    '<strong>' + escapeHtml(story.freshness || 'CATEGORIA NON VERIFICATA') + '</strong>' +
+    ' · Fonte: ' + escapeHtml(story.sourceDate || 'data da verificare') +
+    ' · Controllo: ' + escapeHtml(story.verificationStatus === 'fonti-consultate' ? 'fonti consultate, non verifica esaustiva' : 'verifica da completare') +
+    '</p>';
+  const editorialWarning = story.verificationStatus !== 'fonti-consultate' ?
+    '<p class="editorial-warning">Questo contenuto non ha ancora superato la verifica integrale delle fonti originali. Non considerarlo una notizia confermata del giorno.</p>' : '';
+
   const paragraphs = (story.paragraphs || [])
     .map(paragraph => '<p>' + richText(paragraph, story.terms) + '</p>').join('');
 
@@ -446,6 +454,16 @@ function render(landing={index:current,mode:'start'}){
     '<main class="reading-main"><div class="reading-scroll" id="reading-scroll" tabindex="0" aria-label="Edizione del '+
     escapeHtml(longDate(edition.date))+'">'+slides.map(renderSlide).join('')+
     '</div></main></div>';
+  if (edition.verificationStatus === 'verifica-parziale') {
+    const notice = document.createElement('div');
+    notice.className = 'edition-verification-notice';
+    notice.setAttribute('role', 'status');
+    notice.textContent = 'EDIZIONE IN VERIFICA · Ultimo controllo dichiarato: ' +
+      (edition.lastEditorialCheck || 'non disponibile') +
+      '. Alcuni approfondimenti non sono ancora verificati integralmente.';
+    const main = app.querySelector('.reading-main');
+    if (main) main.prepend(notice);
+  }
   scrollEl=app.querySelector('#reading-scroll');
   restoreDetails();
   scrollEl.addEventListener('scroll',scheduleScroll,{passive:true});
