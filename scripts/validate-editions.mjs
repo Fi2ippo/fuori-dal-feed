@@ -35,7 +35,7 @@ if (current) {
         const direct = (st.sources || []).filter(s => {
           try {
             const u = new URL(s.url);
-            return u.protocol === 'https:' && u.pathname.split('/').filter(Boolean).length >= 2 && !u.pathname.endsWith('/index.shtml');
+            return u.protocol === 'https:' && u.pathname.length >= 24 && !u.pathname.endsWith('/index.shtml') && !/^\/(world|news|topnews|economia|politica|latest)\/?$/.test(u.pathname);
           } catch { return false; }
         });
         assert(direct.length > 0, prefix + ' has no direct HTTPS article/document link');
