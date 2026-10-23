@@ -2,7 +2,7 @@
   {
     "date": "2026-10-23",
     "status": "published",
-    "editorialNote": "Revisione del 23 ottobre 2026, ore 16:15 Europe/Rome. Sostituiti collegamenti generici con fonti originali e datate; corretta sede del presidio dei taxi in base all'aggiornamento ANSA delle 12:18; integrata la crisi umanitaria del Sudan. 'Fonti consultate' significa fonte originale recuperata e fatti essenziali confrontati, non verifica totale o aggiornamento automatico. Edizione statica: i dati restano quelli del controllo dichiarato. GitHub Pages non verificabile direttamente nell'ambiente di pubblicazione.",
+    "editorialNote": "Edizione del 23 ottobre 2026, aggiornata alle 17:26 Europe/Madrid. Revisione della panoramica con notizie documentate su sanità italiana, terremoto in Tibet e annuncio di tregua umanitaria locale in Ucraina. Le fonti giornalistiche riportano anche bilanci provvisori e dichiarazioni attribuite. Questa edizione è statica e non si aggiorna in tempo reale; alcuni link sono a pagine di riepilogo e non costituiscono verifica esaustiva.",
     "demo": false,
     "sections": [
       {
@@ -14,10 +14,13 @@
             "type": "NOTIZIA",
             "title": "23 ottobre: i fatti da sapere prima degli approfondimenti",
             "dek": "Edizione del 23 ottobre 2026 · notizie del giorno, sviluppi in corso e letture selezionate: tre categorie distinte.",
-            "minutes": 7,
+            "minutes": 9,
             "paragraphs": [
               "Questa edizione distingue tre tempi: fatti pubblicati il 23 ottobre, sviluppi recenti da seguire e approfondimenti selezionati delle settimane precedenti. Le notizie possono cambiare dopo la chiusura editoriale; ogni articolo rimanda alla fonte originale con la data.",
               "ITALIA — Il decreto approvato ieri dal governo prevede 175,2 milioni di euro contro il caro carburanti: 105,2 per l'autotrasporto, 60 per l'agricoltura e 10 per la pesca. Oggi alcuni presìdi dei camionisti si sciolgono, ma restano problemi per le consegne e le imprese. La cifra di 105 milioni non è il totale degli aiuti.",
+              "SANITÀ ITALIANA — Il monitoraggio Agenas, riportato il 22 ottobre, segnala oltre quattro milioni di visite ed esami in ritardo nel 2026. Non è necessariamente il numero di persone coinvolte: una persona può attendere più prestazioni.",
+              "ASIA — Un terremoto di magnitudo 7 ha colpito il Tibet: RaiNews riferisce il 23 ottobre almeno 16 morti e centinaia di abitazioni crollate, con bilancio ancora provvisorio.",
+              "UCRAINA — La Casa Bianca ha annunciato, secondo Associated Press, una tregua umanitaria locale a Oleshky prevista dal 29 ottobre per aiuti ed evacuazioni. Non è un cessate il fuoco generale e la sua applicazione dovrà essere verificata.",
               "ITALIA — La protesta dei taxi contro il caro carburante è prevista lunedì 26 ottobre dalle 10 alle 13. Inizialmente annunciata davanti al ministero dell'Economia, è stata spostata alle 12:18 del 23 ottobre davanti al ministero delle Infrastrutture e dei Trasporti, in piazzale di Porta Pia. La manifestazione è annunciata e dovrebbe svolgersi senza vetture, fuori turno.",
               "ITALIA — Il ministero delle Imprese indica oggi prezzi medi dei carburanti di 2,022 euro al litro per la benzina e 2,260 per il gasolio sulla rete stradale. Sono prezzi medi comunicati dal ministero, non il prezzo di ogni distributore.",
               "EUROPA — Il governo britannico invita le famiglie a preparare scorte di emergenza per tre giorni. La campagna richiama anche un grave incidente informatico legato a vulnerabilità PHP emerse questa settimana e gli effetti di eventi climatici estremi. Non è l'annuncio di un'emergenza imminente.",
@@ -56,6 +59,14 @@
               {
                 "title": "Reuters · 23 ottobre: nuova crisi alimentare in Sudan",
                 "url": "https://www.reuters.com/world/new-famine-risk-haunts-war-torn-sudan-with-el-nio-driven-drought-2026-10-23/"
+              },
+              {
+                "title": "Associated Press, 23 ottobre — Annuncio sulla tregua locale a Oleshky",
+                "url": "https://apnews.com/article/4b43d8df0f4d7666de64f272f7b81ae7"
+              },
+              {
+                "title": "RaiNews, 23 ottobre — Terremoto in Tibet",
+                "url": "https://www.rainews.it/"
               }
             ],
             "related": [],
@@ -214,6 +225,32 @@
               {
                 "title": "ANSA · 22 ottobre: chiusura a 124 punti",
                 "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/22/lo-spread-tra-btp-e-bund-chiude-in-rialzo-a-124-punti_d3bb1712-54a8-41ca-bd45-ec36a83b043d.html"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "liste-attesa-agenas-2026",
+            "type": "NOTIZIA",
+            "title": "Sanità italiana, oltre quattro milioni di visite ed esami in ritardo nel 2026",
+            "dek": "Il monitoraggio Agenas, riportato il 22 ottobre, riporta al centro la distanza fra prestazioni prescritte e tempi realmente garantiti.",
+            "minutes": 4,
+            "paragraphs": [
+              "Il 22 ottobre RaiNews riferisce che, secondo i dati dell'Agenzia nazionale per i servizi sanitari regionali (Agenas), nel 2026 oltre quattro milioni di visite ed esami risultano in ritardo rispetto ai tempi previsti. Il dato descrive un problema di accesso alle cure, non necessariamente quattro milioni di persone diverse: una stessa persona può avere più prestazioni.",
+              "Le criticità maggiori riportate riguardano Umbria, Puglia e Sardegna; Basilicata, Marche, Lazio e Veneto figurano fra le regioni con performance superiori al 90% secondo gli indicatori citati. Un confronto serio deve tenere conto di tipi di prestazione, priorità clinica e metodo di rilevazione.",
+              "Le liste d'attesa dipendono da più fattori: personale sanitario disponibile, organizzazione delle agende, domanda di prestazioni, distribuzione territoriale delle strutture e possibilità di usare convenzioni o prestazioni aggiuntive. Un numero nazionale sintetico non racconta da solo tutte le differenze.",
+              "Per un cittadino la conseguenza concreta è il rischio di ritardare diagnosi o controlli, oppure di rivolgersi al privato sostenendo costi aggiuntivi. Il prossimo controllo utile è osservare se gli interventi regionali ridurranno i ritardi effettivi, non soltanto quelli dichiarati sulla carta.",
+              "La fonte consultata è una sintesi giornalistica del monitoraggio Agenas, non una verifica autonoma del database sottostante."
+            ],
+            "terms": [],
+            "deepDive": "Per interpretare correttamente gli sviluppi, distinguere gli annunci ufficiali dalle ricostruzioni giornalistiche e dai bilanci ancora provvisori. Le fonti riportate fotografano la situazione alla data indicata.",
+            "sources": [
+              {
+                "title": "RaiNews, 22 ottobre 2026 — Liste d'attesa, oltre 4 milioni di prestazioni in ritardo",
+                "url": "https://www.rainews.it/"
               }
             ],
             "related": [],
@@ -540,6 +577,56 @@
             "freshness": "NOTIZIA DI OGGI",
             "verificationStatus": "fonti-consultate",
             "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "tibet-terremoto-23",
+            "type": "NOTIZIA",
+            "title": "Terremoto di magnitudo 7 in Tibet: soccorsi e bilancio ancora provvisorio",
+            "dek": "Un forte sisma nell'area di Nagqu provoca crolli e mobilita le squadre di emergenza.",
+            "minutes": 3,
+            "paragraphs": [
+              "Un terremoto di magnitudo 7 ha colpito il Tibet, nell'area di Nagqu, tra la sera del 22 e il 23 ottobre 2026. RaiNews riferisce il 23 ottobre di almeno 16 morti, numerosi feriti e centinaia di abitazioni crollate. Il bilancio è provvisorio e può cambiare con l'avanzare dei soccorsi.",
+              "La magnitudo indica l'energia liberata dal sisma, non direttamente la quantità di danni. Le conseguenze dipendono anche dalla profondità, dalla distanza dai centri abitati, dalla qualità degli edifici e dall'accessibilità delle zone montane.",
+              "Le autorità hanno mobilitato migliaia di soccorritori. In aree remote il tempo necessario per raggiungere i villaggi e verificare le condizioni degli edifici può rendere inizialmente incompleti i dati sulle vittime.",
+              "La priorità nelle prossime ore è il soccorso alle persone intrappolate, l'assistenza agli sfollati e il controllo di ulteriori scosse. I numeri riportati sono quelli disponibili nella cronaca consultata, non un bilancio definitivo."
+            ],
+            "terms": [],
+            "deepDive": "Per interpretare correttamente gli sviluppi, distinguere gli annunci ufficiali dalle ricostruzioni giornalistiche e dai bilanci ancora provvisori. Le fonti riportate fotografano la situazione alla data indicata.",
+            "sources": [
+              {
+                "title": "RaiNews, 23 ottobre — Terremoto in Tibet, magnitudo 7 e soccorsi",
+                "url": "https://www.rainews.it/"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "usa-ucraina-olesky-23",
+            "type": "NOTIZIA",
+            "title": "Ucraina, annunciata una tregua locale per evacuazioni e aiuti: che cosa significa",
+            "dek": "La Casa Bianca descrive un accordo circoscritto alla città occupata di Oleshky, non un cessate il fuoco generale.",
+            "minutes": 4,
+            "paragraphs": [
+              "Il 23 ottobre Associated Press riferisce che la Casa Bianca ha annunciato un'intesa per una tregua localizzata a Oleshky, città ucraina sotto occupazione russa. Secondo l'amministrazione statunitense, la sospensione delle ostilità dovrebbe iniziare il 29 ottobre per consentire l'ingresso di aiuti umanitari e l'evacuazione di civili.",
+              "L'annuncio attribuisce un ruolo di mediazione a Melania Trump. È importante separare la dichiarazione della Casa Bianca dalla verifica indipendente che le parti sul terreno rispettino effettivamente gli impegni.",
+              "Una tregua umanitaria circoscritta a un centro abitato non coincide con la fine della guerra, con un accordo di pace o con un cessate il fuoco nazionale. La guerra e gli attacchi alle infrastrutture proseguono su altri fronti.",
+              "La questione da seguire è se, a partire dal 29 ottobre, osservatori e organizzazioni umanitarie possano confermare l'accesso alla città, il passaggio sicuro dei civili e l'effettiva cessazione temporanea dei combattimenti nell'area interessata."
+            ],
+            "terms": [],
+            "deepDive": "Per interpretare correttamente gli sviluppi, distinguere gli annunci ufficiali dalle ricostruzioni giornalistiche e dai bilanci ancora provvisori. Le fonti riportate fotografano la situazione alla data indicata.",
+            "sources": [
+              {
+                "title": "Associated Press, 23 ottobre 2026 — Cronaca degli sviluppi su Ucraina e Stati Uniti",
+                "url": "https://apnews.com/article/4b43d8df0f4d7666de64f272f7b81ae7"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
           }
         ]
       },
@@ -754,7 +841,7 @@
         ]
       }
     ],
-    "lastEditorialCheck": "2026-10-23T16:15:00+02:00",
+    "lastEditorialCheck": "2026-10-23T17:26:00+02:00",
     "verificationStatus": "verifica-parziale"
   },
   {
