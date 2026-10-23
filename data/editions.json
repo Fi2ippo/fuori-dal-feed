@@ -2,7 +2,7 @@
   {
     "date": "2026-10-23",
     "status": "published",
-    "editorialNote": "Revisione del 23 ottobre 2026. L'apertura è stata integrata con notizie datate e attribuite. ATTENZIONE: non tutti gli approfondimenti della presente edizione hanno superato la verifica integrale delle fonti originali; non interpretare la data dell'edizione come data di pubblicazione di ogni articolo. Questo sito statico non si aggiorna automaticamente.",
+    "editorialNote": "Audit 23 ottobre 2026: controllo tecnico del repository riuscito; disponibilità del sito GitHub Pages non verificabile dall'ambiente. Fonti originali confermate per tifone Champi (Reuters), quasi-Riemann (Quanta) e studio 74 paesi (Nature). Altri articoli rimangono da verificare; link generici e titoli senza conferma non equivalgono a fact-checking. Non usare questa edizione come fonte esclusiva per notizie urgenti.",
     "demo": false,
     "sections": [
       {
@@ -160,7 +160,7 @@
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "fonti-consultate",
+            "verificationStatus": "da-verificare",
             "sourceDate": "2026-10-23"
           },
           {
@@ -185,7 +185,7 @@
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "fonti-consultate",
+            "verificationStatus": "da-verificare",
             "sourceDate": "2026-10-23"
           }
         ]
@@ -216,7 +216,7 @@
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "fonti-consultate",
+            "verificationStatus": "da-verificare",
             "sourceDate": "2026-10-23"
           },
           {
@@ -226,7 +226,7 @@
             "dek": "Una perturbazione in arrivo mette alla prova trasporti e sistemi di protezione civile.",
             "minutes": 3,
             "paragraphs": [
-              "Reuters riferisce il 23 ottobre che Taiwan ha sospeso gran parte delle attività in previsione dell'arrivo del tifone Champi, con quasi mille voli cancellati.",
+              "Reuters riferisce venerdì 23 ottobre che Taiwan ha sospeso gran parte delle attività per l'arrivo del tifone Champi: cancellati 262 voli interni e 717 internazionali, in totale 979. Le autorità segnalano una persona morta, 163 feriti e 2.639 evacuati dalle aree montane.",
               "Secondo le previsioni citate, la tempesta potrebbe portare venti forti e piogge torrenziali, pur mostrando segnali di indebolimento. Le autorità mantengono misure precauzionali per il rischio di allagamenti e interruzioni dei trasporti.",
               "La cancellazione preventiva di voli e attività non è un'indicazione che il peggio sia già accaduto: serve a limitare l'esposizione al rischio prima dell'arrivo della perturbazione.",
               "Gli sviluppi da seguire sono la traiettoria effettiva, eventuali evacuazioni e danni, e il ripristino dei collegamenti."
@@ -235,8 +235,8 @@
             "terms": [],
             "sources": [
               {
-                "title": "Reuters via The Star — Taiwan, 23 ottobre",
-                "url": "https://d3ahdtrm1vsak0.cloudfront.net/news/world"
+                "title": "Reuters — Taiwan shuts down ahead of Typhoon Champi, 23 ottobre",
+                "url": "https://www.reuters.com/business/environment/taiwan-shuts-down-ahead-weakening-typhoon-champi-hundreds-flights-cancelled-2026-10-22/"
               }
             ],
             "related": [],
@@ -266,7 +266,7 @@
             ],
             "related": [],
             "freshness": "NOTIZIA DI OGGI",
-            "verificationStatus": "fonti-consultate",
+            "verificationStatus": "da-verificare",
             "sourceDate": "2026-10-23"
           },
           {
@@ -450,7 +450,7 @@
             ],
             "related": [],
             "freshness": "SVILUPPO IN CORSO",
-            "verificationStatus": "fonti-consultate",
+            "verificationStatus": "da-verificare",
             "sourceDate": "2026-10-22"
           }
         ]
@@ -517,8 +517,8 @@
             ],
             "related": [],
             "freshness": "SCOPERTA, RICERCA O LETTURA",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-19"
           },
           {
             "id": "restofworld-memorie-smartphone",
@@ -630,8 +630,8 @@
             ],
             "related": [],
             "freshness": "SCOPERTA, RICERCA O LETTURA",
-            "verificationStatus": "da-verificare",
-            "sourceDate": null
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-12"
           }
         ]
       },
