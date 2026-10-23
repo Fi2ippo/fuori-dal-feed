@@ -277,7 +277,7 @@ function renderArticle(slide) {
   return '<article class="article" id="' + escapeHtml(story.id) +
     '">' + returnToReadingLink(story.id) + head + '<h1>' + escapeHtml(story.title) +
     '</h1><p class="article-dek">' + escapeHtml(story.dek || '') +
-    '</p><div class="article-reading"><div class="article-body">' + paragraphs +
+    '</p>' + editorialMeta + editorialWarning + '<div class="article-reading"><div class="article-body">' + paragraphs +
     '</div><aside class="margin-note" aria-live="polite" hidden></aside></div>' +
     '<div class="article-extras">' + deepDive + relatedHtml + sourceHtml +
     '</div><div class="article-ending" aria-hidden="true"></div></article>';
