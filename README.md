@@ -4,7 +4,7 @@ Un'edizione al giorno. Un percorso di lettura, non un feed.
 
 ## Stato
 
-Edizione pilota del **22 ottobre 2026** pubblicata in `data/editions.json`: 12 articoli originali in italiano, basati su fonti giornalistiche e istituzionali consultabili. I contenuti non vengono ancora generati o verificati automaticamente.
+Edizione del **23 ottobre 2026** pubblicata in `data/editions.json`: 16 articoli e rubriche in italiano, 8 notizie d'apertura, analisi, opportunità con scadenze, una lettura scientifica con DOI e scoperte culturali non ripetute. L'archivio conserva anche l'edizione pilota del **22 ottobre 2026** (12 articoli). I contenuti vengono redatti e verificati per singola edizione; il sito non genera notizie in autonomia.
 
 ## Esperienza di lettura
 
@@ -29,4 +29,4 @@ Tutti i link in `related` devono puntare a una coppia `date` + `storyId` esisten
 
 GitHub Pages pubblica il ramo `main` dalla cartella root. Il sito è statico, senza framework o database. I file JavaScript e CSS hanno una versione nella pagina `index.html` per evitare cache obsolete.
 
-**Non è ancora installato alcun sistema di aggiornamento automatico.** La futura automazione editoriale dovrà verificare fonti, date e link, gestire duplicazioni/correzioni e committare le edizioni prima del deploy.
+**Il sito resta statico.** Le edizioni giornaliere vengono preparate e pubblicate nel repository; il frontend non genera né verifica notizie autonomamente. Ogni aggiornamento editoriale deve controllare fonti, date, link, opportunità e duplicazioni culturali prima del commit.
