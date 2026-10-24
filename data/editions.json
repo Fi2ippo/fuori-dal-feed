@@ -1,5 +1,766 @@
 [
   {
+    "date": "2026-10-24",
+    "status": "published",
+    "editorialNote": "Edizione mattutina del 24 ottobre 2026: giornalismo contestuale, dati e fonti attribuiti, eventi futuri distinti da quelli avvenuti, memoria tramite collegamenti all'archivio. Consultati i due cataloghi editoriali FUORI DAL FEED (357 e 100 fonti). Segnalata la divergenza Reuters/AP sulla data della tregua di Oleshky. Lettura scientifica peer-reviewed con DOI e borsa con requisiti ufficiali verificati.",
+    "demo": false,
+    "sections": [
+      {
+        "id": "apertura",
+        "name": "IL MONDO OGGI",
+        "stories": [
+          {
+            "id": "apertura-24-ottobre",
+            "type": "NOTIZIA",
+            "title": "24 ottobre 2026: le notizie da capire, non soltanto da scorrere",
+            "dek": "Una guida ai fatti accertati, agli eventi attesi oggi e alle letture che meritano più tempo.",
+            "minutes": 2,
+            "paragraphs": [
+              "ITALIA — Questa mattina sono previste manifestazioni in diverse città, con controlli rafforzati dopo gli scontri del fine settimana precedente. A Milano inizia inoltre il congresso straordinario della Lega, dove Matteo Salvini affronta la candidatura alternativa di Massimo Garavaglia. Sono appuntamenti in corso o annunciati: non conosciamo ancora il loro esito.",
+              "MONDO — In Ucraina è stato annunciato un accordo per una tregua umanitaria limitata alla città occupata di Oleshky; in Cisgiordania Israele ha preparato forti restrizioni dopo un attacco mortale presso Hebron. Domenica il Brasile voterà per scegliere fra Lula e Flávio Bolsonaro, con sondaggi molto ravvicinati. In Francia si prepara una nuova giornata di proteste.",
+              "ECONOMIA E CRISI — L'Unione europea discute il deficit commerciale con la Cina, mentre le tensioni con l'Iran spingono il petrolio sopra i 115 dollari al barile. In Sudan la siccità peggiora una crisi alimentare già alimentata dalla guerra. Sono storie collegate ai costi, alla sicurezza e alle scelte politiche, non episodi isolati.",
+              "OLTRE L'ATTUALITÀ — Abbiamo selezionato un approfondimento sugli incendi spagnoli, un caso di resilienza digitale, una ricerca peer-reviewed sulle notifiche, una straordinaria tradizione botanica giapponese e una borsa di studio realmente aperta. Le letture di contesto non vengono presentate come scoperte avvenute oggi."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [],
+            "sources": [
+              {
+                "title": "Sky TG24, proteste di sabato",
+                "url": "https://tg24.sky.it/cronaca/2026/10/24/manifestazione-sabato-24-ottobre-proteste-italia-diretta"
+              },
+              {
+                "title": "Reuters, Ucraina",
+                "url": "https://www.reuters.com/world/europe/russia-ukraine-agree-ceasefire-embattled-town-hold-peace-talks-next-month-2026-10-23/"
+              },
+              {
+                "title": "Datafolha, Brasile",
+                "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-46.shtml"
+              },
+              {
+                "title": "Reuters, UE e Cina",
+                "url": "https://www.reuters.com/world/china/eu-ministers-vow-tackle-china-shock-20-through-talks-with-beijing-2026-10-23/"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "id": "italia",
+        "name": "ITALIA",
+        "stories": [
+          {
+            "id": "manifestazioni-italia-24",
+            "type": "NOTIZIA",
+            "title": "Proteste in Italia, Milano presidiata: cosa si sa e cosa ancora no",
+            "dek": "Le manifestazioni del 24 ottobre hanno obiettivi diversi. Il dibattito sulla sicurezza non deve cancellare quello sui diritti.",
+            "minutes": 5,
+            "paragraphs": [
+              "Sabato 24 ottobre Milano, Roma, Torino e altre città si preparano a cortei e presìdi. Dopo gli scontri e i danneggiamenti del 17 e 18 ottobre a Milano, il Viminale ha rafforzato il dispositivo di sicurezza: Sky TG24 riferisce dell'arrivo di 500 paracadutisti nel capoluogo lombardo e di controlli in più città. A Roma circa 300 agenti della polizia locale sono stati destinati ai servizi legati alle manifestazioni e alla viabilità.",
+              "Non si tratta però di un unico movimento con un programma comune. A Torino è annunciata una manifestazione contro il riarmo, mentre altre iniziative riguardano il costo della vita, le politiche sociali e temi internazionali. Il Movimento 17 ottobre ha detto che comunicherà alcuni luoghi di ritrovo soltanto all'ultimo momento. La varietà delle mobilitazioni impedisce di attribuire a tutti i partecipanti obiettivi e comportamenti identici.",
+              "Il ministro dell'Interno Matteo Piantedosi sostiene che fra alcuni gruppi violenti esista un coordinamento. È una valutazione attribuita al governo, non una sentenza che stabilisca le responsabilità di ogni manifestante. Le indagini devono distinguere chi organizza una protesta pacifica da chi commette aggressioni o saccheggi.",
+              "Il confronto politico è aperto anche sulle misure preventive. Il governo ha discusso strumenti più severi per prevenire disordini; il sindaco di Milano Giuseppe Sala ha richiamato la necessità di affrontare il malessere sociale, non soltanto la repressione. Sicurezza e libertà di riunione sono entrambe questioni reali: il diritto di manifestare pacificamente è tutelato, ma non comprende il diritto di danneggiare persone o negozi.",
+              "Questa è un'edizione mattutina: non anticipiamo numeri dei partecipanti, incidenti o esiti di cortei non ancora conclusi. Nel pomeriggio andrà verificato se le misure adottate hanno consentito lo svolgimento pacifico delle iniziative e se vi siano state restrizioni contestate."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Viminale",
+                "definition": "Nome comunemente usato per indicare il Ministero dell'Interno italiano."
+              },
+              {
+                "term": "Fermo preventivo",
+                "definition": "Misura restrittiva temporanea soggetta a requisiti di legge; non è una condanna penale."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Sky TG24, diretta del 24 ottobre",
+                "url": "https://tg24.sky.it/cronaca/2026/10/24/manifestazione-sabato-24-ottobre-proteste-italia-diretta"
+              },
+              {
+                "title": "ANSA, dibattito sul decreto sicurezza",
+                "url": "https://www.ansa.it/amp/sito/notizie/politica/2026/10/20/oggi-il-cdm-sulla-sicurezza-domani-la-cgil-in-piazza-a-milano-contro-le-diseguaglianze_b5702cd2-a73e-4734-8495-07184704c255.html"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-23",
+                "storyId": "milano-proteste-danni",
+                "label": "Gli scontri di Milano e le prime misure"
+              }
+            ],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          },
+          {
+            "id": "lega-congresso-24",
+            "type": "ANALISI",
+            "title": "La Lega sceglie il segretario: Salvini contro Garavaglia, ma il confronto è sull'identità",
+            "dek": "Al congresso di Milano del 24 e 25 ottobre circa 705 delegati discutono la direzione del partito.",
+            "minutes": 4,
+            "paragraphs": [
+              "Il congresso straordinario della Lega comincia oggi a Milano e prosegue domenica. Il programma prevede circa 705 delegati chiamati a discutere mozioni ed eleggere il segretario federale. Non è un voto di tutti gli italiani né di tutti gli elettori leghisti: è una consultazione interna con regole proprie.",
+              "Matteo Salvini ha convocato l'appuntamento dopo mesi di critiche e tensioni, annunciandolo a Pontida come una richiesta di fiducia. Il senatore Massimo Garavaglia, presidente della commissione Finanze del Senato, ha deciso di candidarsi contro di lui. Secondo le ricostruzioni giornalistiche Salvini parte favorito, ma la presenza di uno sfidante dà forma a una discussione politica che esiste da tempo.",
+              "La Lega è nata come movimento legato al Nord, all'autonomia territoriale e al federalismo. Con Salvini ha assunto una dimensione nazionale e ha dato maggior peso a immigrazione, sicurezza e sovranità. Garavaglia rivendica il carattere federalista e territoriale del partito e ha dichiarato che non dovrebbe essere considerato una forza di estrema destra: è la sua posizione politica.",
+              "Il confronto conta anche per il governo nazionale, di cui la Lega fa parte. La leadership influenza i rapporti con gli alleati, le priorità sull'autonomia regionale e le strategie elettorali. Un eventuale successo di Salvini non eliminerebbe automaticamente le differenze interne; un risultato consistente della mozione alternativa potrebbe rendere più visibili le richieste dei territori.",
+              "Alla chiusura di questa edizione il congresso non ha ancora votato. Non attribuiamo quindi risultati o percentuali inesistenti: il fatto di oggi è l'apertura di una competizione sulla guida e sulla linea del partito."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Federalismo",
+                "definition": "Modello di distribuzione dei poteri pubblici fra governo centrale ed enti territoriali."
+              },
+              {
+                "term": "Congresso federale",
+                "definition": "Assemblea rappresentativa che delibera sulla linea e sulla leadership secondo lo statuto di un partito."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Sky TG24, temi del congresso",
+                "url": "https://tg24.sky.it/politica/2026/10/22/congresso-lega-temi"
+              },
+              {
+                "title": "ANSA, candidatura Garavaglia",
+                "url": "https://videoembed.ansa.it/sito/notizie/politica/2026/10/14/garavaglia-mi-candido-al-congresso-la-lega-non-e-di-estrema-destra_afe2fa8e-58c0-416b-a5d4-c229d489fc75.html"
+              },
+              {
+                "title": "Sky TG24, programma e delegati",
+                "url": "https://tg24.sky.it/politica/video/2026/10/23/sabato-e-domenica-al-via-congresso-straordinario-lega-1134050"
+              }
+            ],
+            "related": [],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          },
+          {
+            "id": "decreto-carburanti-24",
+            "type": "ANALISI",
+            "title": "175,2 milioni per il caro gasolio: cosa riceveranno camionisti, agricoltori e pescatori",
+            "dek": "Il decreto del 22 ottobre risponde ai blocchi dei tir, ma non elimina le cause internazionali dei rincari.",
+            "minutes": 5,
+            "paragraphs": [
+              "Il governo ha approvato il 22 ottobre un decreto urgente da 175,2 milioni di euro per attenuare il costo dei carburanti. ANSA ne ha ricostruito la distribuzione: 105,2 milioni per l'autotrasporto, 60 milioni per l'agricoltura e 10 milioni per la pesca. Confondere i 105 milioni destinati ai camion con il totale sarebbe un errore: riguardano soltanto uno dei tre settori.",
+              "Per i trasportatori lo strumento principale è un credito d'imposta, che permette alle imprese ammissibili di compensare parte degli oneri fiscali. Per gli agricoltori è previsto un contributo a fondo perduto del 20% delle spese ammissibili di carburante sostenute dal 1° giugno al 15 ottobre, entro 45 centesimi al litro; per la pesca la quota indicata è del 10%. Modalità e documentazione devono seguire le regole attuative, quindi stanziamento non significa rimborso già incassato.",
+              "Il decreto prevede anche la sospensione fino al 31 marzo 2027 di determinati canoni di leasing dei veicoli in scadenza nei mesi precedenti. Sospendere un pagamento non equivale a cancellare un debito: può però aiutare la liquidità di un'impresa quando le spese correnti aumentano improvvisamente.",
+              "Perché la protesta dei camionisti riguarda tutti? Perché la distribuzione di alimenti, medicinali e beni industriali dipende in larga parte dal trasporto su strada. Se le consegne si fermano, l'impatto si estende a supermercati, aziende e famiglie. Il governo presenta il decreto come una risposta urgente; alcune associazioni contestano che le misure siano sufficienti.",
+              "Il problema di fondo resta il prezzo dell'energia. Le proiezioni della Banca d'Italia del 16 ottobre stimano un'inflazione media del 3,2% nel 2026, influenzata dai rincari energetici. È una previsione annua, non l'aumento di ogni singolo prodotto. I prossimi indicatori utili saranno la ripresa delle consegne, l'effettiva erogazione degli aiuti e l'andamento del gasolio."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Credito d'imposta",
+                "definition": "Agevolazione utilizzabile per ridurre imposte o contributi dovuti secondo condizioni di legge."
+              },
+              {
+                "term": "Fondo perduto",
+                "definition": "Contributo che, se correttamente ottenuto, non deve essere rimborsato come un prestito."
+              },
+              {
+                "term": "Leasing",
+                "definition": "Contratto di utilizzo di un bene con pagamento di canoni e condizioni specifiche di acquisto finale."
+              }
+            ],
+            "sources": [
+              {
+                "title": "ANSA, ripartizione ufficiale del decreto",
+                "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/22/dai-tir-alla-pesca-ecco-tutti-gli-aiuti-in-arrivo_b84cb587-ffc8-4a0f-a41f-b4ca360e998a.html"
+              },
+              {
+                "title": "ANSA, proteste e intervento del governo",
+                "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/22/il-cdm-approva-il-decreto-sugli-aiuti-105-milioni-per-i-tir-e-70-per_416e7ef3-b46a-4594-90dd-671b4eb1cc0e.html"
+              },
+              {
+                "title": "Borsa Italiana, proiezioni Bankitalia",
+                "url": "https://www.borsaitaliana.it/borsa/notizie/teleborsa/economia/bankitalia-rivede-al-rialzo-il-pil-09-nel-2026-ma-l-energia-spinge-l-inflazione-al-32-137_2026-10-16_TLB.html?lang=it"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-23",
+                "storyId": "trasporti-carburanti-italia",
+                "label": "Il blocco dei trasporti e i rincari"
+              },
+              {
+                "date": "2026-10-22",
+                "storyId": "tir-decreto-carburanti",
+                "label": "Il primo annuncio del decreto"
+              }
+            ],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "id": "mondo",
+        "name": "EUROPA E MONDO",
+        "stories": [
+          {
+            "id": "ucraina-oleshky-24",
+            "type": "NOTIZIA",
+            "title": "Ucraina, una tregua locale per evacuare Oleshky: non è ancora un accordo di pace",
+            "dek": "La sospensione annunciata il 23 ottobre riguarda una città occupata. Reuters e AP riportano date di avvio diverse.",
+            "minutes": 6,
+            "paragraphs": [
+              "Russia e Ucraina hanno annunciato un'intesa per interrompere temporaneamente le operazioni militari a Oleshky, cittadina nel sud dell'Ucraina sotto controllo russo. L'obiettivo è permettere consegne umanitarie, sminamento di percorsi e evacuazione dei civili. Non è un cessate il fuoco generale: gli altri fronti restano attivi e le questioni territoriali non sono risolte.",
+              "Oleshky si trova sulla sponda orientale del Dnipro, di fronte a Kherson. Prima dell'invasione russa del 2022 aveva circa 24.000 abitanti; Reuters riferisce che ne restano approssimativamente fra 1.700 e 2.000. La vicinanza al fronte e le conseguenze della distruzione della diga di Kakhovka nel 2023 hanno reso difficili acqua, assistenza medica e collegamenti.",
+              "La Casa Bianca attribuisce alla first lady Melania Trump un ruolo di mediazione. Questa è una dichiarazione dell'amministrazione statunitense riportata dalla stampa, non una prova indipendente di ogni fase del negoziato. C'è anche una discrepanza fra fonti autorevoli: Reuters indica il 27 ottobre come data d'inizio della tregua, mentre un dispaccio Associated Press pubblicato dal Washington Post indica il 29 ottobre. Non scegliamo una data senza chiarimento.",
+              "Il presidente ucraino Volodymyr Zelensky ha annunciato inoltre l'intenzione di tenere colloqui tecnici con rappresentanti russi e americani nella prima metà di novembre, con Abu Dhabi o la Svizzera fra le possibili sedi. Ma un colloquio tecnico non equivale a un trattato: restano le richieste russe sui territori occupati e quelle ucraine sulle garanzie di sicurezza.",
+              "Il 23 ottobre le parti hanno anche scambiato 270 militari prigionieri ciascuna, il primo scambio dall'agosto precedente. È un risultato umanitario verificabile, distinto dalla possibilità di una pace complessiva. La prossima prova sarà vedere se i corridoi di Oleshky si apriranno davvero e se gli abitanti potranno uscire in sicurezza."
+            ],
+            "deepDive": "Nota di verifica: Reuters indica il 27 ottobre e Associated Press il 29 ottobre come data prevista. La differenza è riportata, non nascosta.",
+            "terms": [
+              {
+                "term": "Tregua umanitaria",
+                "definition": "Sospensione limitata e temporanea dei combattimenti per consentire assistenza o evacuazioni."
+              },
+              {
+                "term": "Corridoio umanitario",
+                "definition": "Percorso destinato al passaggio sicuro di civili e aiuti in una zona di guerra."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters, accordo e colloqui del 23 ottobre",
+                "url": "https://www.reuters.com/world/europe/russia-ukraine-agree-ceasefire-embattled-town-hold-peace-talks-next-month-2026-10-23/"
+              },
+              {
+                "title": "Associated Press via Washington Post, data diversa",
+                "url": "https://www.washingtonpost.com/politics/2026/10/23/russia-ukraine-war-ceasefire-oleshky-melania-trump/7636ac20-cee7-11f1-ac04-9f58578a68b4_story.html"
+              },
+              {
+                "title": "The Guardian, aggiornamento del 24 ottobre",
+                "url": "https://www.theguardian.com/world/2026/oct/24/ukraine-war-briefing-russian-diesel-tankers-headed-for-north-america-says-moscow-as-us-tries-to-revive-peace-talks"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-23",
+                "storyId": "usa-ucraina-olesky-23",
+                "label": "L'annuncio iniziale della tregua"
+              }
+            ],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          },
+          {
+            "id": "hebron-cisgiordania-24",
+            "type": "NOTIZIA",
+            "title": "Hebron, attacco a soldati israeliani e annuncio di chiusure in Cisgiordania",
+            "dek": "Due militari uccisi il 23 ottobre; la risposta israeliana apre questioni di sicurezza, diritto e protezione dei civili.",
+            "minutes": 5,
+            "paragraphs": [
+              "Il 23 ottobre due uomini armati palestinesi hanno ucciso due soldati israeliani e ferito altri tre presso un posto di blocco vicino a Hebron, nel sud della Cisgiordania. Secondo Associated Press, le forze israeliane hanno ucciso gli aggressori e avviato una vasta operazione. I primi lanci parlavano di cinque feriti: i bilanci successivi hanno precisato che due militari erano morti.",
+              "Il primo ministro Benjamin Netanyahu ha ordinato un cordone di sicurezza intorno a Hebron e annunciato la preparazione di una possibile chiusura dell'intera Cisgiordania. Il governo presenta le misure come necessarie a prevenire nuovi attacchi. Preparare una chiusura non significa dimostrare che ogni accesso al territorio sia già stato bloccato nello stesso momento.",
+              "La Cisgiordania è distinta da Gaza. È un territorio palestinese occupato da Israele dal 1967, dove convivono città palestinesi, insediamenti israeliani e diversi livelli di amministrazione e controllo militare. Per chi vive a Hebron i posti di blocco possono determinare l'accesso quotidiano a scuola, lavoro e ospedali: una restrizione estesa può colpire anche persone non coinvolte nell'attacco.",
+              "Il Guardian ha documentato contestazioni giudiziarie contro alcune demolizioni di edifici. I legali sostengono che colpire famiglie non responsabili dell'aggressione possa costituire punizione collettiva, vietata dal diritto internazionale umanitario. Le autorità israeliane rivendicano ragioni di sicurezza. Raccontare entrambe le posizioni non significa equiparare l'attacco ai civili alle misure statali: significa distinguere fatti, giustificazioni e obblighi giuridici.",
+              "L'episodio precede le elezioni israeliane del 27 ottobre, in cui la sicurezza sarà un tema importante. La vicinanza al voto non prova automaticamente le motivazioni di ogni decisione. I fatti da verificare nelle prossime ore sono l'estensione effettiva delle chiusure e le conseguenze sulla popolazione civile."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Cisgiordania",
+                "definition": "Territorio palestinese a ovest del Giordano occupato da Israele dal 1967."
+              },
+              {
+                "term": "Punizione collettiva",
+                "definition": "Punizione inflitta a persone per azioni di cui non sono individualmente responsabili; vietata dal diritto umanitario."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Associated Press, bilancio e sviluppi",
+                "url": "https://apnews.com/article/6424dff433a4f99f00cac2328de0f7a4"
+              },
+              {
+                "title": "ANSA, dichiarazioni di Netanyahu",
+                "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/attacco-al-checkpoint-di-hebron-scattata-unoperazione-antiterrorismo_9ba2138b-09b6-4e76-8477-6a022b91575a.html"
+              },
+              {
+                "title": "The Guardian, contestazioni sulle demolizioni",
+                "url": "https://www.theguardian.com/world/2026/oct/23/netanyahu-orders-very-extensive-operation-west-bank-two-israeli-soldiers-killed"
+              }
+            ],
+            "related": [],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          },
+          {
+            "id": "brasile-ballottaggio-24",
+            "type": "ANALISI",
+            "title": "Brasile, Lula e Flávio Bolsonaro al 50% nei voti validi stimati: perché non sappiamo chi vincerà",
+            "dek": "Il ballottaggio è domenica 25 ottobre. Datafolha misura una gara serrata, non un risultato elettorale.",
+            "minutes": 5,
+            "paragraphs": [
+              "Il Brasile voterà domenica 25 ottobre per scegliere il presidente nel secondo turno. I candidati sono Luiz Inácio Lula da Silva, presidente uscente del Partito dei Lavoratori, e Flávio Bolsonaro, senatore del Partito Liberale e figlio dell'ex presidente Jair Bolsonaro. Al primo turno nessuno ha ottenuto la maggioranza necessaria.",
+              "Il sondaggio Datafolha pubblicato il 23 ottobre assegna il 47% delle intenzioni di voto totali a Bolsonaro e il 46% a Lula, con il 5% di bianche o nulle e il 2% di indecisi. Considerando soltanto i voti validi stimati, i due risultano entrambi al 50%. Il campione comprende 2.520 elettori intervistati dal 20 al 22 ottobre; il margine d'errore dichiarato è di due punti percentuali.",
+              "Il margine d'errore è decisivo per leggere correttamente il dato: un punto di differenza non prova un vantaggio reale nell'intero elettorato. Altri istituti pubblicano valori leggermente diversi anche per differenze di campionamento e metodo. Il sondaggio è una fotografia incerta delle intenzioni, non lo scrutinio delle schede.",
+              "Lula propone continuità delle politiche sociali e rivendica una politica estera relativamente autonoma rispetto agli Stati Uniti. Flávio Bolsonaro si presenta con una linea conservatrice su sicurezza e politica economica e propone rapporti più stretti con Washington. Queste sono posizioni politiche dichiarate, non valutazioni editoriali sulla loro efficacia.",
+              "Il voto conta ben oltre il Brasile: il paese è centrale per l'agricoltura mondiale, l'Amazzonia, i rapporti commerciali con Cina e Stati Uniti e le trattative sul clima. Datafolha rileva forti differenze territoriali e sociali, con Lula più forte nel Nordest e Bolsonaro fra gli evangelici e nel Sud. L'affluenza e la mobilitazione dei rispettivi elettori saranno quindi fondamentali.",
+              "La conclusione responsabile oggi è semplice: la gara è aperta. Il 25 ottobre, quando arriveranno i risultati ufficiali, il giornale potrà raccontare il vincitore e il significato politico del voto senza ripetere da capo tutto questo contesto."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Ballottaggio",
+                "definition": "Secondo turno fra i candidati meglio classificati quando nessuno ha ottenuto la maggioranza richiesta."
+              },
+              {
+                "term": "Voti validi",
+                "definition": "Voti espressi per i candidati, esclusi bianchi e nulli."
+              },
+              {
+                "term": "Margine d'errore",
+                "definition": "Intervallo statistico che descrive l'incertezza dovuta al campionamento."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Datafolha, rilevazione originale del 23 ottobre",
+                "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-46.shtml"
+              },
+              {
+                "title": "Associated Press, contesto del primo turno",
+                "url": "https://apnews.com/article/c194f8965632c8af9bcc4e7a3716cd7c"
+              }
+            ],
+            "related": [],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          },
+          {
+            "id": "ue-cina-china-shock-24",
+            "type": "ANALISI",
+            "title": "Europa e Cina: perché un deficit commerciale di 370 miliardi non è una perdita di 370 miliardi",
+            "dek": "Bruxelles vuole proteggere le industrie senza rinunciare ai benefici di prodotti e componenti a prezzi competitivi.",
+            "minutes": 5,
+            "paragraphs": [
+              "Il 23 ottobre i ministri europei hanno discusso la crescita delle importazioni cinesi e lo squilibrio negli scambi di beni. Reuters riferisce che il deficit commerciale dell'Unione europea verso la Cina ha superato i 370 miliardi di euro nel 2025 e potrebbe oltrepassare i 400 miliardi nel 2026. La linea discussa privilegia il dialogo con Pechino, pur mantenendo possibili misure di difesa commerciale.",
+              "Deficit significa che l'Europa compra beni dalla Cina per un valore maggiore di quello che le vende. Non significa che la stessa cifra sia denaro semplicemente 'perso': alcune importazioni sono beni convenienti per le famiglie e componenti utili alle imprese europee. Ma uno squilibrio persistente può indicare problemi di competitività e dipendenza da produzioni estere.",
+              "Il nome China Shock 2.0 richiama la trasformazione del commercio mondiale dopo l'ingresso cinese nell'Organizzazione mondiale del commercio nel 2001. Oggi la competizione riguarda sempre più macchinari, prodotti chimici, batterie e tecnologie avanzate. Le imprese europee denunciano che l'enorme capacità produttiva e alcune sovvenzioni cinesi rendono difficile sostenere i prezzi.",
+              "Un dazio può proteggere una fabbrica europea rendendo più costosa la merce importata, ma può anche aumentare il prezzo per chi compra. Un'indagine anti-sovvenzioni serve a verificare se gli aiuti pubblici esteri alterino la concorrenza; non equivale a considerare sleale ogni prodotto cinese. La Commissione valuta nuovi settori, tra cui plastiche e PET per gli imballaggi, ma non sono dazi generalizzati già entrati in vigore.",
+              "Il dilemma è particolarmente evidente nella transizione energetica: l'Europa vuole produrre più tecnologie pulite ma dipende anche da componenti cinesi. Le scelte future dovranno bilanciare occupazione industriale, autonomia strategica, prezzi per i consumatori e rapporti diplomatici. La previsione sul deficit 2026 resta una stima, non il consuntivo definitivo."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Deficit commerciale",
+                "definition": "Differenza negativa fra valore delle esportazioni e delle importazioni."
+              },
+              {
+                "term": "Dazio",
+                "definition": "Imposta applicata alle merci importate."
+              },
+              {
+                "term": "Anti-sovvenzioni",
+                "definition": "Procedura commerciale che valuta il possibile effetto distorsivo di aiuti pubblici esteri."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters, ministri UE e China Shock 2.0",
+                "url": "https://www.reuters.com/world/china/eu-ministers-vow-tackle-china-shock-20-through-talks-with-beijing-2026-10-23/"
+              }
+            ],
+            "related": [],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "sudan-fame-siccita-24",
+            "type": "ANALISI",
+            "title": "Sudan, alla guerra si aggiunge la siccità: perché milioni di persone rischiano la fame",
+            "dek": "Le piogge del 2026 sono state le più scarse da oltre trent'anni. I numeri futuri sono proiezioni, non vittime già contate.",
+            "minutes": 6,
+            "paragraphs": [
+              "Reuters ha documentato il 23 ottobre una nuova minaccia per il Sudan: fra luglio e settembre, nel periodo più importante della stagione delle piogge, le precipitazioni sono state le più scarse da oltre trent'anni su scala nazionale. Le conseguenze riguardano coltivazioni e pascoli in aree come Darfur, Kordofan e Gedaref. Non è la prima notizia sulla guerra, ma uno sviluppo che può aggravare la crisi alimentare.",
+              "La guerra civile è iniziata nell'aprile 2023 fra l'esercito regolare sudanese, guidato da Abdel Fattah al-Burhan, e le Rapid Support Forces del comandante Mohamed Hamdan Dagalo, detto Hemedti. I due leader avevano condiviso il potere militare dopo la caduta di Omar al-Bashir, ma si sono scontrati sul controllo dello Stato e delle forze armate. I combattimenti hanno costretto milioni di persone a lasciare case e lavori.",
+              "Una stagione agricola secca significa meno sorgo e altri raccolti, pascoli impoveriti e animali più deboli. Per una famiglia rurale il danno è doppio: meno cibo da mangiare e meno prodotti da vendere per comprare medicine o sementi. Se la guerra blocca strade e mercati, diventa anche difficile rifornirsi altrove. La siccità quindi non agisce isolatamente.",
+              "Secondo l'analisi IPC citata da Reuters, a giugno circa 5,1 milioni di persone affrontavano livelli gravi di insicurezza alimentare. Il Programma alimentare mondiale stima che la siccità possa aggiungere 350.000 persone a questa condizione entro fine 2026 e fino a 1,2 milioni entro agosto 2027. Le ultime due cifre sono previsioni: non devono essere presentate come nuovi casi già verificati.",
+              "Carestia è una classificazione tecnica estrema, basata su soglie di privazione alimentare, malnutrizione e mortalità. Non ogni persona in grave insicurezza alimentare è automaticamente in carestia. Inoltre, quando alcuni agricoltori prevedono raccolti pari a un quarto di quelli precedenti, descrivono le proprie aziende o aree, non la produzione nazionale complessiva.",
+              "Anche gli aiuti umanitari incontrano ostacoli: il WFP ha ridotto alcune razioni per carenza di fondi, mentre combattimenti e strade insicure complicano la distribuzione. Per prevenire un peggioramento servono accesso sicuro, finanziamenti e la possibilità di riprendere a coltivare. L'articolo precedente dell'archivio conserva il quadro iniziale; qui la novità è il peso della siccità sui prossimi raccolti."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "IPC",
+                "definition": "Sistema internazionale per classificare la gravità dell'insicurezza alimentare."
+              },
+              {
+                "term": "Carestia",
+                "definition": "Livello estremo di crisi alimentare determinato da criteri su fame, malnutrizione e mortalità."
+              },
+              {
+                "term": "El Niño",
+                "definition": "Fenomeno climatico del Pacifico che influenza le precipitazioni in diverse aree del mondo."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters, inchiesta su Sudan e siccità del 23 ottobre",
+                "url": "https://www.reuters.com/world/new-famine-risk-haunts-war-torn-sudan-with-el-nio-driven-drought-2026-10-23/"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-23",
+                "storyId": "sudan-siccita-fame-23",
+                "label": "Il quadro iniziale della crisi alimentare"
+              }
+            ],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "francia-proteste-24",
+            "type": "NOTIZIA",
+            "title": "Francia, musei chiusi e 70.000 agenti mobilitati: la protesta nata nelle scuole si allarga",
+            "dek": "Il 24 ottobre Parigi e altre città si preparano a nuovi cortei dopo le violenze dello scorso fine settimana.",
+            "minutes": 5,
+            "paragraphs": [
+              "Il Louvre, il Musée d'Orsay e altri musei parigini sono chiusi oggi mentre la Francia si prepara a nuove manifestazioni. Associated Press riferisce che le autorità hanno previsto fino a 70.000 agenti in tutto il paese e mezzi speciali per evitare il ripetersi di saccheggi e danneggiamenti. Anche il programma pubblico di Art Basel è stato ridotto per motivi di sicurezza.",
+              "Le proteste non sono nate improvvisamente da un partito. Secondo AP, a settembre un liceo della periferia di Parigi ha contestato la mancanza di personale e risorse. La mobilitazione si è estesa ad altre scuole e città, incorporando richieste su accesso universitario, costo della vita e disuguaglianze. È un passaggio da una vertenza scolastica a un movimento sociale più ampio.",
+              "Il fine settimana precedente più di mezzo milione di persone ha manifestato e circa 3.000 negozi sono stati danneggiati o saccheggiati, secondo i dati riportati da AP. Queste cifre non significano che tutti i manifestanti siano responsabili delle violenze. Distinguere i partecipanti pacifici da chi commette reati è indispensabile per comprendere sia le proteste sia la risposta dello Stato.",
+              "Alcune manifestazioni sono state vietate a Lione, Nizza e Montpellier. Il governo difende le restrizioni come necessarie a proteggere cittadini e attività economiche; i sindacati le contestano come eccessive limitazioni delle libertà pubbliche. Il presidente Emmanuel Macron affronta la crisi negli ultimi mesi del mandato, prima delle presidenziali del 2027.",
+              "Ad Orléans è annunciata anche una manifestazione contro l'estrema destra durante un congresso del partito di Marine Le Pen. Sono mobilitazioni differenti, pur nello stesso clima politico. Questa edizione mattutina non attribuisce ancora numeri finali ai cortei di oggi: partecipazione ed eventuali incidenti saranno fatti da verificare dopo il loro svolgimento."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Diritto di riunione",
+                "definition": "Libertà di incontrarsi e manifestare pacificamente, tutelata dalle norme democratiche."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Associated Press, reportage del 24 ottobre",
+                "url": "https://apnews.com/article/france-protests-paris-unrest-ad2fb9206e72e5d1b4ae43fdf7aa96a9"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-23",
+                "storyId": "francia-proteste-sicurezza",
+                "label": "Le tensioni francesi nell'edizione precedente"
+              }
+            ],
+            "freshness": "NOTIZIA DI OGGI",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-24"
+          }
+        ]
+      },
+      {
+        "id": "dentro",
+        "name": "DENTRO LA NOTIZIA",
+        "stories": [
+          {
+            "id": "petrolio-iran-prezzi-24",
+            "type": "ANALISI",
+            "title": "Petrolio oltre 115 dollari: come la paura di nuovi attacchi all'Iran arriva ai prezzi italiani",
+            "dek": "Il Brent è salito il 23 ottobre. Una minaccia geopolitica può influenzare i mercati prima che si interrompa una fornitura.",
+            "minutes": 5,
+            "paragraphs": [
+              "Venerdì 23 ottobre il Brent, riferimento internazionale per il petrolio, ha superato brevemente i 117 dollari al barile, prima di tornare poco sopra i 116, secondo il Guardian. La salita è legata ai timori di nuovi attacchi statunitensi e israeliani contro l'Iran e alle minacce alle infrastrutture energetiche del Golfo. Sono timori di mercato, non la prova che una nuova operazione militare sia già avvenuta.",
+              "Il petrolio può rincarare anche quando le forniture non sono ancora interrotte. Se commercianti e imprese temono che una guerra renda più difficile trasportarlo, il prezzo incorpora un premio per il rischio. Lo Stretto di Hormuz, fra Iran e penisola arabica, è particolarmente importante perché vi transita una parte significativa degli scambi petroliferi mondiali.",
+              "Il Guardian ricorda che prima della guerra iniziata a febbraio il Brent era intorno ai 72 dollari. Il confronto rende visibile l'ordine di grandezza del cambiamento, ma non permette di attribuire ogni oscillazione a una sola causa: contano anche domanda globale, capacità produttiva e decisioni degli operatori.",
+              "Come si trasmette il rincaro a una famiglia italiana? Il greggio viene raffinato per produrre benzina e gasolio, ma sul prezzo alla pompa pesano anche raffinazione, trasporto, margini e imposte. Un aumento del Brent non diventa automaticamente lo stesso aumento percentuale al distributore. Se persiste, però, può incidere su camion, agricoltura, pesca e quindi su altri beni.",
+              "Il decreto italiano da 175,2 milioni per questi settori è un esempio concreto del collegamento fra geopolitica ed economia quotidiana. Per capire gli sviluppi bisogna osservare sicurezza delle rotte, disponibilità effettiva di greggio e negoziati diplomatici, distinguendo le indiscrezioni su attacchi futuri dalle operazioni già accertate."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Brent",
+                "definition": "Qualità di petrolio utilizzata come prezzo di riferimento internazionale."
+              },
+              {
+                "term": "Barile",
+                "definition": "Unità di volume petrolifera di circa 159 litri."
+              },
+              {
+                "term": "Premio per il rischio",
+                "definition": "Quota del prezzo legata alla probabilità percepita di eventi sfavorevoli futuri."
+              }
+            ],
+            "sources": [
+              {
+                "title": "The Guardian, mercato petrolifero del 23 ottobre",
+                "url": "https://www.theguardian.com/business/2026/oct/23/oil-five-month-high-fears-us-renews-strikes-iran"
+              },
+              {
+                "title": "ANSA, decreto italiano sui carburanti",
+                "url": "https://videoembed.ansa.it/sito/notizie/economia/2026/10/22/dai-tir-alla-pesca-ecco-tutti-gli-aiuti-in-arrivo_b84cb587-ffc8-4a0f-a41f-b4ca360e998a.html"
+              }
+            ],
+            "related": [
+              {
+                "date": "2026-10-22",
+                "storyId": "iran-hormuz-navi",
+                "label": "Il contesto della crisi a Hormuz"
+              },
+              {
+                "date": "2026-10-23",
+                "storyId": "trasporti-carburanti-italia",
+                "label": "Gli effetti italiani del caro gasolio"
+              }
+            ],
+            "freshness": "SVILUPPO IN CORSO",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "id": "scoperte",
+        "name": "SCOPERTE INATTESE",
+        "stories": [
+          {
+            "id": "spagna-incendi-boschi-24",
+            "type": "ANALISI",
+            "title": "La Spagna ha più boschi, eppure brucia: il paradosso dell'abbandono rurale",
+            "dek": "Copernicus misura oltre 301.000 ettari percorsi dal fuoco nel 2026. La gestione del paesaggio conta quanto il clima.",
+            "minutes": 5,
+            "paragraphs": [
+              "Dal 1° gennaio al 21 ottobre 2026 in Spagna sono bruciati circa 301.413 ettari, il 43% dei quasi 700.000 registrati nell'Unione europea, secondo i dati EFFIS-Copernicus riportati da Europa Press il 23 ottobre. Un ettaro corrisponde a 10.000 metri quadrati. La superficie percorsa dal fuoco non coincide necessariamente con foresta distrutta per sempre.",
+              "Il confronto con l'anno precedente è indispensabile: alla stessa data del 2025 la Spagna aveva registrato circa 391.659 ettari bruciati. Il 2026 è stato molto grave, ma su questo indicatore non ha superato il 2025. Un articolo accurato non trasforma una cifra impressionante in un record senza verificare la serie storica.",
+              "Reuters evidenzia un paradosso: fra il 1990 e il 2025 la copertura forestale spagnola è aumentata del 38%, anche per l'abbandono di campi e pascoli. Più boschi possono significare maggiore assorbimento di carbonio e nuovi habitat; ma dove la vegetazione cresce senza gestione, arbusti ed erbe secche possono creare continuità di combustibile.",
+              "Immagina un territorio con campi, pascoli e macchie di bosco separate. Quando l'agricoltura scompare, la vegetazione può collegare zone prima distinte e offrire al fuoco percorsi più continui. Caldo, vento e siccità restano fattori decisivi: l'abbandono non sostituisce il cambiamento climatico come spiegazione, ma può amplificarne gli effetti.",
+              "Proprietà frammentate, proprietari assenti e scarse risorse economiche complicano gli interventi coordinati. La prevenzione richiede quindi anche politiche agricole e demografiche, oltre a vigili del fuoco e gestione delle emergenze. Il dato da ricordare è che 'più alberi' e 'territorio più sicuro' non sono automaticamente sinonimi."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "EFFIS",
+                "definition": "Sistema europeo d'informazione sugli incendi boschivi."
+              },
+              {
+                "term": "Ettaro",
+                "definition": "Unità di superficie pari a 10.000 metri quadrati."
+              },
+              {
+                "term": "Continuità del combustibile",
+                "definition": "Presenza di vegetazione infiammabile collegata, che può facilitare la propagazione delle fiamme."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Europa Press, dati EFFIS del 23 ottobre",
+                "url": "https://www.europapress.es/sociedad/noticia-total-301413-hectareas-quemaron-espana-21-octubre-43-ue-copernicus-20261023110453.html"
+              },
+              {
+                "title": "Reuters, spopolamento e rischio incendi",
+                "url": "https://www.reuters.com/sustainability/europes-cosmopolitan-fire-crisis-2026-10-23/"
+              }
+            ],
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          },
+          {
+            "id": "uk-emergenze-72-ore-cyber-24",
+            "type": "CONTESTO",
+            "title": "Il Regno Unito consiglia tre giorni di scorte: cosa c'entra un problema di cybersicurezza?",
+            "dek": "La campagna «Be Ready» è prevenzione, non l'annuncio di un'emergenza imminente.",
+            "minutes": 5,
+            "paragraphs": [
+              "Il 23 ottobre il governo britannico ha consigliato alle famiglie di conservare acqua potabile e cibo non deperibile sufficienti per circa tre giorni. La campagna «Be Ready» mira a rendere i cittadini più preparati a interruzioni temporanee di servizi. Non è un annuncio di guerra imminente né un'indicazione che mancheranno presto alimenti nei negozi.",
+              "Fra i motivi citati c'è un grave incidente legato a vulnerabilità di PHP, linguaggio informatico usato da molti siti e servizi. Reuters riferisce che la divulgazione di falle ha spinto amministratori e aziende a proteggere i sistemi, mentre si registravano numerosi tentativi di attacco. Quando un componente molto diffuso è vulnerabile, i problemi possono propagarsi a servizi apparentemente indipendenti.",
+              "Il collegamento con le scorte domestiche è indiretto ma concreto. Pagamenti elettronici, distribuzione delle merci, comunicazioni e servizi pubblici dipendono da reti digitali. Se un'interruzione prolungata impedisce di acquistare o ricevere beni, una piccola riserva riduce la vulnerabilità immediata. La stessa preparazione può servire durante alluvioni, incendi o blackout.",
+              "Il primo ministro Andy Burnham ha sostenuto la necessità di passare da risposte d'emergenza a prevenzione sistematica. Il ministro della Difesa Wes Streeting ha collegato l'aumento dei rischi informatici anche alla diffusione dell'intelligenza artificiale. Sono valutazioni di governo sui rischi, non prove che un attacco specifico sia già pianificato.",
+              "Anche la Commissione europea aveva raccomandato kit di emergenza da 72 ore. La lezione è più ampia della lista della spesa: sistemi complessi funzionano grazie a dipendenze invisibili e diventano fragili quando una componente essenziale smette di funzionare. Prepararsi in modo proporzionato non significa cedere all'allarmismo."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "PHP",
+                "definition": "Linguaggio di programmazione usato da molti servizi e siti web."
+              },
+              {
+                "term": "Vulnerabilità",
+                "definition": "Debolezza di un sistema che può consentire attacchi o interruzioni."
+              },
+              {
+                "term": "Resilienza",
+                "definition": "Capacità di resistere a un'interruzione e recuperare le funzioni essenziali."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Reuters, campagna Be Ready",
+                "url": "https://www.reuters.com/business/aerospace-defense/uk-tells-public-keep-three-days-emergency-supplies-home-2026-10-23/"
+              },
+              {
+                "title": "Dawn, dispaccio Reuters con dettagli",
+                "url": "https://www.dawn.com/news/2039277/uk-tells-public-to-keep-3-days-emergency-supplies-at-home-amid-php-glitch"
+              }
+            ],
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-23"
+          }
+        ]
+      },
+      {
+        "id": "ricerca",
+        "name": "RICERCA SCIENTIFICA",
+        "stories": [
+          {
+            "id": "studio-notifiche-sette-secondi-2026",
+            "type": "RICERCA",
+            "title": "Una notifica rallenta l'attenzione anche senza aprirla: che cosa dimostra davvero uno studio",
+            "dek": "Fournier e colleghi hanno osservato un rallentamento transitorio di circa sette secondi in un esperimento con 180 studenti.",
+            "minutes": 6,
+            "paragraphs": [
+              "Questa è una lettura scientifica selezionata, non una notizia pubblicata oggi. Lo studio «Attention hijacked: How social media notifications disrupt cognitive processing», firmato da Hippolyte Fournier, Arnaud Fournel, François Osiurak, Olivier Koenig, Flora Pâris, Vivien Gaujoux e Fabien Ringeval, è apparso online il 29 gennaio 2026 ed è incluso nel volume 179 di giugno della rivista peer-reviewed Computers in Human Behavior. DOI verificato: 10.1016/j.chb.2026.108926.",
+              "La domanda è semplice: una notifica simile a quelle dei social interrompe l'elaborazione cognitiva anche quando non viene aperta? Per verificarlo, i ricercatori hanno coinvolto 180 studenti dell'Università di Lione, con età media di circa 20,6 anni, assegnati a tre condizioni sperimentali. I partecipanti svolgevano un test di Stroop, nel quale devono indicare il colore dell'inchiostro ignorando la parola scritta.",
+              "Durante il compito comparivano avvisi che imitavano le notifiche di applicazioni social. Il risultato principale è stato un rallentamento temporaneo dell'elaborazione cognitiva, dell'ordine di sette secondi dopo l'avviso. Questo non significa che ogni notifica 'rubi' esattamente sette secondi di vita o che il cervello si spenga: è un effetto misurato sui tempi di risposta in quel protocollo.",
+              "Lo studio ha misurato anche la dilatazione pupillare, possibile indicatore di attivazione fisiologica. Le analisi suggeriscono che contino la rilevanza percepita dell'avviso e le abitudini: frequenza dei controlli del telefono e numero di notifiche risultavano più informativi del tempo totale davanti allo schermo. Le correlazioni con le abitudini personali, però, non dimostrano da sole un rapporto causale.",
+              "I limiti sono sostanziali. Il campione era formato da universitari e non rappresenta tutte le età; il compito era breve e svolto in laboratorio; gli avvisi erano simulati. Non possiamo trasferire automaticamente la dimensione dell'effetto alla guida, al lavoro o a una giornata di studio. Anche i dati pupillari richiedono cautela interpretativa.",
+              "La ragione per cui vale la pena leggerlo è pratica e progettuale: forse il benessere digitale non dipende soltanto dal numero di ore di schermo, ma anche dalla frammentazione dell'attenzione. Ridurre le interruzioni nei momenti di concentrazione è un'applicazione plausibile, non una terapia universale già dimostrata da questo singolo esperimento."
+            ],
+            "deepDive": "Autori: H. Fournier, A. Fournel, F. Osiurak, O. Koenig, F. Pâris, V. Gaujoux, F. Ringeval. Computers in Human Behavior 179 (2026), articolo 108926. DOI 10.1016/j.chb.2026.108926. Studio sperimentale con 180 studenti, test di Stroop e misurazioni pupillari. Risultato: rallentamento transitorio di circa sette secondi. Limiti: campione, laboratorio, notifiche simulate, correlazioni non causali.",
+            "terms": [
+              {
+                "term": "Peer review",
+                "definition": "Valutazione di uno studio da parte di esperti prima della pubblicazione."
+              },
+              {
+                "term": "Test di Stroop",
+                "definition": "Compito che misura il controllo dell'attenzione quando due informazioni sono in conflitto."
+              },
+              {
+                "term": "Correlazione",
+                "definition": "Associazione statistica che da sola non prova un rapporto di causa-effetto."
+              }
+            ],
+            "sources": [
+              {
+                "title": "Articolo scientifico originale e DOI",
+                "url": "https://doi.org/10.1016/j.chb.2026.108926"
+              },
+              {
+                "title": "Dati e codice aperti dello studio",
+                "url": "https://osf.io/cqx9u/"
+              },
+              {
+                "title": "DBLP, metadati bibliografici",
+                "url": "https://dblp.org/rec/journals/chb/FournierFOKPGR26"
+              }
+            ],
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-01-29"
+          }
+        ]
+      },
+      {
+        "id": "cultura",
+        "name": "UNA SCOPERTA CULTURALE",
+        "stories": [
+          {
+            "id": "crisantemo-mille-fiori-una-pianta",
+            "type": "CULTURA",
+            "title": "Mille fiori da una sola pianta: l'arte giapponese di coltivare il tempo",
+            "dek": "L'ōzukuri trasforma un crisantemo in una cupola monumentale con diciotto mesi di lavoro e una sola radice.",
+            "minutes": 4,
+            "paragraphs": [
+              "Una cupola con centinaia di crisantemi perfettamente disposti può sembrare composta da piante diverse. In realtà ogni fiore può appartenere allo stesso organismo, con un unico apparato radicale. È il Thousand Bloom Chrysanthemum, una forma di coltivazione raccontata da Kay Chubbuck su JSTOR Daily il 22 ottobre 2026. Non è una scoperta avvenuta stamattina, ma una lettura culturale selezionata.",
+              "La tradizione giapponese si chiama ōzukuri, 'grande coltivazione'. Il crisantemo è associato all'autunno, alla longevità e alla cultura imperiale giapponese. La forma monumentale fu sviluppata nei giardini di Tokyo nell'Ottocento, con un modello importante risalente al 1884.",
+              "Il procedimento non consiste nel montare fiori artificialmente. I coltivatori partono da talee e guidano ogni ramificazione, eliminano alcuni germogli e selezionano un bocciolo per stelo. Nei Longwood Gardens americani il processo richiede circa diciotto mesi, migliaia di legature e una struttura di sostegno progettata per distribuire il peso.",
+              "La sincronizzazione della fioritura è la parte più sorprendente. I crisantemi rispondono alla durata della notte: l'illuminazione artificiale può ritardare la formazione dei boccioli e la successiva esposizione a notti più lunghe ne coordina l'apertura. La forma finale è dunque il risultato di fisiologia vegetale, tecnica e pazienza.",
+              "A Longwood un esemplare del 2019 raggiunse 1.542 fiori; nel 2025 ne aveva 1.363. Il numero non racconta tutto: ciò che appare naturale e immediato al visitatore nasconde mesi di osservazione e correzione. È una lezione inattesa sul design di sistemi viventi: progettare significa spesso accompagnare processi che non possiamo controllare completamente."
+            ],
+            "deepDive": "Le fonti indicate distinguono i dati osservati dalle dichiarazioni e dalle previsioni. Gli sviluppi successivi alla chiusura mattutina richiedono nuove verifiche.",
+            "terms": [
+              {
+                "term": "Ōzukuri",
+                "definition": "Tecnica giapponese di coltivazione monumentale del crisantemo da un'unica pianta."
+              },
+              {
+                "term": "Fotoperiodo",
+                "definition": "Durata relativa di luce e buio che influenza processi biologici come la fioritura."
+              }
+            ],
+            "sources": [
+              {
+                "title": "JSTOR Daily, approfondimento del 22 ottobre",
+                "url": "https://daily.jstor.org/the-art-of-the-thousand-bloom-chrysanthemum/"
+              }
+            ],
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-22"
+          }
+        ]
+      },
+      {
+        "id": "opportunita",
+        "name": "OPPORTUNITÀ CONCRETE",
+        "stories": [
+          {
+            "id": "borsa-digiwind-irlanda-2027",
+            "type": "NOTIZIA",
+            "title": "Dodici borse da 7.200 euro per ricerca estiva in Irlanda: candidatura aperta",
+            "dek": "DigiWind finanzia dodici settimane a Limerick nel 2027, ma richiede competenze tecniche e inglese certificato.",
+            "minutes": 4,
+            "paragraphs": [
+              "Il 22 ottobre 2026 si è aperto il bando DigiWind della Technological University of the Shannon (TUS): fino a dodici borse da 7.200 euro ciascuna per un programma estivo di ricerca e formazione a Limerick, in Irlanda. La scadenza ufficiale è il 1° marzo 2027 alle 17:00 CET. L'apertura e la somma sono documentate sulla pagina del progetto, non ricavate da un annuncio generico.",
+              "Il programma si svolgerà in presenza dal 7 giugno al 27 agosto 2027, per dodici settimane. Riguarda la digitalizzazione dei sistemi eolici ed energetici e comprende un percorso da 10 crediti ECTS di livello master, con casi applicativi, attività formative e visite. Non è un Erasmus aperto indistintamente a qualsiasi disciplina.",
+              "I requisiti principali sono cittadinanza UE o di un paese associato ammissibile, laurea triennale in ingegneria, informatica o tecnologia pertinente oppure almeno cinque anni di esperienza professionale riconoscibile nel settore. È inoltre richiesto inglese certificato: IELTS Academic almeno 6,5 o TOEFL iBT almeno 90, salvo esenzioni per madrelingua.",
+              "I 7.200 euro servono a coprire le spese di permanenza e vengono versati in relazione alla frequenza. Viaggio, alloggio e aspetti amministrativi devono essere organizzati dal partecipante. La candidatura avviene tramite F6S dalla pagina ufficiale, allegando documenti come curriculum, titolo di studio e certificati. I risultati sono previsti entro il 15 marzo 2027.",
+              "La selezione è competitiva e la borsa non è garantita. L'opportunità è concreta proprio perché possiede importo, requisiti, calendario e regolamento verificabili; chi non ha un percorso tecnico non dovrebbe presumere di essere idoneo. Meglio una borsa di nicchia ben documentata che dieci bandi vaghi."
+            ],
+            "deepDive": "Apertura: 22 ottobre 2026. Scadenza: 1 marzo 2027 alle 17:00 CET. Programma: 7 giugno–27 agosto 2027. Fino a 12 borse da 7.200 euro. Richiesti titolo tecnico o esperienza rilevante, cittadinanza ammissibile e certificazione d'inglese. Domanda via F6S.",
+            "terms": [
+              {
+                "term": "ECTS",
+                "definition": "Sistema europeo di crediti formativi per riconoscere il carico di lavoro degli studi."
+              },
+              {
+                "term": "CET",
+                "definition": "Ora dell'Europa centrale; in inverno coincide con l'ora di Madrid e Roma."
+              }
+            ],
+            "sources": [
+              {
+                "title": "DigiWind, pagina ufficiale e requisiti",
+                "url": "https://digiwind.org/open-calls/tus-open-call-summer-internship/"
+              },
+              {
+                "title": "Portale europeo dei bandi aperti",
+                "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?isExactMatch=true&order=DESC&pageNumber=1&pageSize=50&programmePeriod=2021+-+2027&status=31094501%2C31094502&type=8"
+              }
+            ],
+            "related": [],
+            "freshness": "SCOPERTA, RICERCA O LETTURA",
+            "verificationStatus": "fonti-consultate",
+            "sourceDate": "2026-10-22"
+          }
+        ]
+      }
+    ],
+    "lastEditorialCheck": "2026-10-24T09:35:35+02:00",
+    "verificationStatus": "fonti-consultate"
+  },
+  {
     "date": "2026-10-23",
     "status": "published",
     "editorialNote": "Edizione del 23 ottobre 2026, aggiornata alle 17:26 Europe/Madrid. Revisione della panoramica con notizie documentate su sanità italiana, terremoto in Tibet e annuncio di tregua umanitaria locale in Ucraina. Le fonti giornalistiche riportano anche bilanci provvisori e dichiarazioni attribuite. Questa edizione è statica e non si aggiorna in tempo reale; alcuni link sono a pagine di riepilogo e non costituiscono verifica esaustiva.",
